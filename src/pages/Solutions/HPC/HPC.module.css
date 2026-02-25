@@ -1,0 +1,164 @@
+.container {
+  max-width: auto;
+  margin: 0 50px;
+}
+
+
+.sectionTitle {
+  color: var(--primary-color);
+  font-size: var(--header1-size);
+  font-weight: var(--fw-medium);
+  margin-bottom: 20px;
+}
+
+
+.introText {
+  color: #111827;
+  font-size: var(--body-size);
+  font-weight: var(--fw-regular);
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.overviewDesc {
+    padding: 20px 0;
+}
+
+/* fpga section */
+.fpgaSection {
+  padding: 20px 0;
+  background-color: var(--secondary-color); 
+}
+
+.fpgaGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile: 1 cột */
+  gap: 50px;
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+
+
+
+/* Phần Ảnh bên trái */
+.fpgaImageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  order: 1;
+}
+
+.fpgaImageWrapper img {
+  width: 100%;
+  max-width: 500px; 
+  height: auto;
+  border-radius: 8px;
+}
+
+
+/* Từng khối tính năng nhỏ */
+.featureItem {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #d1d5db; /* Đường kẻ gạch ngang màu xám */
+}
+
+.featureTitle {
+  font-size: var(--body-size);
+  font-weight: var(--fw-medium);
+  color: #000000;
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+.featureDesc {
+  font-size: var(--description-size);
+  font-weight: var(--fw-light);
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* switch architecture section */
+.switchSection {
+  padding: 20px 0;
+}
+
+.switchGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* Phần Ảnh bên phải */
+.switchImageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.switchImageWrapper img {
+  width: 100%;
+  max-width: 500px; 
+  height: auto;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-size: var(--body-size);
+  font-weight: var(--fw-medium);
+  padding: 4px 12px;
+  border-radius: 20px; /* Bo tròn thành hình viên thuốc */
+  margin-right: 10px; /* Cách chữ Technology Ownership ra một chút */
+  vertical-align: middle;
+}
+
+.platformSection {
+  padding: 20px 0;
+}
+
+.platformGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.platformGrid .sectionTitle {
+  text-align: center;
+}
+.platformGrid img {
+  width: 100%;
+  max-width: 80vw; 
+  height: auto;
+}
+
+.platformList {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.platformList li {
+  font-size: var(--body-size);
+  font-weight: var(--fw-light);
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 1024px) {
+  .fpgaGrid {
+    grid-template-columns: 1fr 1fr; 
+  }
+
+  .fpgaImageWrapper {
+    order: 0; 
+  }
+
+  .switchGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

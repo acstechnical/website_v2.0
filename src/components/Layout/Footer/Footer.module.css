@@ -1,0 +1,144 @@
+/* Container chính của Footer */
+.footer {
+  position: relative;
+  overflow: hidden; /* Đảm bảo video không tràn ra ngoài */
+  color: #ffffff;
+  padding: 60px 20px 20px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo video phủ đầy mà không bị méo */
+  z-index: 0; /* Đặt video ở lớp dưới cùng */
+}
+
+/* Lớp phủ màu đen trong suốt (70%) đè lên trên video */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ mờ */
+  z-index: 1; /* Đặt lớp phủ trên video nhưng dưới nội dung */
+}
+
+/* Nâng toàn bộ chữ và nội dung lên trên cùng (z-index: 2) */
+.footerContent, 
+.footerBottom {
+  position: relative;
+  z-index: 2;
+}
+
+/* Phần chia cột chứa nội dung */
+.footerContent {
+  max-width: auto;
+  margin: 0 50px;
+  display: grid;
+  gap: 40px;
+  /* Mặc định trên điện thoại là 1 cột */
+  grid-template-columns: 1fr; 
+}
+
+/* Responsive cho màn hình Tablet (Từ 768px trở lên chia 2 cột) */
+@media (min-width: 768px) {
+  .footerContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive cho màn hình Máy tính (Từ 1024px trở lên chia 4 cột: Cột 1 to gấp đôi các cột còn lại) */
+@media (min-width: 1024px) {
+  .footerContent {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+/* --- Cột 1: Thông tin thương hiệu --- */
+.brandSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.tagline {
+  color: #a0aec0; /* Màu xám nhạt */
+  font-size: var(--decription-size);
+  font-weight: var(--fw-light);
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+/* --- Các cột Links --- */
+.linksSection {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tiêu đề của mỗi cột (Solutions, Products, Company) */
+.colTitle {
+  font-size: var(--header2-size);
+  font-weight: var(--fw-medium);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/* Đường gạch ngang mảnh dưới tiêu đề */
+.colTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #4a5568; /* Màu xám tối */
+}
+
+/* Danh sách link */
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Khoảng cách giữa các dòng */
+}
+
+.footerLink {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: var(--body-size);
+  font-weight: var(--fw-regular);
+  transition: color 0.3s ease;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Đường gạch mờ giống thiết kế */
+}
+
+.footerLink:hover {
+  color: #3182ce; /* Chuyển màu xanh khi hover */
+  border-bottom-color: #3182ce;
+}
+
+/* --- Phần Copyright dưới cùng --- */
+.footerBottom {
+  max-width: 1280px;
+  margin: 60px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: #a0aec0;
+  font-size: var(--decription-size);
+  font-weight: var(--fw-light);
+}

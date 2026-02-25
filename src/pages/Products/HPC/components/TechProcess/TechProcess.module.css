@@ -1,0 +1,135 @@
+.section {
+  padding-bottom: 20px 0;
+  background-color: var(--secondary-color); 
+}
+.container {
+  max-width: auto;
+  margin: 0 auto;
+}
+
+.accordionWrapper {
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05); /* Đổ bóng nhẹ cho cả khối */
+  overflow: hidden;
+  border: 1px solid var(--border-color); /* Viền mỏng xám nhạt */
+}
+
+/* Từng dòng accordion */
+.accordionItem {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.accordionItem:last-child {
+  border-bottom: none;
+}
+
+/* Phần nút bấm tiêu đề */
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 25px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s;
+}
+
+.accordionHeader:hover {
+  background-color: #f9fafb;
+}
+
+.icon {
+  margin-right: 15px;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.titleText {
+  font-size: 18px;
+  font-weight: 500; /* Medium */
+  color: #000;
+}
+
+/* Khi đang mở */
+.activeItem .icon {
+  color: var(--primary-color); /* Icon chuyển màu xanh */
+}
+
+.activeItem .titleText {
+  font-weight: var(--fw-medium); /* Chữ đậm lên */
+  color: #000;
+}
+
+/* Phần nội dung ẩn hiện */
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  background-color: #fff;
+}
+
+.contentInner {
+  padding: 20px 25px 40px 25px; /* Padding cho nội dung bên trong */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.imageGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.contentImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .imageGrid {
+    max-width: 350px;
+    gap: 15px;
+  }
+  
+  .accordionHeader {
+    padding: 15px 20px;
+  }
+  
+  .contentInner {
+    padding: 15px 20px 30px 20px;
+  }
+  
+  .titleText {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageGrid {
+    max-width: 100%;
+    gap: 12px;
+  }
+  
+  .accordionHeader {
+    padding: 12px 15px;
+  }
+  
+  .contentInner {
+    padding: 12px 15px 20px 15px;
+  }
+  
+  .titleText {
+    font-size: 14px;
+  }
+}

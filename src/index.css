@@ -1,0 +1,55 @@
+:root {
+  /* Màu sắc thương hiệu */
+  --primary-color: #2C549A;      
+  --secondary-color: #F5F8FC;
+
+  /* 3. Phân cấp độ đậm nhạt (Font-weight) */
+  --fw-light: 300;               /* Chữ phụ, chú thích */
+  --fw-regular: 400;             /* Chữ chính (Body text) */
+  --fw-medium: 500;              /* Tiêu đề chính (H1, H2, tên thẻ) */   
+  --fw-semibold: 600;            /* Tiêu đề trang*/  
+  
+  /* Màu viền */ 
+  --border-color: #e2e8f0;       /* Màu viền thẻ card */
+
+  /* Cỡ chữ */
+  /* --header1-size: 32px;
+  --header2-size: 24px;
+  --body-size: 16px;
+  --decription-size: 14px; */
+
+  /* BIẾN FONT SIZE RESPONSIVE */
+    /* H1: Nhỏ nhất 24px, Tốt nhất 4vw (4% chiều rộng màn hình), Lớn nhất 36px */
+  --header1-size: clamp(24px, 4vw + 1rem, 36px); 
+  
+  /* H2: Nhỏ nhất 20px, Lớn nhất 28px */
+  --header2-size: clamp(20px, 3vw + 0.5rem, 28px);
+  
+  /* Body: Nhỏ nhất 15px, Lớn nhất 18px (để đọc trên PC cho sướng mắt) */
+  --body-size: clamp(15px, 2vw, 18px);
+  
+  /* Description: Nhỏ nhất 13px, Lớn nhất 16px */
+  --description-size: clamp(13px, 1.5vw, 16px);
+
+}
+
+* { 
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: black;
+  line-height: 1.5;
+  background-color: #ffffff;
+}
+
+section {
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}

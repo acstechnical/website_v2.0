@@ -1,0 +1,234 @@
+.section {
+  padding: 20px 0;
+  background-color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 10px 0;
+  }
+}
+
+.container {
+  max-width: auto;
+  min-height: auto;
+  padding: 0 50px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Bên trái nhỏ hơn bên phải chút (tỉ lệ 40% - 60%) */
+  gap: 60px; /* Khoảng cách giữa 2 cột */
+  align-items: start;
+}
+
+@media (max-width: 1200px) {
+  .layout {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* --- Style cho Cột Trái (Sidebar) --- */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tabButton {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 15px 0;
+  font-size: 18px;
+  color: var(--text-body); /* Màu xám bình thường */
+  cursor: pointer;
+  border-bottom: 1px solid #e5e7eb; /* Đường kẻ mờ ngăn cách các mục */
+  transition: all 0.3s ease;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  line-height: 1.5;
+  border-left: 3px solid transparent;
+  padding-left: 12px;
+}
+
+@media (max-width: 1024px) {
+  .tabButton {
+    font-size: 16px;
+    padding: 12px 0;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabButton {
+    font-size: 14px;
+    padding: 12px 12px;
+    border-left: none;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabButton {
+    font-size: 13px;
+    padding: 10px 10px;
+    min-height: 40px;
+  }
+}
+
+.tabButton:hover {
+  color: var(--primary-color);
+}
+
+/* Trạng thái khi nút được chọn */
+.active {
+  color: var(--primary-color); /* Đổi màu chữ sang xanh */
+  font-weight: var(--fw-bold); /* In đậm */
+  border-left: 3px solid var(--primary-color);
+  background-color: rgba(0, 123, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+  .active {
+    border-left: none;
+    border-bottom: 3px solid var(--primary-color);
+    background-color: transparent;
+  }
+}
+
+/* --- Style cho Cột Phải (Content) --- */
+.contentArea {
+  /* Thêm hiệu ứng fade-in nhẹ khi đổi tab cho mượt */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.contentList {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.listItem {
+  font-size: var(--description-size);
+  color: #000000;
+  margin-bottom: 15px; /* Khoảng cách giữa các gạch đầu dòng */
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .listItem {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .listItem {
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 480px) {
+  .listItem {
+    font-size: 13px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+}
+
+/* Hiệu ứng hiện dần */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive cho Mobile --- */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  .sidebar {
+    flex-direction: row; 
+    overflow-x: auto;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0;
+    gap: 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tabButton {
+    white-space: nowrap; 
+    padding: 12px 12px;
+    border-bottom: none;
+    margin-right: 0;
+    flex-shrink: 0;
+  }
+  
+  .active {
+    border-bottom: 3px solid var(--primary-color);
+    border-left: none;
+  }
+
+  .contentList {
+    padding-left: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .layout {
+    gap: 15px;
+  }
+
+  .sidebar {
+    gap: 0;
+  }
+
+  .tabButton {
+    padding: 10px 10px;
+    margin-right: 0;
+  }
+
+  .contentList {
+    padding-left: 16px;
+  }
+}
+

@@ -1,0 +1,62 @@
+/* Khung chứa chung để căn giữa nội dung */
+.container {
+  max-width: auto;
+  margin: 0 50px;
+}
+
+.sectionTitle {
+  color: var(--primary-color);
+  font-size: var(--header1-size);
+  font-weight: var(--fw-medium);
+  margin-bottom: 20px;
+}
+
+.introText {
+  color: #111827;
+  font-size: var(--body-size);
+  font-weight: var(--fw-regular);
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* --- Section 1: What we do --- */
+.whatWeDoSection {
+  padding: 20px 0 0 0;
+}
+
+/* Đường gạch ngang phân cách */
+.divider {
+  border: none;
+  border-bottom: 1px solid #000000;
+  margin-bottom: 20px;
+}
+
+/* --- Lưới CSS Grid cho các Card --- */
+.cardGrid {
+  display: grid;
+  gap: 24px;
+  /* Responsive: Điện thoại 1 cột, Tablet 2 cột, PC 4 cột */
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- Section 2 & 3: Our Solutions & Our Products --- */
+.solutionsSection {
+  margin-bottom: 20px;
+}
+
+.productsSection {
+  margin-bottom: 20px;
+}

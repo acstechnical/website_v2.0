@@ -1,0 +1,43 @@
+.card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  height: 100%; /* Giúp các thẻ cao bằng nhau */
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+  border-color: var(--border-color);
+}
+
+/* Khung chứa Icon màu xanh nhạt */
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  background-color: var(--secondary-color); /* Nền xanh nhạt */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+
+.title {
+  font-size: var(--body-size);
+  font-weight: var(--fw-medium);
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: var(--decription-size);
+  font-weight: var(--fw-light);
+  line-height: 1.6;
+  flex-grow: 1; 
+}
+

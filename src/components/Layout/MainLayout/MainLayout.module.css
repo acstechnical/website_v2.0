@@ -1,0 +1,12 @@
+/* Thay thế cho min-h-screen và flex flex-col */
+.layoutWrapper {
+  min-height: 100vh; /* Chiều cao tối thiểu bằng 100% màn hình */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Thay thế cho flex-grow và bg-gray-50 */
+.mainContent {
+  flex-grow: 1; /* Chiếm toàn bộ khoảng trống còn lại giữa Header và Footer */
+  background-color: #ffffff;
+}

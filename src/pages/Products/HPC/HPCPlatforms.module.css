@@ -1,0 +1,120 @@
+.container {
+  max-width: auto;
+  margin: 0 50px;
+}
+
+
+.sectionTitle {
+  color: var(--primary-color);
+  font-size: var(--header1-size);
+  font-weight: var(--fw-medium);
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: var(--body-size);
+  font-weight: var(--fw-light);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.imageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+.imageWrapper img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: contain;
+}
+
+.hpcPlatformsSection {
+  padding: 20px 0;
+}
+
+.hpcPlatformsSection .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 50px;
+  border-bottom: 1px solid #000000;
+}
+
+.leftContent {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+}
+.newTechSection {
+  padding: 20px 0;
+  background-color: var( --secondary-color);
+}
+
+.techGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.sectionSubtitle {
+  font-size: var(--body-size);
+  font-weight: var(--fw-medium);
+  color: #000000; 
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Danh sách gạch đầu dòng các công nghệ */
+.techList {
+  list-style: none; /* Bỏ dấu chấm mặc định */
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.techList li {
+  font-size: var(--description-size);
+  color: var(--text-body);
+  font-weight: var(--fw-light);
+  margin-bottom: 12px;
+  padding-left: 15px;
+  position: relative;
+}
+
+/* Tạo dấu gạch ngang (-) thủ công cho đẹp */
+.techList li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  color: var(--text-body);
+}
+
+.videoShowcaseSection {
+  padding: 20px 0;
+}
+
+.videoShowcaseSection .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+@media (min-width:1024px) {
+    .hpcPlatformsSection .container {
+        grid-template-columns: 1.2fr 0.8fr;
+    }
+    .techGrid {
+        grid-template-columns: 1.2fr 0.8fr; 
+    }
+
+    .videoShowcaseSection .container {
+        flex-direction: row;
+        gap: 40px;
+        justify-content: space-around;
+    }
+}

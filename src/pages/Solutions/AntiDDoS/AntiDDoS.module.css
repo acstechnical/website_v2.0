@@ -1,0 +1,141 @@
+.container {
+  max-width: auto;
+  margin: 0 50px;
+}
+
+.sectionTitle {
+  color: var(--primary-color);
+  font-size: var(--header1-size);
+  font-weight: var(--fw-medium);
+  margin-bottom: 20px;
+}
+
+.introSection {
+  padding: 20px 0;
+}
+
+.introSection .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+}
+
+.introImageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+.introImageWrapper img {
+  max-width: 90%;
+  height: auto;
+}
+
+.helpSection {
+  padding: 20px 0;
+  background-color: var(--secondary-color);
+}
+
+.helpSection .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.leftContent {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.helpImageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.helpImageWrapper img {
+  width: 100%;
+  max-width: 500px; 
+  height: auto;
+}
+
+.benefitsContainer{
+  padding: 20px 0;
+}
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.featureItem {
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #d1d5db; /* Đường kẻ gạch ngang màu xám */
+}
+
+.featureItem:last-child {
+  border-bottom: none; 
+}
+
+.featureTitle {
+  font-size: var(--body-size);
+  font-weight: var(--fw-medium);
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.featureDesc {
+  font-size: var(--description-size);
+  font-weight: var(--fw-light);
+  color: #000000;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+@media (min-width:1024px) {
+  .cardGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .helpSection .container {
+    display: grid;
+    grid-template-columns: 1.3fr 2fr;
+    gap: 40px;
+  }
+
+  .leftContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .featureGrid {
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .featureItem {
+    margin: 20px 20px 20px 0;
+    padding-right: 20px;
+    border-right: 1px solid #d1d5db; /* Đường kẻ gạch ngang màu xám */
+    border-bottom: none; /* Bỏ đường kẻ dưới */
+  }
+
+  .featureItem:last-child {
+    border-right: none; 
+  }
+}
+
