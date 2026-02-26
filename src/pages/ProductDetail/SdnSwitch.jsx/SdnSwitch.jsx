@@ -1,15 +1,15 @@
 import React, { useEffect} from 'react';
-import { Link } from 'react-router-dom';
 import styles from "./SdnSwitch.module.css";
 import PageTitle from '../../../components/Layout/PageTitle/PageTitle';
 import ServiceCard_3 from '../../../components/UI/ServiceCard_3/ServiceCard_3';
 import FeatureItem from '../../../components/UI/FeatureItem/FeatureItem';
 import AdvantageCard from '../../../components/UI/AdvantageCard/AdvantageCard/AdvantageCard';
+import PrevPageBtn from '../../../components/UI/PrevPageBtn/PrevPageBtn';
 
 import backgroundVideo from "../../../assets/video/networking-devices_product_background.mp4";
 import sdn_sample from "../../../assets/image/ProductDetail/SDN/SDN_sample_01.png";
 import sdn_spec from "../../../assets/image/ProductDetail/SDN/sdn_spec.png";
-import {Globe, Cpu, Activity, Grid, Sliders, Key, Code, TrendingUp, Monitor, Tool, Clock, Zap, Shield, Layers, ArrowLeft, FileText} from 'react-feather';
+import {Globe, Cpu, Activity, Grid, Sliders, Key, Code, TrendingUp, Monitor, Tool, Clock, Zap, Shield, Layers,FileText} from 'react-feather';
 const SdnSwitch = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -181,15 +181,8 @@ const SdnSwitch = () => {
             </section>
 
             {/* 8. Back to Products */}
-            <section className={styles.backSection}>
-                <div className={styles.container}>
-                    <Link to="/products/networking-devices" className={styles.backButton}>
-                        <ArrowLeft size={20} />
-                        <span>See more our networking devices</span>
-                    </Link>
-                </div>
-            </section>
-                
+            <PrevPageBtn linkTo="/products/networking-devices" />
+            
         </div>
     );
 }

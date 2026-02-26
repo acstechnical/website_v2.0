@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './LayerSwitch.module.css';
 import FeatureItem from '../../../components/UI/FeatureItem/FeatureItem';
 import PageTitle from '../../../components/Layout/PageTitle/PageTitle';
+import PrevPageBtn from '../../../components/UI/PrevPageBtn/PrevPageBtn';
 
 import backgroundVideo from "../../../assets/video/networking-devices_product_background.mp4";
 
@@ -72,6 +73,8 @@ const LayerSwitch = () => {
                 </div>
             </section>
 
+            {/* Back to Cyber Security Page */}
+            <PrevPageBtn linkTo="/products/networking-devices" />
         </div>
     );
 };
