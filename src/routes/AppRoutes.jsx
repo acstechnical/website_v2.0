@@ -17,6 +17,7 @@ import NetworkingDevices from '../pages/Products/NetworkingDevices/NetworkingDev
 
 
 import SdnSwitch from '../pages/ProductDetail/SdnSwitch.jsx/SdnSwitch';
+import LayerSwitch from '../pages/ProductDetail/LayerSwitch/LayerSwitch';
 const AppRoutes = () => {
   return (
     <Routes>
@@ -39,6 +40,7 @@ const AppRoutes = () => {
 
           {/* Đường dẫn cho các sản phẩm trong NetworkingDevices */}
           <Route path="products/networking-devices/sdn-switch" element={<SdnSwitch />} />
+          <Route path="products/networking-devices/layer-2-3-4-switch" element={<LayerSwitch />} />
         </Route>
       </Routes>
     );
