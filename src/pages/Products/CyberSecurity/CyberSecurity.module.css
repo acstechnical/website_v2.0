@@ -1,0 +1,12 @@
+.sectionTitle {
+  color: var(--primary-color);
+  font-size: var(--header1-size);
+  font-weight: var(--fw-medium);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contentSection {
+  padding: 20px 0;
+  background-color: #ffffff;
+}

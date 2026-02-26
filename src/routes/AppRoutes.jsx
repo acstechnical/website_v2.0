@@ -7,17 +7,23 @@ import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import About from '../pages/About';
 
+// Import các trang chi tiết sản phẩm của Solutions
 import HPC from '../pages/Solutions/HPC/HPC';
 import AntiDDoS from '../pages/Solutions/AntiDDoS/AntiDDoS';
 import IPSec from '../pages/Solutions/IPSec/IPSec';
 import IdsIps from '../pages/Solutions/IdsIps/IdsIps';
 
+// Import các trang sản phẩm chính của Products
 import HPCPlatforms from '../pages/Products/HPC/HPCPlatforms';
 import NetworkingDevices from '../pages/Products/NetworkingDevices/NetworkingDevices';
+import CyberSecurity from '../pages/Products/CyberSecurity/CyberSecurity';
 
-
+// Import các trang chi tiết sản phẩm của NetworkingDevices
 import SdnSwitch from '../pages/ProductDetail/SdnSwitch.jsx/SdnSwitch';
 import LayerSwitch from '../pages/ProductDetail/LayerSwitch/LayerSwitch';
+
+// Import các trang chi tiết sản phẩm của CyberSecurity
+import AntiDDoS_Device from '../pages/ProductDetail/AntiDDoS/AntiDDoS_Device';
 const AppRoutes = () => {
   return (
     <Routes>
@@ -37,10 +43,14 @@ const AppRoutes = () => {
           {/* Đường dẫn cho Products */}
           <Route path="products/hpc-platforms" element={<HPCPlatforms />} />
           <Route path="products/networking-devices" element={<NetworkingDevices/>} />
+          <Route path="products/cyber-security" element={<CyberSecurity />} />
 
           {/* Đường dẫn cho các sản phẩm trong NetworkingDevices */}
           <Route path="products/networking-devices/sdn-switch" element={<SdnSwitch />} />
           <Route path="products/networking-devices/layer-2-3-4-switch" element={<LayerSwitch />} />
+
+          {/* Đường dẫn cho các sản phẩm trong CyberSecurity */}
+          <Route path="products/cyber-security/anti-ddos-device" element={<AntiDDoS_Device />} />
         </Route>
       </Routes>
     );
