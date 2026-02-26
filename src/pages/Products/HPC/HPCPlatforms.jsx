@@ -8,10 +8,7 @@ import VideoShowcase from "./components/VideoShowcase/VideoShowcase";
 import backgroundVideo from "../../../assets/video/hpc_product_background.mp4";
 import hpc_example from "../../../assets/image/hpc_product/hpc_example.png";
 import hpc_ai_1 from "../../../assets/image/hpc_product/hpc_ai_1.png";
-import hpc_ai_2 from "../../../assets/image/hpc_product/hpc_ai_2.jpg";
-import hpc_ai_3 from "../../../assets/image/hpc_product/hpc_ai_2.jpg";
-import hpc_ai_4 from "../../../assets/image/hpc_product/hpc_ai_2.jpg";
-import hpc_ai_5 from "../../../assets/image/hpc_product/hpc_ai_2.jpg";
+
 const HPCPlatforms = () => {
   useEffect(() => {
     window.scrollTo(0, 0);

@@ -32,7 +32,7 @@ const ProductList = ({ data }) => {
                   </ul>
                 </div>
 
-                <Link to={`/product-detail/${item.id}`} className={styles.readMoreBtn}>
+                <Link to={item.linkTo} className={styles.readMoreBtn}>
                   Read more <ArrowRight size={18} weight="bold" style={{ marginLeft: '5px' }} />
                 </Link>
               </div>

@@ -15,6 +15,8 @@ import IdsIps from '../pages/Solutions/IdsIps/IdsIps';
 import HPCPlatforms from '../pages/Products/HPC/HPCPlatforms';
 import NetworkingDevices from '../pages/Products/NetworkingDevices/NetworkingDevices';
 
+
+import SdnSwitch from '../pages/ProductDetail/SdnSwitch.jsx/SdnSwitch';
 const AppRoutes = () => {
   return (
     <Routes>
@@ -34,6 +36,9 @@ const AppRoutes = () => {
           {/* Đường dẫn cho Products */}
           <Route path="products/hpc-platforms" element={<HPCPlatforms />} />
           <Route path="products/networking-devices" element={<NetworkingDevices/>} />
+
+          {/* Đường dẫn cho các sản phẩm trong NetworkingDevices */}
+          <Route path="products/networking-devices/sdn-switch" element={<SdnSwitch />} />
         </Route>
       </Routes>
     );

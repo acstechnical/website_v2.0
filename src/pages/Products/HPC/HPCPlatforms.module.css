@@ -91,7 +91,7 @@
   content: "-";
   position: absolute;
   left: 0;
-  color: var(--text-body);
+  color: #000;
 }
 
 .videoShowcaseSection {

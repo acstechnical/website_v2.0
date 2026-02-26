@@ -1,5 +1,5 @@
 .section {
-  padding: 80px 0;
+  padding-bottom: 20px;
   background-color: #ffffff;
 }
 
@@ -13,7 +13,7 @@
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  gap: 60px; /* Khoảng cách giữa các sản phẩm lớn */
+  gap: 20px; /* Khoảng cách giữa các sản phẩm lớn */
 }
 
 .productCard {
@@ -31,7 +31,8 @@
 }
 
 .productCard:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
 }
 
 /* --- Cột ảnh --- */

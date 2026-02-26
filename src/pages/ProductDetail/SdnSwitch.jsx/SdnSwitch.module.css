@@ -1,0 +1,190 @@
+.container {
+  max-width: auto;
+  margin: 0 50px;
+}
+
+.title {
+  color: var(--primary-color);
+  font-size: var(--header1-size);
+  font-weight: var(--fw-medium);
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: var(--body-size);
+  font-weight: var(--fw-light);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.imageWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 10px 0;
+}
+.imageWrapper img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: contain;
+}
+
+.specButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background-color: #fff;
+  color: var(--primary-color);
+  font-size: var(--body-size);
+  font-weight: var(--fw-medium);
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.specButton:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.titleSection {
+  padding: 20px 0 10px 0;
+}
+
+.sectionTitle {
+  font-size: var(--header2-size);
+  font-weight: var(--fw-regular);
+  color: #000;
+  margin-bottom: 15px;
+  border-left: 2px solid var(--primary-color);
+  padding-left: 15px;
+  display: inline-block;
+}
+
+.text {
+  font-size: var(--body-size);
+  font-weight: var(--fw-light);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+
+.overviewSection {
+  padding:10px 0;
+}
+
+.overviewSection .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.applicationSection{
+    padding: 10px 0;
+}
+.applicationSection ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.applicationSection li {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.technicalSection {
+  padding: 10px 0;
+}
+
+.technicalSection ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.technicalSection li {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.combinedSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.featuresSection {
+  padding: 10px 0;
+}
+.featuresGrid {
+    display: grid;
+}
+.featuresSection .featuresGrid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px; /* Khoảng cách giữa các thẻ */
+}
+
+.outstandingSection .featuresGrid {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+
+.advantagesSection {
+  padding: 10px 0;
+}
+
+.advantagefeatures {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 24px; /* Khoảng cách giữa các thẻ */
+}
+
+.backSection {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: var(--body-size);
+  font-weight: var(--fw-medium);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.backButton:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .overviewSection .container {
+    grid-template-columns: 1fr;
+  }
+
+  .combinedSection {
+    grid-template-columns: 1fr;
+  }
+
+  .advantagefeatures {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,45 @@
+.card {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid var(--border-color); 
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: var(--secondary-color); 
+  color: var(--primary-color);      
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.title {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.descLine {
+  margin: 0 0 4px 0; /* Khoảng cách giữa các dòng */
+  font-size: var(--description-size);
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.descLine:last-child {
+  margin-bottom: 0;
+}

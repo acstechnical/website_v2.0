@@ -5,6 +5,7 @@ import switch_device_3 from '../../../assets/image/networking_device/switch_devi
 const data = [
   {
     id: "sdn-switch",  
+    linkTo: '/products/networking-devices/sdn-switch',
     title: 'SDN Switch',
     image: switch_device_1,
     features: [
@@ -19,6 +20,7 @@ const data = [
 
     {
     id: "Layer-2-3-4-Switch",
+    linkTo: '/products/networking-devices/layer-2-3-4-switch',
     title: 'Layer 2/3/4 Switch',
     image: switch_device_2,
     features: [
@@ -33,8 +35,9 @@ const data = [
     },
 
     {
-    id: "Bidirection-Gate-Security",
+    id: "BGS",
     title: 'BGS - Bidirection Gate Security',
+    linkTo: '/products/networking-devices/bgs',
     image: switch_device_3,
     features: [
         'Develop a device with internal-external network structure, allowing comprehensive data transmission, specifically:',
