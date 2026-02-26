@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import styles from "./NetworkingDevices.module.css";
 import PageTitle from "../../../components/Layout/PageTitle/PageTitle";
+import ProductList from "../../../components/UI/ProductList/ProductList";
+import { data } from "./data";
 
 import backgroundVideo from "../../../assets/video/networking-devices_product_background.mp4";
 const NetworkingDevices = () => {
@@ -19,6 +21,7 @@ const NetworkingDevices = () => {
             <PageTitle title="NETWORKING DEVICES" videoSrc={backgroundVideo} />
 
             {/* 2. Content section */}
+            <ProductList data={data} />
         </div>
 
     );
