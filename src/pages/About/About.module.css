@@ -1,0 +1,73 @@
+.container {
+  max-width: 100%;
+  margin: 0 50px;
+}
+
+.sectionTitle {
+  color: var(--primary-color);
+  font-size: var(--header1-size);
+  font-weight: var(--fw-medium);
+  margin-bottom: 20px;
+}
+
+
+.description {
+  font-size: var(--body-size);
+  font-weight: var(--fw-light);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.imageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: center;
+}   
+
+.pageTitleSection {
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: linear-gradient(to right, #0a1128, var(--primary-color));
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    padding: 0 100px;
+}
+
+.pageTitleImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.pageTitleImage img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  position: static;
+  color: #ffffff;
+}
+
+.ourProductSection {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
