@@ -5,7 +5,7 @@ import ProductList from "../../../components/UI/ProductList/ProductList";
 
 
 import antiddos_device_img from "../../../assets/image/cyber_security/antiddos_device.png"
-import imgBg from "../../../assets/image/cyber_security/cyber-security_bg.jpg";
+import imgBg from "../../../assets/image/cyber_security/cyber-security_bg.webp";
 const CyberSecurity = () => {
     useEffect(() => {
         window.scrollTo(0, 0);

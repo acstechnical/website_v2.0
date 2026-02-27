@@ -6,7 +6,7 @@ import FeatureItem from '../../../components/UI/FeatureItem/FeatureItem';
 import AdvantageCard from '../../../components/UI/AdvantageCard/AdvantageCard/AdvantageCard';
 import PrevPageBtn from '../../../components/UI/PrevPageBtn/PrevPageBtn';
 
-import imgBg from "../../../assets/image/networking_device/networking-device_bg.jpg";
+import imgBg from "../../../assets/image/networking_device/networking-device_bg.webp";
 import sdn_sample from "../../../assets/image/ProductDetail/SDN/SDN_sample_01.png";
 import sdn_spec from "../../../assets/image/ProductDetail/SDN/sdn_spec.png";
 import {Globe, Cpu, Activity, Grid, Sliders, Key, Code, TrendingUp, Monitor, Tool, Clock, Zap, Shield, Layers,FileText} from 'react-feather';

@@ -10,7 +10,7 @@ import ipsec_solution_1 from '../../../assets/image/ipsec/ipsec_solution_01.png'
 import ipsec_solution_2 from '../../../assets/image/ipsec/ipsec_solution_02.png';
 import ipsec_solution_3 from '../../../assets/image/ipsec/ipsec_solution_03.png';
 import ipsec_solution_4 from '../../../assets/image/ipsec/ipsec_solution_04.png';
-import imgBg from '../../../assets/image/ipsec/ipsec_bg.jpg';
+import imgBg from '../../../assets/image/ipsec/ipsec_bg.webp';
 
 const IPSec = () => {
     useEffect(() => {

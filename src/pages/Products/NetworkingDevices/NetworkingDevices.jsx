@@ -4,7 +4,7 @@ import PageTitle from "../../../components/Layout/PageTitle/PageTitle";
 import ProductList from "../../../components/UI/ProductList/ProductList";
 import { data } from "./data";
 
-import imgBg from "../../../assets/image/networking_device/networking-device_bg.jpg";
+import imgBg from "../../../assets/image/networking_device/networking-device_bg.webp";
 
 const NetworkingDevices = () => {
     useEffect(() => {

@@ -4,7 +4,7 @@ import PageTitle from '../../../components/Layout/PageTitle/PageTitle';
 import hpcSampleImage from '../../../assets/image/hpc_solutions/hpc_sample_01.png';
 import switchImage from '../../../assets/image/hpc_solutions/hpc_arch_1.png';
 import platformImage from '../../../assets/image/hpc_solutions/hpc_5.png';
-import imgBg from '../../../assets/image/hpc_solutions/hpc_solution_bg.jpg';
+import imgBg from '../../../assets/image/hpc_solutions/hpc_solution_bg.webp';
 const HPC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);

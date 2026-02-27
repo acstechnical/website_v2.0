@@ -3,7 +3,7 @@ import styles from './AntiDDoS.module.css';
 import PageTitle from '../../../components/Layout/PageTitle/PageTitle';
 import staticImg from '../../../assets/image/antiddos_solutions/staticstic.png';
 import exampleImg from '../../../assets/image/antiddos_solutions/explain_02.png';
-import imgBg from '../../../assets/image/antiddos_solutions/anti-ddos_solution_bg.jpg';
+import imgBg from '../../../assets/image/antiddos_solutions/anti-ddos_solution_bg.webp';
 import ServiceCard from '../../../components/UI/ServiceCard_2/ServiceCard_2';
 import HelpCard from '../../../components/UI/ServiceCard_3/ServiceCard_3';
 import { XCircle, Shield, Zap, Settings, Share2, Clock, AlertTriangle, Server, ShieldOff } from 'react-feather';
