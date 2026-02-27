@@ -1,0 +1,26 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa icon và chữ theo chiều ngang */
+  text-align: center;  /* Căn giữa nội dung chữ */
+  padding: 20px;
+  max-width: 250px;    /* Giới hạn độ rộng để chữ tự xuống dòng đẹp */
+}
+
+.iconWrapper {
+  margin-bottom: 24px;
+  color: #000000;      /* Hoặc màu xanh tùy theo brand của bạn */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 1.15rem;
+  line-height: 1.4;
+  font-weight: var(--fw-light);
+  color: #000;
+  margin: 0;
+  /* Giúp xử lý các ký tự xuống dòng nếu bạn truyền chuỗi có \n */
+  white-space: pre-line; 
+}

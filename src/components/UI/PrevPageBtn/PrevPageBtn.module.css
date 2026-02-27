@@ -10,7 +10,7 @@
   padding: 12px 20px;
   background-color: var(--primary-color);
   color: #fff;
-  font-size: var(--body-size);
+  font-size: var(--description-size);
   font-weight: var(--fw-medium);
   border-radius: 8px;
   text-decoration: none;
@@ -22,4 +22,5 @@
   background-color: #000;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }

@@ -5,7 +5,7 @@ import FeaturesTab from "./components/FeaturesTab/FeaturesTab";
 import TechProcess from "./components/TechProcess/TechProcess";
 import VideoShowcase from "./components/VideoShowcase/VideoShowcase";
 
-import imgBg from "../../../assets/image/hpc_product/hpc_product_bg.jpg";
+import imgBg from "../../../assets/image/hpc_product/hpc_product_bg.webp";
 import hpc_example from "../../../assets/image/hpc_product/hpc_example.png";
 import hpc_ai_1 from "../../../assets/image/hpc_product/hpc_ai_1.png";
 

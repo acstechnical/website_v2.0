@@ -5,7 +5,7 @@ import FeatureItem from '../../../components/UI/FeatureItem/FeatureItem';
 import PageTitle from '../../../components/Layout/PageTitle/PageTitle';
 import PrevPageBtn from '../../../components/UI/PrevPageBtn/PrevPageBtn';
 
-import imgBg from "../../../assets/image/networking_device/networking-device_bg.jpg";
+import imgBg from "../../../assets/image/networking_device/networking-device_bg.webp";
 
 const LayerSwitch = () => {
     useEffect(() => {

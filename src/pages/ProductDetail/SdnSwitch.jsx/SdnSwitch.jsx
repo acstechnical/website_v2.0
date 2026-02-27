@@ -3,7 +3,7 @@ import styles from "./SdnSwitch.module.css";
 import PageTitle from '../../../components/Layout/PageTitle/PageTitle';
 import ServiceCard_3 from '../../../components/UI/ServiceCard_3/ServiceCard_3';
 import FeatureItem from '../../../components/UI/FeatureItem/FeatureItem';
-import AdvantageCard from '../../../components/UI/AdvantageCard/AdvantageCard/AdvantageCard';
+import AdvantageCard from '../../../components/UI/AdvantageCard/AdvantageCard';
 import PrevPageBtn from '../../../components/UI/PrevPageBtn/PrevPageBtn';
 
 import imgBg from "../../../assets/image/networking_device/networking-device_bg.webp";
