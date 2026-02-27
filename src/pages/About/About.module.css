@@ -59,7 +59,7 @@
 
 .pageTitleImage img {
   width: 100%;
-  max-width: 200px;
+  max-width: 300px;
   height: auto;
   object-fit: cover;
   position: static;
@@ -122,6 +122,16 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.whyAcronicsSection {
+  padding: 100px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to right, #0a1128, var(--primary-color));
+}
+
 @media (min-width: 1200px) {
   .ourValuesSection,
   .ourTeamSection {
@@ -137,7 +147,21 @@
   }
 }
 
+.contactUsLink {
+  margin-top: 20px;
+  padding: 12px 24px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  font-weight: var(--fw-medium);
+  transition: background-color 0.3s ease;
+}
 
+.contactUsLink:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
 
 @media (max-width:768px) {
   .container {

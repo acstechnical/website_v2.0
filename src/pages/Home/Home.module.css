@@ -20,6 +20,18 @@
   margin-bottom: 20px;
 }
 
+.pageTitle {
+  width: 100%;
+  height: calc(100vh - 60px);
+  /* background: linear-gradient(to right, #0a1128, var(--primary-color)); */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
 .videoBackground {
   position: absolute;
   top: 0;
@@ -33,14 +45,13 @@
 
 /* --- Section 1: What we do --- */
 .whatWeDoSection {
-  padding: 20px 0 0 0;
+  padding-top: 20px;
 }
 
 /* Đường gạch ngang phân cách */
 .divider {
   border: none;
   border-bottom: 1px solid #000000;
-  margin-bottom: 20px;
 }
 
 /* --- Lưới CSS Grid cho các Card --- */
@@ -65,9 +76,9 @@
 
 /* --- Section 2 & 3: Our Solutions & Our Products --- */
 .solutionsSection {
-  margin-bottom: 20px;
+  padding-top: 20px;
 }
 
 .productsSection {
-  margin-bottom: 20px;
+  padding: 20px 0;
 }

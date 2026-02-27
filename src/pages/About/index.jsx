@@ -1,4 +1,5 @@
 import React, { useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import styles from './About.module.css';
 import asc_logo_white from '../../assets/image/global/logo_white_without_text.svg';
 import img_1 from '../../assets/image/about/image_1.jpg';
@@ -59,13 +60,13 @@ const About = () => {
               </div>
             </section>
           </div>
-
           {/* 4. Why Acronics Solution */}
-          <section className={styles.ourValuesSection}>
-            
+          <section className={styles.whyAcronicsSection}>
+            <h1>Why Acronics Solutions?</h1>
+            <p>We are the only FPGA vendor-agnostic supplier of critical mass able to address enterprise-class qualification, validation, lifecycle and support requirements for customers deploying FPGA accelerators in high performance computing and networking applications.
+            </p>
+            <Link to="/contact" className={styles.contactUsLink}>Contact Us</Link>
           </section>
-
-         
         </div>
     );
 }
