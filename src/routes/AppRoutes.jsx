@@ -17,6 +17,7 @@ import IdsIps from '../pages/Solutions/IdsIps/IdsIps';
 import HPCPlatforms from '../pages/Products/HPC/HPCPlatforms';
 import NetworkingDevices from '../pages/Products/NetworkingDevices/NetworkingDevices';
 import CyberSecurity from '../pages/Products/CyberSecurity/CyberSecurity';
+import Cryptography from '../pages/Products/Cryptography/Cryptography';
 
 // Import các trang chi tiết sản phẩm của NetworkingDevices
 import SdnSwitch from '../pages/ProductDetail/SdnSwitch.jsx/SdnSwitch';
@@ -44,7 +45,8 @@ const AppRoutes = () => {
           <Route path="products/hpc-platforms" element={<HPCPlatforms />} />
           <Route path="products/networking-devices" element={<NetworkingDevices/>} />
           <Route path="products/cyber-security" element={<CyberSecurity />} />
-
+          <Route path="products/cryptography" element={<Cryptography />} />
+          
           {/* Đường dẫn cho các sản phẩm trong NetworkingDevices */}
           <Route path="products/networking-devices/sdn-switch" element={<SdnSwitch />} />
           <Route path="products/networking-devices/layer-2-3-4-switch" element={<LayerSwitch />} />

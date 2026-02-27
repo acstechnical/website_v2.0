@@ -135,6 +135,12 @@
   height: auto;
 }
 
+.platformImageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .platformList {
   list-style-type: disc;
   padding-left: 20px;

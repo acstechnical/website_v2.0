@@ -37,7 +37,7 @@ const data = [
     {
     id: "BGS",
     title: 'BGS - Bidirection Gate Security',
-    linkTo: '/products/networking-devices/bgs',
+    linkTo: '/',
     image: switch_device_3,
     features: [
         'Develop a device with internal-external network structure, allowing comprehensive data transmission, specifically:',
