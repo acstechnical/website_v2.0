@@ -7,6 +7,7 @@ const PageTitle = ({ title, videoSrc }) => {
         <video autoPlay muted loop playsInline preload="auto" className={styles.videoBackground}>
             <source src={videoSrc} type="video/mp4" />
         </video>
+        <div className={styles.overlay}></div>
         <h1>{title}</h1>
     </div>
     );
