@@ -181,7 +181,7 @@ const SdnSwitch = () => {
             </section>
 
             {/* 8. Back to Products */}
-            <PrevPageBtn linkTo="/products/networking-devices" />
+            <PrevPageBtn linkTo="/products/networking-devices" text="See more our networking devices"/>
             
         </div>
     );

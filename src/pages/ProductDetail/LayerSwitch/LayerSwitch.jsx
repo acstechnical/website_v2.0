@@ -6,6 +6,7 @@ import PageTitle from '../../../components/Layout/PageTitle/PageTitle';
 import PrevPageBtn from '../../../components/UI/PrevPageBtn/PrevPageBtn';
 
 import imgBg from "../../../assets/image/networking_device/networking-device_bg.webp";
+import {GitMerge, Filter, Shield} from 'react-feather'
 
 const LayerSwitch = () => {
     useEffect(() => {
@@ -35,7 +36,7 @@ const LayerSwitch = () => {
                 </div>
             </section>
 
-            {/* Layer 2 Switching */}
+            {/* 3. Layer 2 Switching */}
             <section className={styles.layerSection}>
                 <div className={styles.container}>
                     <h2 className={styles.sectionTitle}>Layer 2 Switching</h2>
@@ -73,8 +74,58 @@ const LayerSwitch = () => {
                 </div>
             </section>
 
+            {/* 4. Layer 2/3/4 Classification and ACL*/}
+            <section className={styles.layer234Section}>
+                <div className={styles.container}>
+                    <h2 className={styles.sectionTitle}>Layer 2/3/4 Classification and ACL</h2>
+                    <div className={styles.featuresGrid}>
+                        <FeatureItem
+                            iconName={Filter}
+                            title="L2 classification rules include:"
+                            descriptions='Source port, Destination MAC, Source MAC, VLAN VID, VLAN PCP, VLAN CFI, Ethernet type.'
+                        />
+                        <FeatureItem
+                            iconName={Shield}
+                            title='32-entry classification / ACL rules supporting:'
+                            descriptions='Source port, routed flag, VRF, IPv4 / IPv6 / MPLS packet types, source IP, destination IP, ToS, L4 protocol type, L4 source port, L4 destination port, TCP flags.'
+                        />
+                        <FeatureItem
+                            iconName={GitMerge}
+                            title='High-Performance Data Throughput'
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* 5. QoS and Traffic Management  */}
+            <section className={styles.layerSection}>
+                <div className={styles.container}>
+                    <h2 className={styles.sectionTitle}>QoS and Traffic Management</h2>
+                    <ul>
+                        <li className={styles.text}>5,242,880-bit shared packet buffer memory (4,096 cells x 160 bytes each) shared among all ports.</li>
+                        <li className={styles.text}>8 priority queues per egress port.</li>
+                        <li className={styles.text}>Configurable egress queue mapping from IP ToS, MPLS EXP/TC, or VLAN PCP bits.</li>
+                        <li className={styles.text}>16 ingress admission control entries.</li>
+                        <li className={styles.text}>Strict Priority Scheduler for deterministic traffic handling.</li>
+                        <li className={styles.text}>Egress queue resource limiter with four independent configuration sets.</li>
+                        <li className={styles.text}>Multicast/Broadcast storm control with dedicated token buckets for flooding, broadcast, and multicast traffic.</li>
+                        <li className={styles.text}>Configurable per egress port, either packet-based or byte-based control.</li>
+                    </ul>
+                </div>
+            </section>
+
+            {/* 6.System Control and Management */}
+             <section className={styles.layerSection}>
+                <div className={styles.container}>
+                    <h2 className={styles.sectionTitle}>System Control and Management</h2>
+                    <ul>
+                        <li className={styles.text}>Configuration interface for accessing configuration and status registers/tables.</li>
+                        <li className={styles.text}>LLDP (Link Layer Discovery Protocol) frames can optionally be sent to the CPU for processing.</li>
+                    </ul>
+                </div>
+            </section>
             {/* Back to Cyber Security Page */}
-            <PrevPageBtn linkTo="/products/networking-devices" />
+            <PrevPageBtn linkTo="/products/networking-devices" text="See more our networking devices"/>
         </div>
     );
 };

@@ -1,7 +1,7 @@
 /* Khung chứa chung để căn giữa nội dung */
 .container {
-  margin: 0 auto;    /* Căn giữa container */
-  padding: 0 20px;   /* Padding thay cho margin 50px để an toàn trên mobile */
+  margin: 0 auto;    
+  padding: 0 20px;   
 }
 
 .sectionTitle {

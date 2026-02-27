@@ -2,7 +2,7 @@ import {Link, useNavigate} from "react-router-dom";
 import styles from "./PrevPageBtn.module.css";
 import { ArrowLeft } from "react-feather";
 
-const PrevPageBtn = ({linkTo}) => {
+const PrevPageBtn = ({linkTo, text}) => {
     const navigate = useNavigate();
 
     const handleBack = () => {
@@ -23,7 +23,7 @@ const PrevPageBtn = ({linkTo}) => {
                 </Link> */}
                 <button onClick={handleBack} className={styles.backButton}>
                     <ArrowLeft size={20} />
-                    <span>See more our networking devices</span>
+                    <span>{text}</span>
                 </button>
             </div>
         </section>
