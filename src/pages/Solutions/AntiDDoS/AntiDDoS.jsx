@@ -1,10 +1,9 @@
 import React, { useEffect} from 'react';
 import styles from './AntiDDoS.module.css';
 import PageTitle from '../../../components/Layout/PageTitle/PageTitle';
-import backgroundVideo from '../../../assets/video/antiddos_solutions_background.mp4';
 import staticImg from '../../../assets/image/antiddos_solutions/staticstic.png';
 import exampleImg from '../../../assets/image/antiddos_solutions/explain_02.png';
-
+import imgBg from '../../../assets/image/antiddos_solutions/anti-ddos_solution_bg.jpg';
 import ServiceCard from '../../../components/UI/ServiceCard_2/ServiceCard_2';
 import HelpCard from '../../../components/UI/ServiceCard_3/ServiceCard_3';
 import { XCircle, Shield, Zap, Settings, Share2, Clock, AlertTriangle, Server, ShieldOff } from 'react-feather';
@@ -74,7 +73,7 @@ const AntiDDoS = () => {
   return (
     <div className={styles.antiddosContainer}>
       {/* 1. Page title */}
-      <PageTitle title="DISTRIBUTED DENIAL OF SERVICE (DDoS) PROTECTION" videoSrc={backgroundVideo} />
+      <PageTitle title="DISTRIBUTED DENIAL OF SERVICE (DDoS) PROTECTION" imgSrc={imgBg} />
 
       {/* 2. Anti-DDoS Intro Section */}
       <section className={styles.introSection}>

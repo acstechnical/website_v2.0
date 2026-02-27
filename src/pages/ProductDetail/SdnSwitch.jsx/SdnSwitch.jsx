@@ -6,7 +6,7 @@ import FeatureItem from '../../../components/UI/FeatureItem/FeatureItem';
 import AdvantageCard from '../../../components/UI/AdvantageCard/AdvantageCard/AdvantageCard';
 import PrevPageBtn from '../../../components/UI/PrevPageBtn/PrevPageBtn';
 
-import backgroundVideo from "../../../assets/video/networking-devices_product_background.mp4";
+import imgBg from "../../../assets/image/networking_device/networking-device_bg.jpg";
 import sdn_sample from "../../../assets/image/ProductDetail/SDN/SDN_sample_01.png";
 import sdn_spec from "../../../assets/image/ProductDetail/SDN/sdn_spec.png";
 import {Globe, Cpu, Activity, Grid, Sliders, Key, Code, TrendingUp, Monitor, Tool, Clock, Zap, Shield, Layers,FileText} from 'react-feather';
@@ -24,7 +24,7 @@ const SdnSwitch = () => {
     return (
         <div>
             {/* 1. Page title */}
-            <PageTitle title="ACS SDN - Switch on FPGA" videoSrc={backgroundVideo} />
+            <PageTitle title="ACS SDN - Switch on FPGA" imgSrc={imgBg} />
 
             {/* 2. overview section */}
             <section className={styles.overviewSection}>

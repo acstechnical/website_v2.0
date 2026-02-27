@@ -2,7 +2,6 @@ import React, { useEffect} from 'react';
 import styles from './Home.module.css';
 import ServiceCard from '../../components/UI/ServiceCard_1/ServiceCard_1';
 import introVideo from '../../assets/video/home_background.mp4';
-import PageTitle from '../../components/Layout/PageTitle/PageTitle';
 import { Server, Shield, Lock, Eye, Cpu, Share2, CheckCircle, Key  } from 'react-feather';
 
 const Home = () => {
@@ -75,7 +74,11 @@ const Home = () => {
 
         <div className={styles.homeContainer}>
             {/* 1. Video intro */}
-            <PageTitle videoSrc={introVideo} />
+            <div className={styles.pageTitle}>
+                <video autoPlay muted loop playsInline preload="auto" className={styles.videoBackground}>
+                    <source src={introVideo} type="video/mp4" />
+                </video>
+            </div>
 
             {/* 2. What we do */}
             <section className={styles.whatWeDoSection}>

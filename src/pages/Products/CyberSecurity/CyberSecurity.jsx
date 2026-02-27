@@ -5,7 +5,7 @@ import ProductList from "../../../components/UI/ProductList/ProductList";
 
 
 import antiddos_device_img from "../../../assets/image/cyber_security/antiddos_device.png"
-import videoBackground from "../../../assets/video/cyber_security_product_background.mp4";
+import imgBg from "../../../assets/image/cyber_security/cyber-security_bg.jpg";
 const CyberSecurity = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -37,7 +37,7 @@ const CyberSecurity = () => {
     return (
         <div>
             {/* 1. Page title */}
-            <PageTitle title="CYBER SECURITY" videoSrc={videoBackground} />
+            <PageTitle title="CYBER SECURITY" imgSrc={imgBg} />
             {/* 2. Content section */}
             <div className={styles.contentSection}>
                 <h1 className={styles.sectionTitle}>Our Cyber Security Solutions</h1>

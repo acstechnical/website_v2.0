@@ -4,8 +4,7 @@ import PageTitle from '../../../components/Layout/PageTitle/PageTitle';
 import hpcSampleImage from '../../../assets/image/hpc_solutions/hpc_sample_01.png';
 import switchImage from '../../../assets/image/hpc_solutions/hpc_arch_1.png';
 import platformImage from '../../../assets/image/hpc_solutions/hpc_5.png';
-import backgroundVideo from '../../../assets/video/hpc_solutions_background.mp4';
-
+import imgBg from '../../../assets/image/hpc_solutions/hpc_solution_bg.jpg';
 const HPC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -19,7 +18,7 @@ const HPC = () => {
   return (
     <div className={styles.hpcSolutionContainer}>
       {/* 1. Page title */}
-      <PageTitle title="HIGH PERFORMANCE COMPUTING SOLUTIONS" videoSrc={backgroundVideo} />
+      <PageTitle title="HIGH PERFORMANCE COMPUTING SOLUTIONS" imgSrc={imgBg} />
 
       {/* 1. HPC Intro Section */}
       <section className={styles.overviewDesc}>

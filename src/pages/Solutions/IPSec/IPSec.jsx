@@ -1,6 +1,5 @@
 import {useEffect} from 'react';
 import PageTitle from '../../../components/Layout/PageTitle/PageTitle';
-import backgroundVideo from '../../../assets/video/ipsec_solutions_background.mp4';
 import styles from './IPSec.module.css';
 import ipsecDescImg_1 from '../../../assets/image/ipsec/ipsec_desc_01.png';
 import ipsecDescImg_2 from '../../../assets/image/ipsec/ipsec_desc_02.png';
@@ -11,7 +10,7 @@ import ipsec_solution_1 from '../../../assets/image/ipsec/ipsec_solution_01.png'
 import ipsec_solution_2 from '../../../assets/image/ipsec/ipsec_solution_02.png';
 import ipsec_solution_3 from '../../../assets/image/ipsec/ipsec_solution_03.png';
 import ipsec_solution_4 from '../../../assets/image/ipsec/ipsec_solution_04.png';
-
+import imgBg from '../../../assets/image/ipsec/ipsec_bg.jpg';
 
 const IPSec = () => {
     useEffect(() => {
@@ -26,7 +25,7 @@ const IPSec = () => {
     return (
         <div>   
             {/* 1. Page title */}
-            <PageTitle title="IPSec (Internet Protocol Security)" videoSrc={backgroundVideo} />
+            <PageTitle title="IPSec (Internet Protocol Security)" imgSrc={imgBg} />
 
             {/* 2. introSection */}
             <section className={styles.introSection}>

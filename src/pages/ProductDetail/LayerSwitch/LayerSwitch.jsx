@@ -5,7 +5,7 @@ import FeatureItem from '../../../components/UI/FeatureItem/FeatureItem';
 import PageTitle from '../../../components/Layout/PageTitle/PageTitle';
 import PrevPageBtn from '../../../components/UI/PrevPageBtn/PrevPageBtn';
 
-import backgroundVideo from "../../../assets/video/networking-devices_product_background.mp4";
+import imgBg from "../../../assets/image/networking_device/networking-device_bg.jpg";
 
 const LayerSwitch = () => {
     useEffect(() => {
@@ -20,7 +20,7 @@ const LayerSwitch = () => {
     return (
         <div>
             {/* 1.Page title */}
-            <PageTitle title="ACS Layer 2/3/4 Switch - Switch on FPGA" videoSrc={backgroundVideo} />
+            <PageTitle title="ACS Layer 2/3/4 Switch - Switch on FPGA" imgSrc={imgBg} />
 
             {/* 2. Technical Specifications */}
             <section className={styles.overviewSection}>

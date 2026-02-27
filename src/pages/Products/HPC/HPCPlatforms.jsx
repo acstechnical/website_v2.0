@@ -5,7 +5,7 @@ import FeaturesTab from "./components/FeaturesTab/FeaturesTab";
 import TechProcess from "./components/TechProcess/TechProcess";
 import VideoShowcase from "./components/VideoShowcase/VideoShowcase";
 
-import backgroundVideo from "../../../assets/video/hpc_product_background.mp4";
+import imgBg from "../../../assets/image/hpc_product/hpc_product_bg.jpg";
 import hpc_example from "../../../assets/image/hpc_product/hpc_example.png";
 import hpc_ai_1 from "../../../assets/image/hpc_product/hpc_ai_1.png";
 
@@ -21,7 +21,7 @@ const HPCPlatforms = () => {
   return (
     <div>
       {/* 1. Page title */}
-      <PageTitle title="HIGH PERFORMANCE COMPUTING PLATFORMS" videoSrc={backgroundVideo} />
+      <PageTitle title="HIGH PERFORMANCE COMPUTING PLATFORMS" imgSrc={imgBg} />
 
       {/* 2. High Performance Computing Platforms */}  
       <section className={styles.hpcPlatformsSection}>

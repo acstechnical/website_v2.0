@@ -4,7 +4,7 @@ import PageTitle from "../../../components/Layout/PageTitle/PageTitle";
 import ProductList from "../../../components/UI/ProductList/ProductList";
 import { data } from "./data";
 
-import backgroundVideo from "../../../assets/video/networking-devices_product_background.mp4";
+import imgBg from "../../../assets/image/networking_device/networking-device_bg.jpg";
 
 const NetworkingDevices = () => {
     useEffect(() => {
@@ -19,7 +19,7 @@ const NetworkingDevices = () => {
     return (
         <div>
             {/* 1. Page title */}
-            <PageTitle title="NETWORKING DEVICES" videoSrc={backgroundVideo} />
+            <PageTitle title="NETWORKING DEVICES" imgSrc={imgBg} />
 
             
 

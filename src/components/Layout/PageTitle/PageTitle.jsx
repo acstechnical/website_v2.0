@@ -1,12 +1,10 @@
 import React from 'react';
 import styles from './PageTitle.module.css';
 
-const PageTitle = ({ title, videoSrc }) => {
+const PageTitle = ({ title, imgSrc }) => {
   return (
     <div className={styles.pageTitle}>
-        <video autoPlay muted loop playsInline preload="auto" className={styles.videoBackground}>
-            <source src={videoSrc} type="video/mp4" />
-        </video>
+        <img src={imgSrc} alt="Page Title Background" className={styles.imgBg} />
         <div className={styles.overlay}></div>
         <h1>{title}</h1>
     </div>
