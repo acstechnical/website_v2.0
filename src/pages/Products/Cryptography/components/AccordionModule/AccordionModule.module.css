@@ -1,0 +1,45 @@
+.module {
+  margin-bottom: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.moduleTitle {
+  padding: 16px 20px;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  color: #111827;
+  font-size: var(--body-size);
+  font-weight: var(--fw-medium);
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+.moduleTitle:hover {
+  background-color: #e9ecef;
+}
+
+.moduleTitle.active {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.icon {
+  font-size: 0.875rem;
+  transition: transform 0.2s ease;
+}
+
+.moduleContent {
+  padding: 20px;
+  background-color: #ffffff;
+  color: #334155;
+  font-size: var(--body-size);
+  line-height: 1.6;
+  border-top: 1px solid var(--border-color);
+}

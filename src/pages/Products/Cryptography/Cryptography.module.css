@@ -123,14 +123,58 @@
   display: block;
 }
 
-/* Responsive cho điện thoại */
-@media (max-width: 768px) {
-  .arch-grid {
-    grid-template-columns: 1fr;
-  }
+.detailsSection{
+    margin-top: 20px;
 }
 
+.subContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
+.subImageWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.subImageWrapper img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.subText h4 {
+    font-size: var(--body-size);
+    font-weight: var(--fw-regular);
+}
+.subText ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.subText li {
+    margin-top: 10px;
+    font-size: var(--body-size);
+    font-weight: var(--fw-light);
+    line-height: 1.6;
+}
+
+.subTitle {
+    font-size: var(--body-size);
+    font-weight: var(--fw-medium);
+    border-bottom: 1px solid #000;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.subSection {
+    margin-bottom: 40px;
+}
 @media (max-width: 768px) {
     .scadaSection {
         grid-template-columns: 1fr; 
@@ -144,3 +188,4 @@
         grid-template-columns: 1fr;
     }
 }
+

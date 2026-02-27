@@ -1,19 +1,21 @@
+import React, { useState } from 'react';
+import styles from './AccordionModule.module.css';
+
 const AccordionModule = ({ title, children, defaultOpen = false }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
-    <div className="module">
+    <div className={styles.module}>
       <h3 
-        className={`module_title ${isOpen ? 'active' : ''}`} 
+        className={`${styles.moduleTitle} ${isOpen ? styles.active : ''}`} 
         onClick={() => setIsOpen(!isOpen)}
-        style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
       >
         {title}
-        <span>{isOpen ? '▲' : '▼'}</span>
+        <span className={styles.icon}>{isOpen ? '▲' : '▼'}</span>
       </h3>
       
       {isOpen && (
-        <div className="module_content">
+        <div className={styles.moduleContent}>
           {children}
         </div>
       )}
