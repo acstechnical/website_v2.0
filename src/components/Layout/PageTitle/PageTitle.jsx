@@ -3,8 +3,15 @@ import styles from './PageTitle.module.css';
 
 const PageTitle = ({ title, imgSrc }) => {
   return (
-    <div className={styles.pageTitle}>
-        <img src={imgSrc} alt="Page Title Background" className={styles.imgBg} />
+    // <div className={styles.pageTitle}>
+    //     <img src={imgSrc} alt="Page Title Background" className={styles.imgBg} />
+    //     <div className={styles.overlay}></div>
+    //     <h1>{title}</h1>
+    // </div>
+    <div 
+      className={styles.pageTitle} 
+      style={{ backgroundImage: `url(${imgSrc})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+    >
         <div className={styles.overlay}></div>
         <h1>{title}</h1>
     </div>
