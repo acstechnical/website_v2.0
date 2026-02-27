@@ -3,8 +3,8 @@
   background-color: var(--secondary-color); 
 }
 .container {
-  max-width: auto;
-  margin: 0 auto;
+  margin: 0 auto;    
+  padding: 0 20px;   
 }
 
 .accordionWrapper {

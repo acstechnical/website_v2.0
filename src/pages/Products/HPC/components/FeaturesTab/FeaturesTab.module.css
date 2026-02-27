@@ -16,9 +16,8 @@
 }
 
 .container {
-  max-width: auto;
-  min-height: auto;
-  padding: 0 50px;
+  margin: 0 auto;    
+  padding: 0 20px;
 }
 
 @media (max-width: 1024px) {

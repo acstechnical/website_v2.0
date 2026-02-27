@@ -1,7 +1,7 @@
 /* Khung chứa chung để căn giữa nội dung */
 .container {
-  max-width: auto;
-  margin: 0 50px;
+  margin: 0 auto;    /* Căn giữa container */
+  padding: 0 20px;   /* Padding thay cho margin 50px để an toàn trên mobile */
 }
 
 .sectionTitle {
@@ -29,6 +29,16 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.whatWeDoSection, 
+.solutionsSection, 
+.productsSection {
+  position: relative; 
+  z-index: 2; /* Cao hơn pageTitle */
+  background-color: #ffffff; /* QUAN TRỌNG: Phải có màu nền để che đi video nếu nó bị tràn */
 }
 
 
