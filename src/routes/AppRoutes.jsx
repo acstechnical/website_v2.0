@@ -20,11 +20,11 @@ import CyberSecurity from '../pages/Products/CyberSecurity/CyberSecurity';
 import Cryptography from '../pages/Products/Cryptography/Cryptography';
 
 // Import các trang chi tiết sản phẩm của NetworkingDevices
-import SdnSwitch from '../pages/ProductDetail/SdnSwitch.jsx/SdnSwitch';
-import LayerSwitch from '../pages/ProductDetail/LayerSwitch/LayerSwitch';
+import SdnSwitch from '../pages/ProductDetail/NetworkingDevices/SdnSwitch/SdnSwitch';
+import LayerSwitch from '../pages/ProductDetail/NetworkingDevices/LayerSwitch/LayerSwitch';
 
 // Import các trang chi tiết sản phẩm của CyberSecurity
-import AntiDDoS_Device from '../pages/ProductDetail/AntiDDoS/AntiDDoS_Device';
+import AntiDDoS_Device from '../pages/ProductDetail/CyberSecurity/AntiDDoS/AntiDDoS_Device';
 const AppRoutes = () => {
   return (
     <Routes>

@@ -5,6 +5,7 @@
   padding: 20px 10px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   transition: all 0.3s ease;
   height: 100%; /* Giúp các thẻ cao bằng nhau */
 }
@@ -28,6 +29,7 @@
 }
 
 
+
 .title {
   font-size: var(--body-size);
   font-weight: var(--fw-medium);
@@ -35,9 +37,13 @@
 }
 
 .description {
-  font-size: var(--decription-size);
+  font-size: var(--description-size);
   font-weight: var(--fw-light);
   line-height: 1.6;
-  flex-grow: 1; 
+  margin-bottom: 12px;
+}
+
+.description:last-child {
+  margin-bottom: 0;
 }
 

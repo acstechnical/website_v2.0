@@ -1,18 +1,18 @@
 .card {
   display: flex;
   gap: 16px;
-  padding: 24px;
+  padding: 10px 10px;
   background: #ffffff;
-  border: 1px solid var(--border-color); 
   border-radius: 12px;
   transition: all 0.3s ease;
   height: 100%;
 }
 
-.card:hover {
-  border-color: #3b82f6;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-}
+/* .card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+  border-color: var(--border-color);
+} */
 
 .iconWrapper {
   flex-shrink: 0;
@@ -28,16 +28,15 @@
 
 .title {
   margin: 0 0 8px 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #1e293b;
+  font-size: var(--body-size);
+  font-weight: var(--fw-medium);
 }
 
 .descLine {
   margin: 0 0 4px 0; /* Khoảng cách giữa các dòng */
   font-size: var(--description-size);
-  color: #64748b;
-  line-height: 1.5;
+  font-weight: var(--fw-light);
+  line-height: 1.6;
 }
 
 .descLine:last-child {

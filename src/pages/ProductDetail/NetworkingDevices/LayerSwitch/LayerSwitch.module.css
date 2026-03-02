@@ -1,0 +1,55 @@
+.container {
+  margin: 0 auto;    
+  padding: 0 20px;   
+}
+.title {
+  color: var(--primary-color);
+  font-size: var(--header1-size);
+  font-weight: var(--fw-medium);
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: var(--body-size);
+  font-weight: var(--fw-light);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.titleSection {
+  padding: 20px 0 10px 0;
+}
+
+.sectionTitle {
+  font-size: var(--header2-size);
+  font-weight: var(--fw-regular);
+  color: #000;
+  margin-bottom: 15px;
+  border-left: 2px solid var(--primary-color);
+  padding-left: 15px;
+  display: inline-block;
+}
+.overviewSection {
+  padding:10px 0;
+}
+
+.layerSection {
+  padding: 10px 0;
+}
+
+.layerSection ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.layerSection li {
+  margin-bottom: 10px;
+  /* padding-left: 10px; */
+  position: relative;
+}
+
+li ul {
+    list-style: none;
+    padding-left: 0;
+}
+
