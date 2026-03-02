@@ -19,7 +19,7 @@ const AntiDDoS = () => {
 
     useEffect(() => {
         // Đổi tiêu đề tab trình duyệt
-        document.title = "ACS SDN - Switch on FPGA | Acronics Solutions"; 
+        document.title = "ACS Network Security Device | Acronics Solutions"; 
     }, []);
 
     return (
@@ -164,7 +164,7 @@ const AntiDDoS = () => {
                 </section>
 
                 {/* PrevPageBtn */}
-                <PrevPageBtn linkTo="/products/cybersecurity" text="See more our cybersecurity products"/>
+                <PrevPageBtn linkTo="/products/cyber-security" text="See more our cybersecurity products"/>
             </div>
         </div>
     );
