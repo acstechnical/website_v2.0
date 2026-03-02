@@ -71,12 +71,11 @@
   border: none;
   text-align: left;
   padding: 15px 0;
-  font-size: 18px;
-  color: var(--text-body); /* Màu xám bình thường */
+  font-size: var(--body-size);
+  color: #000; /* Màu xám bình thường */
   cursor: pointer;
-  border-bottom: 1px solid #e5e7eb; /* Đường kẻ mờ ngăn cách các mục */
+  border-bottom: 1px solid var(--border-color); /* Đường kẻ mờ ngăn cách các mục */
   transition: all 0.3s ease;
-  font-family: 'Be Vietnam Pro', sans-serif;
   line-height: 1.5;
   border-left: 3px solid transparent;
   padding-left: 12px;
@@ -84,7 +83,7 @@
 
 @media (max-width: 1024px) {
   .tabButton {
-    font-size: 16px;
+    /* font-size: 16px; */
     padding: 12px 0;
     padding-left: 10px;
   }
@@ -92,7 +91,7 @@
 
 @media (max-width: 768px) {
   .tabButton {
-    font-size: 14px;
+    /* font-size: 14px; */
     padding: 12px 12px;
     border-left: none;
     min-height: 44px;
@@ -104,7 +103,7 @@
 
 @media (max-width: 480px) {
   .tabButton {
-    font-size: 13px;
+    /* font-size: 13px; */
     padding: 10px 10px;
     min-height: 40px;
   }
@@ -142,7 +141,8 @@
 }
 
 .listItem {
-  font-size: var(--description-size);
+  font-size: var(--body-size);
+  font-weight: var(--fw-light);
   color: #000000;
   margin-bottom: 15px; /* Khoảng cách giữa các gạch đầu dòng */
   line-height: 1.6;
@@ -150,14 +150,14 @@
 
 @media (max-width: 1024px) {
   .listItem {
-    font-size: 15px;
+    /* font-size: 15px; */
     margin-bottom: 12px;
   }
 }
 
 @media (max-width: 768px) {
   .listItem {
-    font-size: 14px;
+    /* font-size: 14px; */
     margin-bottom: 10px;
     line-height: 1.55;
   }
@@ -165,7 +165,7 @@
 
 @media (max-width: 480px) {
   .listItem {
-    font-size: 13px;
+    /* font-size: 13px; */
     margin-bottom: 8px;
     line-height: 1.5;
   }
