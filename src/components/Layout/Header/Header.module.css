@@ -67,11 +67,18 @@
   border-top: 3px solid var(--primary-color);
   padding: 10px 0;
   flex-direction: column;
+  z-index: 1000;
 }
 
 /* Hiển thị menu khi hover vào thẻ cha */
 .dropdownContainer:hover .dropdownMenu {
   display: flex;
+}
+
+/* Align language dropdown menu to the right */
+.dropdownContainer:last-child .dropdownMenu {
+  left: auto;
+  right: 0;
 }
 
 .dropdownItem {
@@ -80,6 +87,9 @@
   text-decoration: none;
   font-weight: var(--fw-medium);
   transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .dropdownItem:hover {
@@ -87,46 +97,33 @@
   color: #ffffff;
 }
 
-/* Nút chuyển đổi ngôn ngữ (Toggle Switch) */
-.langToggle {
+/* Container hiển thị lá cờ chính */
+.langDisplay {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: #e0e0e0;
-  border-radius: 20px;
-  width: 70px;
-  height: 34px;
-  padding: 0 5px;
   cursor: pointer;
-  position: relative;
-  user-select: none;
+  padding: 5px;
 }
 
-.langCircle {
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-  z-index: 1;
+.flagMain {
+  width: 28px; /* Điều chỉnh kích thước cờ trên header */
+  height: auto;
+  border-radius: 2px;
+  transition: transform 0.2s;
 }
 
-/* Vị trí của vòng tròn khi ở tiếng Việt */
-.langCircle.vi {
-  transform: translateX(34px);
+.langDisplay:hover .flagMain {
+  transform: scale(1.1);
 }
-.flagSelect {
-  display: flex;
-  gap: 5px;
-  justify-content: space-around;
-  flex: 1;
-  z-index: 2; /* Đảm bảo các cờ nằm trên vòng tròn */
-}
+
+/* Icon trong menu xổ xuống */
 .flagIcon {
   width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  object-fit: fill;
+  height: auto;
+  margin-right: 10px;
+}
+
+
+@media (max-width:768px) {
+  
 }
