@@ -1,10 +1,10 @@
 import React from 'react';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 export const AppProvider = ({ children }) => {
   return (
-    <HashRouter>
+    <BrowserRouter basename="/website-version_3.0/">
       {children}
-    </HashRouter>
+    </BrowserRouter>
   );
 };

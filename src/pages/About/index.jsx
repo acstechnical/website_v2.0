@@ -8,10 +8,6 @@ import hpc_img from '../../assets/image/hpc_solutions/hpc_sample_01.png';
 const About = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, []);
-
-    useEffect(() => {
-        // Đổi tiêu đề tab trình duyệt
         document.title = "About | Acronics Solutions"; 
     }, []);
 
@@ -22,7 +18,7 @@ const About = () => {
             <div className={styles.pageTitleLeftContent}>
               <h1 className={styles.title}>About Acronics</h1>
               <p className={styles.pageSubtitle}>Acronics Solutions provides enterprise-class compute, network, storage and sensor processing accelerator products featuring Altera, Intel and AMD FPGA technology. These programmable products dramatically increase application performance and energy efficiency while reducing total cost of ownership.</p>
-              <p className={styles.pageSubtitle}>Here’s to the Acronics Solutions.</p>
+              <p className={styles.pageSubtitle}>Here's to the Acronics Solutions.</p>
             </div>
             <div className={styles.pageTitleImage}>
               <img src={asc_logo_white} alt="About Acronics" />
