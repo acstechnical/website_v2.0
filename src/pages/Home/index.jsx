@@ -35,7 +35,7 @@ const Home = () => {
         icon: Lock
         },
         {
-        title: 'IPS/IDS',
+        title: 'IDS/IPS',
         description: 'Real-time network intrusion detection and prevention, proactively defending against threats.',
         linkTo: '/solutions/ids-ips',
         icon: Eye

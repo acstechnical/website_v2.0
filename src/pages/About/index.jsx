@@ -2,7 +2,9 @@ import React, { useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import styles from './About.module.css';
 import asc_logo_white from '../../assets/image/global/logo_white_without_text.svg';
-import img_1 from '../../assets/image/about/image_1.jpg';
+import team_1_img from '../../assets/image/about/team_1.jpg';
+import team_2_img from '../../assets/image/about/team_2.jpg';
+import team_3_img from '../../assets/image/about/team_3.jpg';
 import ipsec_img from '../../assets/image/about/ipsec_sample_01.png';
 import hpc_img from '../../assets/image/hpc_solutions/hpc_sample_01.png';
 const About = () => {
@@ -30,7 +32,7 @@ const About = () => {
               <h2 className={styles.sectionTitle}>Our Product</h2>
               <p className={styles.description}>Acronics Solutions has one of the newest FPGA product portfolios in the market. We offer a wide range of premium quality, production-ready FPGA cards with Intel, Altera, and AMD FPGAs. Develop and deploy your application quicker and with reduced cost and risk by having us integrate your FPGA cards into our certified, integrated FPGA servers. We also provide a range of solutions to simplify application development on your Acronics Solutions FPGA card. Our solutions include development tools supporting, system monitoring, and FPGA examples. These are optimized for specific applications such as data capture and networking acceleration.</p>
               <div className={styles.ourProductImageWrapper}>
-                <img src={img_1} alt="Our Product" className={styles.ourProductImage} />
+                <img src={team_1_img} alt="Our Product" className={styles.ourProductImage} />
               </div>
             </section>
 
@@ -40,15 +42,15 @@ const About = () => {
                 <h2 className={styles.sectionTitle}>Our Values</h2>
                 <p className={styles.description}>Acronics Solutions thrives on teamwork, quality and leadership. We work hard to understand our customer's and the market's needs, lead the industry in developing new technologies and build quality into our products and services.</p>
               </div>
-              <div className={styles.ourValuesImageWrapper}>
-                <img src={ipsec_img} alt="IPSec product" className={styles.ourValuesImage} />            
+              <div className={styles.imageWrapper}>
+                <img src={team_2_img} alt="Our Values" className={styles.ourValuesImage} />            
               </div>
             </section>
 
             {/* 3. Our Team */}
             <section className={styles.ourTeamSection}>
-              <div className={styles.ourTeamImageWrapper}>
-                <img src={hpc_img} alt="HPC" className={styles.ourTeamImage} />            
+              <div className={styles.imageWrapper}>
+                <img src={team_3_img} alt="Our Team" className={styles.ourTeamImage} />            
               </div>
               <div className={styles.content}>
                 <h2 className={styles.sectionTitle}>Our Team</h2>
