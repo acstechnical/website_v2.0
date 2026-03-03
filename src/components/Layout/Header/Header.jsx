@@ -7,16 +7,19 @@ import vieFlag from '../../../assets/image/global/flag-for-flag-vietnam-svgrepo-
 
 const Header = () => {
   const [language, setLanguage] = useState('en');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
-  const toggleLanguage = () => {
-    setLanguage(prevLang => (prevLang === 'en' ? 'vi' : 'en'));
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    setActiveDropdown(null); // Reset dropdown khi đóng menu
   };
 
-  // Hàm xử lý khi thay đổi select
-  const handleLanguageChange = (event) => {
-    setLanguage(event.target.value);
-    console.log("Ngôn ngữ hiện tại:", event.target.value);
-    // Tại đây bạn có thể gọi hàm i18n.changeLanguage(event.target.value) nếu dùng i18next
+  const toggleDropdown = (name) => {
+    // Chỉ xử lý toggle click trên màn hình mobile
+    if (window.innerWidth <= 768) {
+      setActiveDropdown(activeDropdown === name ? null : name);
+    }
   };
 
   const changeLanguage = (lang) => {
@@ -26,71 +29,87 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      {/* 1.Logo */}
+      {/* 1. Nút 3 thanh ngang (Hamburger) - Xuất hiện đầu tiên trên mobile */}
+      <div className={styles.hamburger} onClick={toggleMenu}>
+        <span className={`${styles.bar} ${isMenuOpen ? styles.barActive : ''}`}></span>
+        <span className={`${styles.bar} ${isMenuOpen ? styles.barActive : ''}`}></span>
+        <span className={`${styles.bar} ${isMenuOpen ? styles.barActive : ''}`}></span>
+      </div>
+
+      {/* 2. Logo */}
       <div className={styles.logo}>
-        <Link to="/">
+        <Link to="/" onClick={() => setIsMenuOpen(false)}>
           <img src={logo} alt="Acronics Logo"/>
         </Link>
       </div>
 
-      {/* 2.Menu */}
-      <nav className={styles.nav}>
-        {/* Dropdown: Solutions */}
-        <div className={styles.dropdownContainer}>
-          <span className={styles.navLink}>Solutions</span>
-          <div className={styles.dropdownMenu}>
-            <Link to="/solutions/hpc" className={styles.dropdownItem}>HPC</Link>
-            <Link to="/solutions/anti-ddos" className={styles.dropdownItem}>Anti-DDoS</Link>
-            <Link to="/solutions/ipsec" className={styles.dropdownItem}>IPSec</Link>
-            <Link to="/solutions/ids-ips" className={styles.dropdownItem}>IDS/IPS</Link>
-          </div>
-        </div>
-
-        {/* Dropdown: Products */}
-        <div className={styles.dropdownContainer}>
-          <span className={styles.navLink}>Products</span>
-          <div className={styles.dropdownMenu}>
-            <Link to="/products/hpc-platforms" className={styles.dropdownItem}>HPC Platforms</Link>
-            <Link to="/products/networking-devices" className={styles.dropdownItem}>Networking Devices</Link>
-            <Link to="/products/cyber-security" className={styles.dropdownItem}>Cyber Security</Link>
-            <Link to="/products/cryptography" className={styles.dropdownItem}>Cryptography</Link>
-          </div>
-        </div>
-
-        {/* Link: About & Contact */}
-        <Link to="/about" className={styles.navLink}>About</Link>
-        <Link to="/contact" className={styles.navLink}>Contact</Link>
-
-        {/* 3. Dropdown Ngôn ngữ*/}
-        <div className={styles.dropdownContainer}>
-          {/* Hiển thị lá cờ hiện tại */}
-          <div className={styles.langDisplay}>
-            <img 
-              src={language === 'en' ? engFlag : vieFlag} 
-              alt="Current Language" 
-              className={styles.flagMain} 
-            />
-          </div>
-
-          {/* Danh sách lựa chọn khi hover */}
-          <div className={styles.dropdownMenu}>
-            <div 
-              className={styles.dropdownItem} 
-              onClick={() => changeLanguage('en')}
-            >
-              <img src={engFlag} alt="English" className={styles.flagIcon} />
-              <span>English</span>
-            </div>
-            <div 
-              className={styles.dropdownItem} 
-              onClick={() => changeLanguage('vi')}
-            >
-              <img src={vieFlag} alt="Tiếng Việt" className={styles.flagIcon} />
-              <span>Tiếng Việt</span>
+      {/* 3. Phần bên phải: Menu + Language */}
+      <div className={styles.rightSection}>
+        {/* Menu điều hướng */}
+        <nav className={`${styles.nav} ${isMenuOpen ? styles.navActive : ''}`}>
+          {/* Dropdown: Solutions */}
+          <div className={styles.dropdownContainer}>
+            <span className={styles.navLink} onClick={() => toggleDropdown('solutions')}>
+              Solutions
+            </span>
+            <div className={`${styles.dropdownMenu} ${activeDropdown === 'solutions' ? styles.showMobile : ''}`}>
+              <Link to="/solutions/hpc" className={styles.dropdownItem} onClick={toggleMenu}>HPC</Link>
+              <Link to="/solutions/anti-ddos" className={styles.dropdownItem} onClick={toggleMenu}>Anti-DDoS</Link>
+              <Link to="/solutions/ipsec" className={styles.dropdownItem} onClick={toggleMenu}>IPSec</Link>
+              <Link to="/solutions/ids-ips" className={styles.dropdownItem} onClick={toggleMenu}>IDS/IPS</Link>
             </div>
           </div>
+
+          {/* Dropdown: Products */}
+          <div className={styles.dropdownContainer}>
+            <span className={styles.navLink} onClick={() => toggleDropdown('products')}>
+              Products
+            </span>
+            <div className={`${styles.dropdownMenu} ${activeDropdown === 'products' ? styles.showMobile : ''}`}>
+              <Link to="/products/hpc-platforms" className={styles.dropdownItem} onClick={toggleMenu}>HPC Platforms</Link>
+              <Link to="/products/networking-devices" className={styles.dropdownItem} onClick={toggleMenu}>Networking Devices</Link>
+              <Link to="/products/cyber-security" className={styles.dropdownItem} onClick={toggleMenu}>Cyber Security</Link>
+              <Link to="/products/cryptography" className={styles.dropdownItem} onClick={toggleMenu}>Cryptography</Link>
+            </div>
+          </div>
+
+          {/* Link: About & Contact */}
+          <Link to="/about" className={styles.navLink} onClick={toggleMenu}>About</Link>
+          <Link to="/contact" className={styles.navLink} onClick={toggleMenu}>Contact</Link>
+        </nav>
+
+        {/* Nút Ngôn ngữ */}
+        <div className={styles.langWrapper}>
+          <div className={styles.dropdownContainer}>
+            {/* Hiển thị lá cờ hiện tại */}
+            <div className={styles.langDisplay}>
+              <img 
+                src={language === 'en' ? engFlag : vieFlag} 
+                alt="Current Language" 
+                className={styles.flagMain} 
+              />
+            </div>
+
+            {/* Danh sách lựa chọn khi hover */}
+            <div className={styles.dropdownMenu}>
+              <div 
+                className={styles.dropdownItem} 
+                onClick={() => changeLanguage('en')}
+              >
+                <img src={engFlag} alt="English" className={styles.flagIcon} />
+                <span>English</span>
+              </div>
+              <div 
+                className={styles.dropdownItem} 
+                onClick={() => changeLanguage('vi')}
+              >
+                <img src={vieFlag} alt="Tiếng Việt" className={styles.flagIcon} />
+                <span>Tiếng Việt</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </nav>
+      </div>
     </header>
   );
 }
