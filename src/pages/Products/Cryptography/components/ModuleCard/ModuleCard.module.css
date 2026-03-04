@@ -1,15 +1,17 @@
 .moduleCard {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  /* aspect-ratio: 1 / 1; */
+  max-width: 100%;
+  min-height: 80px;
   background-color: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: 20px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
-  
+  margin: 0;
   /* Đổ bóng nhẹ phía dưới */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
@@ -26,6 +28,14 @@
   font-weight: var(--fw-regular);
   text-align: center;
   line-height: 1.3;
-  word-wrap: break-word;
+  /* word-wrap: break-word; */
+  overflow-wrap: anywhere; 
+  word-break: break-word;
+}
+
+@media (min-width: 769px) {
+  .moduleCard {
+    aspect-ratio: 1 / 1;
+  }
 }
 

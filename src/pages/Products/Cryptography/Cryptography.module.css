@@ -1,6 +1,9 @@
 .container {
   margin: 0 auto;    
   padding: 0 20px;   
+  padding: 0 15px; /* Giảm nhẹ padding trên mobile */
+  box-sizing: border-box; /* Bắt buộc để padding không đẩy rộng container */
+  overflow-x: hidden;
 }
 
 .sectionTitle {
@@ -22,14 +25,19 @@
 }
 .scadaGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+  width: 100%;
 }
 
 .scadaImageWrapper {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.scadaImageWrapper img {
+  width: 100%;
 }
 
 
@@ -182,10 +190,25 @@
     
     .scadaGrid {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .archGrid {
         grid-template-columns: 1fr;
+    }
+    .subContent {
+        grid-template-columns: 1fr; /* Chuyển về 1 cột */
+        gap: 20px;
+    }
+
+    .flowCard {
+        flex-direction: column; /* Chuyển ảnh xuống dưới hoặc lên trên chữ */
+        text-align: center;
+    }
+
+    .flowImage {
+        width: 100%; /* Cho phép ảnh to ra theo màn hình hoặc giới hạn lại */
+        max-width: 200px;
     }
 }
 
