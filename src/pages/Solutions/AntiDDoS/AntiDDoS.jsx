@@ -6,7 +6,11 @@ import exampleImg from '../../../assets/image/antiddos_solutions/explain_02.png'
 import imgBg from '../../../assets/image/antiddos_solutions/anti-ddos_solution_bg.webp';
 import ServiceCard from '../../../components/UI/ServiceCard_2/ServiceCard_2';
 import HelpCard from '../../../components/UI/ServiceCard_3/ServiceCard_3';
-import { XCircle, Shield, Zap, Settings, Share2, Clock, AlertTriangle, Server, ShieldOff } from 'react-feather';
+import antiddos_spec_en from '../../../assets/image/antiddos_solutions/antiddos_spec_en.pdf';
+import antiddos_spec_vn from '../../../assets/image/antiddos_solutions/antiddos_spec_vi.pdf';
+import splunk_spec from '../../../assets/image/antiddos_solutions/splunk_spec.pdf';
+import firewall_spec from '../../../assets/image/antiddos_solutions/firewall_spec.pdf';
+import { XCircle, Shield, Zap, Settings, Share2, Clock, AlertTriangle, Server, ShieldOff,FileText } from 'react-feather';
 
 const AntiDDoS = () => {
   useEffect(() => {
@@ -148,6 +152,41 @@ const AntiDDoS = () => {
           </div>
         </div>
 
+      </section>
+
+      {/* 5. Specification */}
+      <section className={styles.specContainer}>
+        <div className={styles.container}>
+          <h1 className={styles.sectionTitle}>Technical Specifications</h1>
+          <div className={styles.specGrid}>
+            <div className={styles.AntiDDoS_Spec}>
+              <h2 className={styles.specTitle}>Anti-DDoS specifications</h2>
+              <a href={antiddos_spec_en} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
+                  <FileText size={20} />
+                  <span>View Anti-DDoS specification PDF</span>
+              </a>
+              <a href={antiddos_spec_vn} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
+                  <FileText size={20} />
+                  <span>Xem thông số kỹ thuật Anti-DDoS</span>
+              </a>
+            </div>
+            <div className={styles.firewall_Spec}>
+              <h2 className={styles.specTitle}>Firewall specifications</h2>
+              <a href={firewall_spec} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
+                  <FileText size={20} />
+                  <span>Xem thông số kỹ thuật Firewall</span>
+              </a>
+            </div>
+            <div className={styles.splunk_Spec}>
+              <h2 className={styles.specTitle}>Splunk specifications</h2>
+              <a href={splunk_spec} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
+                  <FileText size={20} />
+                  <span>Xem thông số kỹ thuật Splunk</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
       </section>
     </div>
   );

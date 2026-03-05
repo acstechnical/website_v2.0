@@ -8,7 +8,7 @@ import PrevPageBtn from '../../../../components/UI/PrevPageBtn/PrevPageBtn';
 
 import imgBg from "../../../../assets/image/networking_device/networking-device_bg.webp";
 import sdn_sample from "../../../../assets/image/ProductDetail/SDN/SDN_sample_01.png";
-import sdn_spec from "../../../../assets/image/ProductDetail/SDN/sdn_spec.png";
+import sdn_spec from "../../../../assets/image/ProductDetail/SDN/sdn_spec.pdf";
 import {Globe, Cpu, Activity, Grid, Sliders, Key, Code, TrendingUp, Monitor, Tool, Clock, Zap, Shield, Layers,FileText} from 'react-feather';
 const SdnSwitch = () => {
     useEffect(() => {
@@ -46,7 +46,7 @@ const SdnSwitch = () => {
                         <img src={sdn_sample} alt="ACS SDN Switch"/>
                         <a href={sdn_spec} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
                             <FileText size={20} />
-                            <span>View SDN-Switch specification image</span>
+                            <span>View SDN-Switch specification PDF</span>
                         </a>
                     </div>
                 </div>

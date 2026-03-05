@@ -20,6 +20,9 @@
 .imageWrapper {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   justify-content: center;
   margin: 10px 0;
 }
@@ -116,4 +119,34 @@
         gap: 40px;
         justify-content: space-around;
     }
+}
+
+
+.specButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background-color: #fff;
+  color: var(--primary-color);
+  font-size: var(--body-size);
+  font-weight: var(--fw-medium);
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.specButton:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gridSpec {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }

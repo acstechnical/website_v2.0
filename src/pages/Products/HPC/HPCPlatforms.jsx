@@ -8,6 +8,9 @@ import VideoShowcase from "./components/VideoShowcase/VideoShowcase";
 import imgBg from "../../../assets/image/hpc_product/hpc_product_bg.webp";
 import hpc_example from "../../../assets/image/hpc_product/hpc_example.png";
 import hpc_ai_1 from "../../../assets/image/hpc_product/hpc_ai_1.png";
+import hpc_plat_en from "../../../assets/image/hpc_product/hpc_plat_en.pdf";
+import hpc_plat_vi from "../../../assets/image/hpc_product/hpc_plat_vi.pdf";
+import {FileText} from 'react-feather';
 
 const HPCPlatforms = () => {
   useEffect(() => {
@@ -40,6 +43,16 @@ const HPCPlatforms = () => {
           </div>
           <div className={styles.imageWrapper}>
             <img src={hpc_example} alt="HPC Platforms"/>
+            <div className={styles.gridSpec}>
+              <a href={hpc_plat_en} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
+                <FileText size={20} />
+                <span>View  HPC specification PDF</span>
+              </a> 
+              <a href={hpc_plat_vi} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
+                <FileText size={20} />
+                <span>Xem thông số kỹ thuật HPC</span>
+              </a> 
+            </div>
           </div>
         </div>
       </section>
