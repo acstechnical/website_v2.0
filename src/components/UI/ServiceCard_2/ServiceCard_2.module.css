@@ -34,6 +34,7 @@
   font-size: var(--header2-size);
   font-weight: var(--fw-medium);
   margin-bottom: 12px;
+  text-align: center;
 }
 
 .description {
