@@ -36,17 +36,17 @@ const SdnSwitch = () => {
                         </p>
                         <h2 className={styles.sectionTitle}>Overview</h2>
                         <p className={styles.text}>
-                            The ACS SDN - Switch, built on advanced FPGA (Programmable Gate Array) technology, is a next-network switch designed for telecom providers, and centers adopting Software-Defined Networking (SDN).
+                            The ACS SDN - Switch, built on advanced FPGA (Programmable Gate Array) technology, is a next-generation network switch designed for telecom providers, and data centers adopting Software-Defined Networking (SDN).
                         </p>
                         <p className={styles.text}>
-                            It delivers the full functionality of traditional Layer 2/ Layer 3 switches while supporting OpenFlow 1.3 and 1.4 dynamic network configuration, intelligent traffic and centralized management. Compared to software-based solutions, the ACS SDN - Switch offers significantly higher, energy efficiency, and security 
+                            It delivers the full functionality of traditional Layer 2 / Layer 3 switches while supporting OpenFlow 1.3 and 1.4 dynamic network configuration, intelligent traffic and centralized management. Compared to software-based solutions, the ACS SDN - Switch offers significantly higher performance, energy efficiency, and security 
                         </p>
                     </div>
                     <div className={styles.imageWrapper}>
                         <img src={sdn_sample} alt="ACS SDN Switch"/>
                         <a href={sdn_spec} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
                             <FileText size={20} />
-                            <span>View SDN-Switch specification PDF</span>
+                            <span>View SDN-Switch Specification PDF</span>
                         </a>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ const SdnSwitch = () => {
                     <div className={styles.container}>
                         <h2 className={styles.sectionTitle}>Technical Highlights</h2>
                         <ul>
-                            <li className={styles.text}>Architecture: FPGA-based SDN switch supporting OpenFlow 1.3 / 1.4</li>
+                            <li className={styles.text}>Architecture: FPGA-Based SDN switch supporting OpenFlow 1.3 / 1.4</li>
                             <li className={styles.text}>Network Layers: Layer 2 / Layer 3 switching capabilities</li>
                             <li className={styles.text}>Performance: Hardware-accelerated packet processing with Multi-Core optimization</li>
                             <li className={styles.text}>Management Interface: Open SDN planes with centralized control</li>

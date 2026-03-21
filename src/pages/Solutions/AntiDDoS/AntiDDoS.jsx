@@ -77,12 +77,12 @@ const AntiDDoS = () => {
   return (
     <div className={styles.antiddosContainer}>
       {/* 1. Page title */}
-      <PageTitle title="DISTRIBUTED DENIAL OF SERVICE (DDoS) PROTECTION" imgSrc={imgBg} />
+      <PageTitle title="Distributed Denial of Service (DDoS) protection" imgSrc={imgBg} />
 
       {/* 2. Anti-DDoS Intro Section */}
       <section className={styles.introSection}>
         <div className={styles.container}>
-          <h1 className={styles.sectionTitle}>What is a DDoS Attack</h1>
+          <h1 className={styles.sectionTitle}>What is a DDoS attack?</h1>
           <div className={styles.cardGrid}>
             {solutionsData.map((item, index) => (
               <ServiceCard

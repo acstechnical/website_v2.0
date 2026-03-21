@@ -176,3 +176,84 @@
       grid-template-columns: 1fr 1fr;
     }
 }
+/* Styles cho phần Device */
+/* --- 8. IPSec Device & Demo Section (Chỉnh sửa riêng biệt) --- */
+.deviceSection {
+  padding: 40px 0;
+  border-bottom: 1px solid #000000; 
+}
+
+/* In đậm tiêu đề chính */
+.deviceSection .sectionTitle {
+  font-weight: 700 !important;
+  margin-bottom: 30px;
+}
+
+.deviceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* CHỈ CHỈNH SỬA imageWrapper TRONG PHẦN DEVICE */
+.deviceImageSide .imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Tỉ lệ 16:9 khớp với video */
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: transparent; /* BỎ NỀN XÁM Ở ĐÂY */
+  margin: 0; /* Reset margin nếu cần */
+}
+
+/* Căn giữa ảnh tuyệt đối trong khung 16:9 */
+.deviceImageSide .imageWrapper img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Căn giữa hoàn hảo */
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Đổi thành contain để thấy hết thiết bị, không bị cắt */
+  max-width: 100%;
+}
+
+/* In đậm tiêu đề/mô tả dưới ảnh */
+.deviceImageSide .description {
+  font-weight: 700 !important; 
+  margin-top: 15px;
+  text-align: center;
+  color: #000;
+}
+
+/* Style cho Video và Caption Video */
+.videoResponsive {
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.videoResponsive iframe {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border: 0;
+}
+
+.videoCaption {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 700 !important; /* In đậm tiêu đề dưới video */
+  font-style: normal; /* Bỏ in nghiêng nếu muốn giống bên trái */
+  color: #000;
+}
+
+@media (min-width: 1024px) {
+  .deviceGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+}

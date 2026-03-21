@@ -18,7 +18,7 @@ const Home = () => {
     const solutionsData = [
         {
         title: 'HPC Solutions',
-        description: 'High-performance computing solutions for research and development, optimizing big data processing workflows.',
+        description: 'High-Performance Computing solutions for research and development, optimizing big data processing workflows.',
         linkTo: '/solutions/hpc',
         icon: Server
         },
@@ -36,7 +36,7 @@ const Home = () => {
         },
         {
         title: 'IDS/IPS',
-        description: 'Real-time network intrusion detection and prevention, proactively defending against threats.',
+        description: 'Real-time network Intrusion Detection and Prevention, proactively defending against threats.',
         linkTo: '/solutions/ids-ips',
         icon: Eye
         }
@@ -46,7 +46,7 @@ const Home = () => {
     const productsData = [
         {
         title: 'HPC Platforms',
-        description: 'Advanced high-performance computing platforms, supporting a wide range of scientific and engineering applications.',
+        description: 'Advanced High-Performance Computing platforms, supporting a wide range of scientific and engineering applications.',
         linkTo: '/products/hpc-platforms',
         icon: Cpu
         },
@@ -85,7 +85,7 @@ const Home = () => {
                 <div className={styles.container}>
                     <h1 className={styles.sectionTitle}>What we do?</h1>
                     <p className={styles.introText}>
-                        <span style={{color: 'var(--primary-color)'}}>Acronics Solutions</span> Inc provides products and solutions in Cybersecurity, Network security, as well as network infrastructure equipments and High-performance Computing systems based on MPSoC FPGA technology. Our solutions enhance processing performance, optimize energy efficiency, and reduce the total cost of ownership for enterprises.
+                        <span style={{color: 'var(--primary-color)'}}>Acronics Solutions</span> Inc provides products and solutions in Cybersecurity, Network security, as well as network infrastructure equipments and High-Performance Computing systems based on MPSoC FPGA technology. Our solutions enhance processing performance, optimize energy efficiency, and reduce the total cost of ownership for enterprises.
                     </p>
                     <hr className={styles.divider} />
                 </div>

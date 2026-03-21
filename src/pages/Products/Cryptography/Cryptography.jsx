@@ -58,7 +58,7 @@ const Cryptography = () => {
   return (
     <div>
       {/* PAGE TITLE */}
-      <PageTitle title="CRYPTOGRAPHY" imgSrc={cryptographyImg} />
+      <PageTitle title="Cryptography" imgSrc={cryptographyImg} />
 
       {/* content */}
       <div className={styles.container}>

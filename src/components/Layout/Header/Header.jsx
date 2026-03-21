@@ -55,7 +55,7 @@ const Header = () => {
             <div className={`${styles.dropdownMenu} ${activeDropdown === 'solutions' ? styles.showMobile : ''}`}>
               <Link to="/solutions/hpc" className={styles.dropdownItem} onClick={toggleMenu}>HPC</Link>
               <Link to="/solutions/anti-ddos" className={styles.dropdownItem} onClick={toggleMenu}>Anti-DDoS</Link>
-              <Link to="/solutions/ipsec" className={styles.dropdownItem} onClick={toggleMenu}>IPSec</Link>
+              <Link to="/solutions/ipsec" className={styles.dropdownItem} onClick={toggleMenu}>IPSec-VPN</Link>
               <Link to="/solutions/ids-ips" className={styles.dropdownItem} onClick={toggleMenu}>IDS/IPS</Link>
             </div>
           </div>

@@ -19,7 +19,7 @@ const NetworkingDevices = () => {
     return (
         <div>
             {/* 1. Page title */}
-            <PageTitle title="NETWORKING DEVICES" imgSrc={imgBg} />
+            <PageTitle title="Networking Devices" imgSrc={imgBg} />
 
             
 

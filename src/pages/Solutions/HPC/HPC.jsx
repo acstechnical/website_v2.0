@@ -18,17 +18,17 @@ const HPC = () => {
   return (
     <div className={styles.hpcSolutionContainer}>
       {/* 1. Page title */}
-      <PageTitle title="HIGH PERFORMANCE COMPUTING SOLUTIONS" imgSrc={imgBg} />
+      <PageTitle title="High-Performance Computing Solutions" imgSrc={imgBg} />
 
       {/* 1. HPC Intro Section */}
       <section className={styles.overviewDesc}>
         <div className={styles.container}>
-          <h1 className={styles.sectionTitle}>High Performance Computing Solutions</h1>
+          <h1 className={styles.sectionTitle}>High-Performance Computing Solutions</h1>
           <p className={styles.introText}>
             <span style={{color: 'var(--primary-color)'}}>Acronics Solutions</span> High Performance Computing (HPC) refers to the use of powerful computing systems and parallel processing techniques to solve complex computational problems and process massive amounts of data at high speed.
           </p>
           <p className={styles.introText}>
-            HPC systems consist of interconnected compute nodes working together to deliver significantly greater performance than traditional systems. This architecture is widely applied in fields such as <span style={{color: 'var(--primary-color)'}}>AI and Machine Learning, scientific simulation, engineering design, quantitative finance, and big data analytics.</span>
+            HPC systems consist of interconnected compute nodes working together to deliver significantly greater performance than traditional systems. This architecture is widely applied in fields such as <span style={{color: 'var(--primary-color)'}}>AI and machine learning, scientific simulation, engineering design, quantitative finance, and big data analytics.</span>
           </p>
           <p className={styles.introText}>
             <span style={{color: 'var(--primary-color)'}}>The Acronics Solutions HPC Platform</span> provides an integrated and scalable environment for managing workloads, monitoring performance, and optimizing costs — enabling organizations to fully leverage computational power for research, innovation, and production.
@@ -82,7 +82,7 @@ const HPC = () => {
             {/* Cột 1: Nội dung Chữ (Nằm bên trái) */}
             <div className={styles.switchContent}>
               <h1 className={styles.sectionTitle}>
-                GIGABIT SWITCH Architecture
+                Gigabit Switch Architecture
               </h1>
 
               {/* Feature 1 */}
@@ -120,7 +120,7 @@ const HPC = () => {
     <section className={styles.platformSection}>
         <div className={styles.container}>
           <div className={styles.platformGrid}>
-            <h1 className={styles.sectionTitle}>HPC system platform developed on a self-developed Cluster Gigabit Switch architecture.</h1>
+            <h1 className={styles.sectionTitle}>HPC System Platform Developed on a Self-Developed Cluster Gigabit Switch Architecture.</h1>
             <div className={styles.platformImageWrapper}>
               <img src={platformImage} alt="HPC System Platform Diagram" />
             </div>

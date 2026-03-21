@@ -12,33 +12,35 @@ const CyberSecurity = () => {
     }, []);
 
     useEffect(() => {
-        document.title = "Cyber Security - Acronics";
+        document.title = "Cyber Security | Acronics";
     }, []);
     
     const data = [
         {
-        id: "anti-ddos-device",  
-        linkTo: '/products/cyber-security/anti-ddos-device',
-        title: 'ANTI-DDoS DEVICE - DDoS DEFENDER',
-        image: antiddos_device_img,
-        features: [
-            'DDoS Attack Detection:',
-            '- Detect attacks based on thresholds and packet attributes per IP to identify anomalies and recognize attacks.',
-            '- Detectable attack types: Bandwidth attacks: UDP/ICMP Flood,...; Protocol attacks: SYN Flood,..; Application layer attacks: HTTP Flood, HTTPS Flood, Slowloris,..',
-            '- Attack detection time under 1 second.',
-            'DDoS Attack Mitigation:',
-            '- Implement Challenge-Response mechanism to block attack packets and ensure service for legitimate customers; Bandwidth limiting.',
-            'DDoS Attack Monitoring:',
-            '- Monitor ongoing attacks: Detailed attack information (IP details, bandwidth info, attack type)'
+            id: "anti-ddos-device",  
+            linkTo: '/products/cyber-security/anti-ddos-device',
+            title: 'Anti-DDoS Device - DDoS Defender', // Chuyển từ ALL CAPS sang Title Case để thanh thoát hơn
+            image: antiddos_device_img,
+            features: [
+                'DDoS Attack Detection:',
+                'Detects attacks based on thresholds and packet attributes per IP to identify anomalies and recognize attacks.',
+                'Supports detection of bandwidth attacks (UDP/ICMP Flood), protocol attacks (SYN Flood), and application layer attacks (HTTP/HTTPs Flood, Slowloris).',
+                'Attack detection time is optimized to under 1 second.',
+                'DDoS Attack Mitigation:',
+                'Implements Challenge-Response mechanisms to block malicious packets while ensuring service for legitimate users.',
+                'Integrated bandwidth limiting and traffic shaping.',
+                'DDoS Attack Monitoring:',
+                'Real-time monitoring of ongoing attacks with detailed insights (IP details, bandwidth metrics, and attack types).'
             ]
         }
     ];
 
     return (
         <div>
-            {/* 1. Page title */}
-            <PageTitle title="CYBER SECURITY" imgSrc={imgBg} />
-            {/* 2. Content section */}
+            {/* 1. Page Title */}
+            <PageTitle title="Cyber Security" imgSrc={imgBg} />
+            
+            {/* 2. Content Section */}
             <div className={styles.contentSection}>
                 <h1 className={styles.sectionTitle}>Our Cyber Security Solutions</h1>
                 <ProductList 

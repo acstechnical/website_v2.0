@@ -125,3 +125,97 @@
     grid-template-columns: repeat(2,1fr);
   }
 }
+/* thêm mới css cho GUI Showcase */
+/* --- GUI Showcase Section --- */
+.guiSection {
+    margin-bottom: 40px;
+    padding: 40px 0;
+    /* Có thể thêm background nhạt để phân tách vùng nếu muốn: background: #f9f9f9; */
+}
+
+.guiGrid {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr; /* Tỷ lệ ảnh rộng hơn text */
+    gap: 30px;
+    align-items: start;
+}
+
+.guiDisplayCard {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
+}
+
+.tabBar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.tabButton {
+    background: none;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    color: #888;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: var(--fw-medium);
+}
+
+.tabButton:hover {
+    color: var(--primary-color);
+}
+
+.activeTab {
+    color: var(--primary-color) !important;
+    background-color: #eef6ff; /* Màu nền xanh nhạt khi được chọn */
+    border-radius: 6px;
+}
+
+.tabContent {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fafafa;
+}
+
+.guiImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.guiInfoTitle {
+    font-size: 1.25rem;
+    font-weight: var(--fw-medium);
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* --- Responsive Update --- */
+@media (max-width: 992px) {
+    .guiGrid {
+        grid-template-columns: 1fr; /* Chuyển về 1 cột trên tablet/mobile */
+    }
+    
+    .guiInfo {
+        order: -1; /* Đưa text lên trên ảnh ở mobile (tùy chọn) */
+    }
+}
+
+@media (max-width: 768px) {
+    .tabBar {
+        justify-content: center;
+    }
+    
+    .tabButton {
+        font-size: 0.8rem;
+    }
+}

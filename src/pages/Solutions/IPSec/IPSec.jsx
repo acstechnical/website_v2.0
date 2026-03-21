@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 import PageTitle from '../../../components/Layout/PageTitle/PageTitle';
 import styles from './IPSec.module.css';
 import ipsecDescImg_1 from '../../../assets/image/ipsec/ipsec_desc_01.png';
@@ -10,20 +10,21 @@ import ipsec_solution_1 from '../../../assets/image/ipsec/ipsec_solution_01.png'
 import ipsec_solution_2 from '../../../assets/image/ipsec/ipsec_solution_02.png';
 import ipsec_solution_3 from '../../../assets/image/ipsec/ipsec_solution_03.png';
 import ipsec_solution_4 from '../../../assets/image/ipsec/ipsec_solution_04.png';
+import ipsec_device from '../../../assets/image/ipsec/ipsec_device.jpg';
 import imgBg from '../../../assets/image/ipsec/ipsec_bg.webp';
 
 const IPSec = () => {
     useEffect(() => {
-            window.scrollTo(0, 0);
-        }, []);
+        window.scrollTo(0, 0);
+    }, []);
 
-     useEffect(() => {
-              // Đổi tiêu đề tab trình duyệt
-              document.title = "IPSec Solutions | Acronics Solutions"; 
-          }, []);
+    useEffect(() => {
+        // Đổi tiêu đề tab trình duyệt
+        document.title = "IPSec Solutions | Acronics Solutions";
+    }, []);
 
     return (
-        <div>   
+        <div>
             {/* 1. Page title */}
             <PageTitle title="IPSec (Internet Protocol Security)" imgSrc={imgBg} />
 
@@ -32,7 +33,7 @@ const IPSec = () => {
                 <div className={styles.container}>
                     <h1 className={styles.sectionTitle}>What is IPSec?</h1>
                     <p className={styles.description}>
-                        IPSec operates in two modes to exchange traffic for Virtual Private Networks in the most secure ways. There are two types of IPSec modes: tunnel mode and transport mode.
+                        IPSec operates in two modes to exchange traffic for Virtual Private Networks in the most secure ways. There are two types of IPSec modes: Transport and Tunnel.
                     </p>
                     <div className={styles.introContent}>
                         <div className={styles.featureList}>
@@ -45,7 +46,7 @@ const IPSec = () => {
                             <div className={styles.featureItem}>
                                 <h2 className={styles.featureTitle}>Tunnel Mode</h2>
                                 <p className={styles.featureDesc}>
-                                    Tunnel mode encapsulates the original IP packet into another packet in the VPN tunnel to protect traffic. This method authenticates peers using a pre-shared key with IKE or digital certificates with IKE.                                
+                                    Tunnel mode encapsulates the original IP packet into another packet in the VPN tunnel to protect traffic. This method authenticates peers using a pre-shared key with IKE or digital certificates with IKE.
                                 </p>
                             </div>
                         </div>
@@ -53,14 +54,14 @@ const IPSec = () => {
                             <img src={ipsecDescImg_1} alt="IPSec Modes" />
                         </div>
                     </div>
-                </div>    
+                </div>
             </section>
 
             {/* 3. How Does IPSec Work */}
             <section className={styles.howItWorksSection}>
                 <div className={styles.container}>
                     <div className={styles.howItWorkContent}>
-                        <h1 className={styles.sectionTitle}>How Does IPSec Work?</h1>
+                        <h1 className={styles.sectionTitle}>How does IPSec work?</h1>
                         <p className={styles.description}>
                             Now that you understand the components of IPSec, let's explore how these components work to create a secure path for the sender and receiver to communicate.
                         </p>
@@ -78,7 +79,7 @@ const IPSec = () => {
                     <h1 className={styles.sectionTitle}>IPSec Overview</h1>
                     <div className={styles.contentOverview}>
                         <p className={styles.description}>
-                            The trend of applying new generation networks, centralized and capable of processing large amounts of data such as Big Data, Cloud Computing has become a necessity recently.
+                            The trend of applying new generation networks, centralized and capable of processing large amounts of data such as big data, cloud computing has become a necessity recently.
                         </p>
                         <p className={styles.description}>
                             The speed of data transfer, the speed of the communication & connection standards are increased vigorously (e.g, Fiber optic networks with speeds of 100G, 400G, and even 800G are being deployed). Along with that, security requirements for data transmission over public networks are also increasing.
@@ -95,9 +96,9 @@ const IPSec = () => {
             <section className={styles.goalSection}>
                 <div className={styles.container}>
                     <div className={styles.goalContent}>
-                        <h1 className={styles.sectionTitle}>Goal of this Proof of Concept Development</h1>
+                        <h1 className={styles.sectionTitle}>Goal of This Proof of Concept Development</h1>
                         <p className={styles.description}>
-                        Develop PoC for high-speed IPSec system, security and authentication applications in Data Centers, in Cloud systems,security meets real-time applications.
+                            Develop PoC for high-speed IPSec system, security and authentication applications in Data Centers, in Cloud systems,security meets real-time applications.
                         </p>
                         <div className={styles.imageWrapper}>
                             <img src={ipsecDescImg_3} alt="How Does IPSec Work?" />
@@ -110,13 +111,13 @@ const IPSec = () => {
             {/* 6. Some solutions for IPSec Systems */}
             <section className={styles.solutionsSection}>
                 <div className={styles.container}>
-                    <h1 className={styles.sectionTitle}>Some Solutions for IPSec Systems</h1>
+                    <h1 className={styles.sectionTitle}>Solutions for IPSec Systems</h1>
                     <div className={styles.solutionsContent}>
                         <div className={styles.imageWrapper}>
-                            <img src={ipsec_solution_1} alt="Solutions 1 - Full software based IPSec" />
+                            <img src={ipsec_solution_1} alt="Solutions 1: Full software-based IPSec" />
                         </div>
                         <div className={styles.imageWrapper}>
-                            <img src={ipsec_solution_2} alt="Solutions 2 - IPSec accelerates the cryptography by AES, SHA on FPGA" />
+                            <img src={ipsec_solution_2} alt="Solutions 2 - IPSec cryptography acceleration via AES, SHA on FPGA" />
                         </div>
                         <div className={styles.imageWrapper}>
                             <img src={ipsec_solution_3} alt="Solutions 3 - IPSec accelerates the cryptography by multiple cores" />
@@ -133,12 +134,12 @@ const IPSec = () => {
                 <div className={styles.container}>
                     <div className={styles.highSpeedContent}>
                         <div className={styles.leftContent}>
-                            <h1 className={styles.sectionTitle}>High Speed IPSec Development on Solution 2nd</h1>
+                            <h1 className={styles.sectionTitle}>High-Speed IPSec Development on Solution 2</h1>
                             <p className={styles.description}>
-                                Phase 1st (IKE SA): by IKE Daemon - Linux Crypto Framework.
+                                Phase 1(IKE SA): Managed by IKE Daemon and Linux Crypto Framework.
                             </p>
                             <p className={styles.description}>
-                                Phase 2nd (IPsec SA) by GCS solution: Plugin Crypto driver and HW accelerator for AES, SHA.
+                                Phase 2(IPsec SA)Using GCS Solution: Plugin Crypto Driver and HW Accelerator for AES and SHA.
                             </p>
                         </div>
                         <div className={styles.imageWrapper}>
@@ -147,6 +148,40 @@ const IPSec = () => {
                     </div>
                 </div>
             </section>
+
+            {/* 8. IPSec Device & Demo */}
+            <section className={styles.deviceSection}>
+                <div className={styles.container}>
+                    <h1 className={styles.sectionTitle}>IPSec Device and Demonstration</h1>
+
+                    <div className={styles.deviceGrid}>
+                        {/* Cột 1: Hình ảnh thiết bị */}
+                        <div className={styles.deviceImageSide}>
+                            <div className={styles.imageWrapper}>
+                                <img src={ipsec_device} alt="IPSec Hardware Device" />
+                            </div>
+                            <p className={styles.description}>
+                                IPSec system development on SoC-FPGA ZCU102/ZCU106 with 10G/20G Ethernet connectivity
+                            </p>
+                        </div>
+
+                        {/* Cột 2: Video Demo */}
+                        <div className={styles.deviceVideoSide}>
+                            <div className={styles.videoResponsive}>
+                                <iframe
+                                    src="https://www.youtube.com/embed/oYX6m0V9mWc"
+                                    
+                                    title="IPSec System Demo"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <p className={styles.videoCaption}>High-speed IPSec-VPN based on MPSoC-FPGA technology</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
             {/* 8. IPSec System Development Demonstration */}
             <section className={styles.demoSection}>
@@ -158,19 +193,19 @@ const IPSec = () => {
                                 <div className={styles.featureItem}>
                                     <h2 className={styles.featureTitle}>Hardware</h2>
                                     <ul>
-                                        <li className={styles.featureDesc}>FPGA Zedboard with Dual ARMs microprocessors</li>
-                                        <li className={styles.featureDesc}>Dual Ethernet ports</li>
+                                        <li className={styles.featureDesc}>SoC-FPGA ZCU102 (4 ARMs Cores) or ZCU106 (6 ARMs Cores)</li>
+                                        <li className={styles.featureDesc}>Support 10G/20G Ethernet for high speed connectivity</li>
                                     </ul>
                                 </div>
                                 <div className={styles.featureItem}>
                                     <h2 className={styles.featureTitle}>OS and Crypto Framework</h2>
                                     <ul>
                                         <li className={styles.featureDesc}>Linux OS with IPsec protocol stack</li>
-                                        <li className={styles.featureDesc}>Strongswan</li>
+                                        <li className={styles.featureDesc}>StrongSwan</li>
                                     </ul>
                                 </div>
                                 <div className={styles.featureItem}>
-                                    <h2 className={styles.featureTitle}>IPSec build-in</h2>
+                                    <h2 className={styles.featureTitle}>Built-in IPsec Hardware</h2>
                                     <ul>
                                         <li className={styles.featureDesc}>Hardware AES, SHA-256</li>
                                         <li className={styles.featureDesc}>Cryptography driver</li>

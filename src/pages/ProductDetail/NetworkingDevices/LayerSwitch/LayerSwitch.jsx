@@ -15,7 +15,7 @@ const LayerSwitch = () => {
 
     useEffect(() => {
         // Đổi tiêu đề tab trình duyệt
-        document.title = "ACS Layer 2/3/4 Switch  - Switch on FPGA | Acronics Solutions"; 
+        document.title = "ACS Layer 2/3/4 Switch - Switch on FPGA | Acronics Solutions"; 
     }, []);
 
     return (
@@ -31,7 +31,7 @@ const LayerSwitch = () => {
                         <p className={styles.description} style={{fontStyle: 'italic'}}>
                             Advanced Multi-Layer Network Switch
                         </p>
-                        <h2 className={styles.sectionTitle}>Technical Specifications - Layer 2/3/4 Switching Capabilities</h2>
+                        <h2 className={styles.sectionTitle}>Technical Specifications: Layer 2/3/4 Switching Capabilities</h2>
                     </div>
                 </div>
             </section>
@@ -63,9 +63,9 @@ const LayerSwitch = () => {
                         <li className={styles.text}>1,024-entry packet modification table used to build L2 headers for next-hop forwarding.</li>
                         <li className={styles.text}>Configurable ECMP (Equal Cost Multi-Path) support based on:
                             <ul>
-                                <li className={styles.text}>L3 protocol field</li>
+                                <li className={styles.text}>L3 Protocol Field</li>
                                 <li className={styles.text}>L3 ToS</li>
-                                <li className={styles.text}>L4 source/destination ports</li>
+                                <li className={styles.text}>L4 Source/Destination Ports</li>
                             </ul>
                         </li>
                         <li className={styles.text}>ECMP supports up to 256 parallel paths.</li>
@@ -82,7 +82,7 @@ const LayerSwitch = () => {
                         <FeatureItem
                             iconName={Filter}
                             title="L2 classification rules include:"
-                            descriptions='Source port, Destination MAC, Source MAC, VLAN VID, VLAN PCP, VLAN CFI, Ethernet type.'
+                            descriptions='Source Port, Destination MAC, Source MAC, VLAN VID, VLAN PCP, VLAN CFI, Ethernet Type.'
                         />
                         <FeatureItem
                             iconName={Shield}
@@ -108,7 +108,7 @@ const LayerSwitch = () => {
                         <li className={styles.text}>16 ingress admission control entries.</li>
                         <li className={styles.text}>Strict Priority Scheduler for deterministic traffic handling.</li>
                         <li className={styles.text}>Egress queue resource limiter with four independent configuration sets.</li>
-                        <li className={styles.text}>Multicast/Broadcast storm control with dedicated token buckets for flooding, broadcast, and multicast traffic.</li>
+                        <li className={styles.text}>Multicast/Broadcast Storm Control with dedicated token buckets for flooding, broadcast, and multicast traffic.</li>
                         <li className={styles.text}>Configurable per egress port, either packet-based or byte-based control.</li>
                     </ul>
                 </div>
