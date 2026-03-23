@@ -6,7 +6,7 @@ import TechProcess from "./components/TechProcess/TechProcess";
 import VideoShowcase from "./components/VideoShowcase/VideoShowcase";
 
 import imgBg from "../../../assets/image/hpc_product/hpc_product_bg.webp";
-import hpc_example from "../../../assets/image/hpc_product/hpc_example.png";
+import hpc_example from "../../../assets/image/hpc_product/hpc_example.jpg";
 import hpc_ai_1 from "../../../assets/image/hpc_product/hpc_ai_1.png";
 import hpc_plat_en from "../../../assets/image/hpc_product/hpc_plat_en.pdf";
 import hpc_plat_vi from "../../../assets/image/hpc_product/hpc_plat_vi.pdf";
@@ -151,38 +151,40 @@ const HPCPlatforms = () => {
 
       {/* 5. GUI Showcase*/}
       <section className={styles.guiSection}>
-        <h2 className={styles.sectionTitle}>GUI Showcase</h2>
-        <div className={styles.guiGrid}>
-          {/* KHỐI TRÁI: HIỂN THỊ TABS VÀ ẢNH */}
-          <div className={styles.guiDisplayCard}>
-            <div className={styles.tabBar}>
-              {guiData.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`${styles.tabButton} ${activeTab === tab.id ? styles.activeTab : ''}`}
-                >
-                  [{tab.label}]
-                </button>
-              ))}
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>GUI Showcase</h2>
+          <div className={styles.guiGrid}>
+            {/* KHỐI TRÁI: HIỂN THỊ TABS VÀ ẢNH */}
+            <div className={styles.guiDisplayCard}>
+              <div className={styles.tabBar}>
+                {guiData.map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`${styles.tabButton} ${activeTab === tab.id ? styles.activeTab : ''}`}
+                  >
+                    [{tab.label}]
+                  </button>
+                ))}
+              </div>
+
+              {/* Ảnh thay đổi theo activeTab kèm hiệu ứng fade-in đơn giản */}
+              <div className={styles.tabContent} key={activeTab}>
+                <img
+                  src={guiData[activeTab].image}
+                  alt={guiData[activeTab].label}
+                  className={styles.guiImage}
+                />
+              </div>
             </div>
 
-            {/* Ảnh thay đổi theo activeTab kèm hiệu ứng fade-in đơn giản */}
-            <div className={styles.tabContent} key={activeTab}>
-              <img
-                src={guiData[activeTab].image}
-                alt={guiData[activeTab].label}
-                className={styles.guiImage}
-              />
+            {/* KHỐI PHẢI: NỘI DUNG THAY ĐỔI THEO TAB */}
+            <div className={styles.guiInfo} key={`info-${activeTab}`}>
+                <h3 className={styles.guiInfoTitle}>{guiData[activeTab].title}</h3>
+                <p className={styles.text}>
+                  {guiData[activeTab].description}
+                </p>
             </div>
-          </div>
-
-          {/* KHỐI PHẢI: NỘI DUNG THAY ĐỔI THEO TAB */}
-          <div className={styles.guiInfo} key={`info-${activeTab}`}>
-            <h3 className={styles.guiInfoTitle}>{guiData[activeTab].title}</h3>
-            <p className={styles.text}>
-              {guiData[activeTab].description}
-            </p>
           </div>
         </div>
       </section>
@@ -192,7 +194,6 @@ const HPCPlatforms = () => {
           <VideoShowcase
             src="https://www.youtube.com/embed/68IyMgsF3v0"
             title="Overview of ML/DL-Based Malware Detection and Prevention on SoC-FPGA"
-
           />
 
           <VideoShowcase

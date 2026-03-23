@@ -179,14 +179,8 @@
 /* Styles cho phần Device */
 /* --- 8. IPSec Device & Demo Section (Chỉnh sửa riêng biệt) --- */
 .deviceSection {
-  padding: 40px 0;
+  padding: 20px 0;
   border-bottom: 1px solid #000000; 
-}
-
-/* In đậm tiêu đề chính */
-.deviceSection .sectionTitle {
-  font-weight: 700 !important;
-  margin-bottom: 30px;
 }
 
 .deviceGrid {
@@ -220,8 +214,9 @@
 }
 
 /* In đậm tiêu đề/mô tả dưới ảnh */
-.deviceImageSide .description {
-  font-weight: 700 !important; 
+.deviceImageSide .description, .videoCaption {
+  font-size: var(--body-size);
+  font-weight: var(--fw-regular);
   margin-top: 15px;
   text-align: center;
   color: #000;
@@ -242,13 +237,6 @@
   border: 0;
 }
 
-.videoCaption {
-  text-align: center;
-  margin-top: 15px;
-  font-weight: 700 !important; /* In đậm tiêu đề dưới video */
-  font-style: normal; /* Bỏ in nghiêng nếu muốn giống bên trái */
-  color: #000;
-}
 
 @media (min-width: 1024px) {
   .deviceGrid {

@@ -128,8 +128,8 @@
 /* thêm mới css cho GUI Showcase */
 /* --- GUI Showcase Section --- */
 .guiSection {
-    margin-bottom: 40px;
-    padding: 40px 0;
+    margin-bottom: 20px;
+    padding: 20px 0;
     /* Có thể thêm background nhạt để phân tách vùng nếu muốn: background: #f9f9f9; */
 }
 
@@ -148,6 +148,10 @@
     border: 1px solid #eee;
 }
 
+
+.guiInfo {
+    align-self: center;
+}
 .tabBar {
     display: flex;
     flex-wrap: wrap;

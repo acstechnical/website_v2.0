@@ -50,7 +50,7 @@
 .leftContent {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 30px;
+  gap: 10px;
 }
 .newTechSection {
   padding: 20px 0;
@@ -152,8 +152,7 @@
 }
 /* --- GUI Showcase Section --- */
 .guiSection {
-    margin-bottom: 40px;
-    padding: 40px 0;
+    padding: 20px 0 40px 0;
     background: #f9f9f9; /*-- Có thể thêm background nhạt để phân tách vùng nếu muốn --*/
 }
 
@@ -172,6 +171,9 @@
     border: 1px solid #eee;
 }
 
+.guiInfo {
+  align-self: center;
+}
 .tabBar {
     display: flex;
     flex-wrap: wrap;
@@ -216,11 +218,19 @@
     transition: opacity 0.3s ease;
 }
 
+
 .guiInfoTitle {
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
+    font-size: var(--header2-size);
     font-weight: var(--fw-medium);
     margin-bottom: 15px;
     color: #333;
+}
+
+.text {
+    font-size: var(--body-size);
+    font-weight: var(--fw-light);
+    line-height: 1.6;
 }
 
 /* --- Responsive Update --- */

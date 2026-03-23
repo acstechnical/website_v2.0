@@ -51,7 +51,7 @@
 
 .featureTitle {
     font-size: var(--header2-size);
-    font-weight: var(--fw-medium);
+    font-weight: var(--fw-regular);
     margin-bottom: 10px;
 }
 
