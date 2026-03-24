@@ -193,7 +193,7 @@ const HPCPlatforms = () => {
         <div className={styles.container}>
           <VideoShowcase
             src="https://www.youtube.com/embed/68IyMgsF3v0"
-            title="Overview of ML/DL-Based Malware Detection and Prevention on SoC-FPGA"
+            title="Overview of ML/DL-based malware detection and prevention on SoC-FPGA"
           />
 
           <VideoShowcase

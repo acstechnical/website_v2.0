@@ -82,7 +82,7 @@ const LayerSwitch = () => {
                         <FeatureItem
                             iconName={Filter}
                             title="L2 classification rules include:"
-                            descriptions='Source Port, Destination MAC, Source MAC, VLAN VID, VLAN PCP, VLAN CFI, Ethernet Type.'
+                            descriptions='Source Port, destination MAC, source MAC, VLAN VID, VLAN PCP, VLAN CFI, Ethernet type.'
                         />
                         <FeatureItem
                             iconName={Shield}
@@ -100,15 +100,15 @@ const LayerSwitch = () => {
             {/* 5. QoS and Traffic Management  */}
             <section className={styles.layerSection}>
                 <div className={styles.container}>
-                    <h2 className={styles.sectionTitle}>QoS and Traffic Management</h2>
+                    <h2 className={styles.sectionTitle}>QoS and Traffic management</h2>
                     <ul>
                         <li className={styles.text}>5,242,880-bit shared packet buffer memory (4,096 cells x 160 bytes each) shared among all ports.</li>
                         <li className={styles.text}>8 priority queues per egress port.</li>
                         <li className={styles.text}>Configurable egress queue mapping from IP ToS, MPLS EXP/TC, or VLAN PCP bits.</li>
                         <li className={styles.text}>16 ingress admission control entries.</li>
-                        <li className={styles.text}>Strict Priority Scheduler for deterministic traffic handling.</li>
+                        <li className={styles.text}>Strict priority scheduler for deterministic traffic handling.</li>
                         <li className={styles.text}>Egress queue resource limiter with four independent configuration sets.</li>
-                        <li className={styles.text}>Multicast/Broadcast Storm Control with dedicated token buckets for flooding, broadcast, and multicast traffic.</li>
+                        <li className={styles.text}>Multicast/Broadcast storm control with dedicated token buckets for flooding, broadcast, and multicast traffic.</li>
                         <li className={styles.text}>Configurable per egress port, either packet-based or byte-based control.</li>
                     </ul>
                 </div>
@@ -117,7 +117,7 @@ const LayerSwitch = () => {
             {/* 6.System Control and Management */}
              <section className={styles.layerSection}>
                 <div className={styles.container}>
-                    <h2 className={styles.sectionTitle}>System Control and Management</h2>
+                    <h2 className={styles.sectionTitle}>System control and Management</h2>
                     <ul>
                         <li className={styles.text}>Configuration interface for accessing configuration and status registers/tables.</li>
                         <li className={styles.text}>LLDP (Link Layer Discovery Protocol) frames can optionally be sent to the CPU for processing.</li>

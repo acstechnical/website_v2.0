@@ -96,7 +96,7 @@ const IPSec = () => {
             <section className={styles.goalSection}>
                 <div className={styles.container}>
                     <div className={styles.goalContent}>
-                        <h1 className={styles.sectionTitle}>Goal of This Proof of Concept Development</h1>
+                        <h1 className={styles.sectionTitle}>Goal of This Proof of Concept development</h1>
                         <p className={styles.description}>
                             Develop PoC for high-speed IPSec system, security and authentication applications in Data Centers, in Cloud systems,security meets real-time applications.
                         </p>
@@ -111,7 +111,7 @@ const IPSec = () => {
             {/* 6. Some solutions for IPSec Systems */}
             <section className={styles.solutionsSection}>
                 <div className={styles.container}>
-                    <h1 className={styles.sectionTitle}>Solutions for IPSec Systems</h1>
+                    <h1 className={styles.sectionTitle}>Solutions for IPSec systems</h1>
                     <div className={styles.solutionsContent}>
                         <div className={styles.imageWrapper}>
                             <img src={ipsec_solution_1} alt="Solutions 1: Full software-based IPSec" />
@@ -134,12 +134,12 @@ const IPSec = () => {
                 <div className={styles.container}>
                     <div className={styles.highSpeedContent}>
                         <div className={styles.leftContent}>
-                            <h1 className={styles.sectionTitle}>High-Speed IPSec Development on Solution 2</h1>
+                            <h1 className={styles.sectionTitle}>High-Speed IPSec development on Solution 2</h1>
                             <p className={styles.description}>
-                                Phase 1(IKE SA): Managed by IKE Daemon and Linux Crypto Framework.
+                                Phase 1(IKE SA): Managed by IKE daemon and Linux crypto framework.
                             </p>
                             <p className={styles.description}>
-                                Phase 2(IPsec SA)Using GCS Solution: Plugin Crypto Driver and HW Accelerator for AES and SHA.
+                                Phase 2(IPsec SA) Using GCS Solution: Plugin crypto driver and HW accelerator for AES and SHA.
                             </p>
                         </div>
                         <div className={styles.imageWrapper}>
@@ -152,7 +152,7 @@ const IPSec = () => {
             {/* 8. IPSec Device & Demo */}
             <section className={styles.deviceSection}>
                 <div className={styles.container}>
-                    <h1 className={styles.sectionTitle}>IPSec Device and Demonstration</h1>
+                    <h1 className={styles.sectionTitle}>IPSec device and Demonstration</h1>
 
                     <div className={styles.deviceGrid}>
                         {/* Cột 1: Hình ảnh thiết bị */}
@@ -188,7 +188,7 @@ const IPSec = () => {
                 <div className={styles.container}>
                     <div className={styles.demoContent}>
                         <div className={styles.leftContent}>
-                            <h1 className={styles.sectionTitle}>IPSec System Development Demonstration</h1>
+                            <h1 className={styles.sectionTitle}>IPSec system development demonstration</h1>
                             <div className={styles.featureList}>
                                 <div className={styles.featureItem}>
                                     <h2 className={styles.featureTitle}>Hardware</h2>
@@ -205,7 +205,7 @@ const IPSec = () => {
                                     </ul>
                                 </div>
                                 <div className={styles.featureItem}>
-                                    <h2 className={styles.featureTitle}>Built-in IPsec Hardware</h2>
+                                    <h2 className={styles.featureTitle}>Built-in IPsec hardware</h2>
                                     <ul>
                                         <li className={styles.featureDesc}>Hardware AES, SHA-256</li>
                                         <li className={styles.featureDesc}>Cryptography driver</li>

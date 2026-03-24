@@ -82,7 +82,7 @@ const HPC = () => {
             {/* Cột 1: Nội dung Chữ (Nằm bên trái) */}
             <div className={styles.switchContent}>
               <h1 className={styles.sectionTitle}>
-                Gigabit Switch Architecture
+                Gigabit switch architecture
               </h1>
 
               {/* Feature 1 */}
@@ -90,16 +90,16 @@ const HPC = () => {
                 <h2 className={styles.featureTitle}>
                   {/* Badge 100% */}
                   <span className={styles.badge}>100%</span> 
-                  Technology Ownership
+                  Technology ownership
                 </h2>
                 <p className={styles.featureDesc}>
-                  Gigabit Switch systems and FPGA cards are designed and developed from the core.
+                  Gigabit switch systems and FPGA cards are designed and developed from the core.
                 </p>
               </div>
 
               {/* Feature 2 */}
               <div className={styles.featureItem}>
-                <h2 className={styles.featureTitle}>Flexible Scalability</h2>
+                <h2 className={styles.featureTitle}>Flexible scalability</h2>
                 <p className={styles.featureDesc}>
                   Easy expansion through cascading (8-port Switch, supporting 2-tier cascading with 8 FPGA cards per tier).
                 </p>
@@ -120,7 +120,7 @@ const HPC = () => {
     <section className={styles.platformSection}>
         <div className={styles.container}>
           <div className={styles.platformGrid}>
-            <h1 className={styles.sectionTitle}>HPC System Platform Developed on a Self-Developed Cluster Gigabit Switch Architecture.</h1>
+            <h1 className={styles.sectionTitle}>HPC system platform developed on a self-developed cluster gigabit switch architecture.</h1>
             <div className={styles.platformImageWrapper}>
               <img src={platformImage} alt="HPC System Platform Diagram" />
             </div>

@@ -60,11 +60,11 @@ const SdnSwitch = () => {
                     <div className={styles.container}>
                         <h2 className={styles.sectionTitle}>Applications</h2>
                         <ul>
-                            <li className={styles.text}>Internet Service Providers (ISPs) and Telecom Networks</li>
-                            <li className={styles.text}>Enterprise and Campus Networks</li>
-                            <li className={styles.text}>Cloud and Data Center Infrastructure</li>
-                            <li className={styles.text}>Research and Educational Networks</li>
-                            <li className={styles.text}>Smart City and IoT Infrastructure Systems</li>
+                            <li className={styles.text}>Internet Service Providers (ISPs) and Telecom networks</li>
+                            <li className={styles.text}>Enterprise and campus networks</li>
+                            <li className={styles.text}>Cloud and Data center infrastructure</li>
+                            <li className={styles.text}>Research and educational networks</li>
+                            <li className={styles.text}>Smart city and IoT infrastructure systems</li>
                         </ul>
                     </div>
                 </section>
@@ -77,9 +77,9 @@ const SdnSwitch = () => {
                             <li className={styles.text}>Architecture: FPGA-Based SDN switch supporting OpenFlow 1.3 / 1.4</li>
                             <li className={styles.text}>Network Layers: Layer 2 / Layer 3 switching capabilities</li>
                             <li className={styles.text}>Performance: Hardware-accelerated packet processing with Multi-Core optimization</li>
-                            <li className={styles.text}>Management Interface: Open SDN planes with centralized control</li>
+                            <li className={styles.text}>Management interface: Open SDN planes with centralized control</li>
                             <li className={styles.text}>Virtualization: Network and storage virtualization for modern data centers</li>
-                            <li className={styles.text}>Power Management: Dynamic active/inactive function control for energy efficiency</li>
+                            <li className={styles.text}>Power management: Dynamic active/inactive function control for energy efficiency</li>
                         </ul>
                     </div>
                 </section>
@@ -94,27 +94,27 @@ const SdnSwitch = () => {
                     <div className={styles.featuresGrid}>
                         <ServiceCard_3
                             Icon={Globe}
-                            title="Compliance with International Standards"
+                            title="Compliance with international standards"
                             description="Fully compatible with global telecommunications network standards."
                         />
                         <ServiceCard_3
                             Icon={Cpu}
-                            title="Integrated SDN Controller Support"
+                            title="Integrated SDN controller support"
                             description="Works seamlessly with OpenFlow-based SDN controllers and OF-DPA environments."
                         />
                         <ServiceCard_3
                             Icon={Activity}
-                            title="Real-Time Remote Operation"
+                            title="Real-time remote operation"
                             description="Enables real-time network configuration, monitoring, and optimization."
                         />
                         <ServiceCard_3
                             Icon={Sliders}
-                            title="Adaptive Traffic Control"
+                            title="Adaptive traffic control"
                             description="Dynamically manages and prioritizes traffic for efficient utilization."
                         />
                         <ServiceCard_3
                             Icon={Grid}
-                            title="Open and Extensible Design"
+                            title="Open and extensible design"
                             description="Based on open SDN standards for easy integration and long-term scalability."
                         />
                     </div>
@@ -128,27 +128,27 @@ const SdnSwitch = () => {
                     <div className={styles.featuresGrid}>
                         <FeatureItem
                             iconName={Key}
-                            title="Mastery of Core Technology"
+                            title="Mastery of Core technology"
                             descriptions='Full in-house design of integrated circuits, core logic, control software, and custom PCB boards. Guaranteed security, no hidden code, no backdoors.'
                         />
                         <FeatureItem
                             iconName={Code}
-                            title='Proprietary Algorithm Development'
+                            title='Proprietary algorithm development'
                             descriptions='Hardware-implemented OpenFlow algorithms on FPGA with proprietary management policies competing with software-based SDN platforms.'
                         />
                         <FeatureItem
                             iconName={TrendingUp}
-                            title='High-Performance Data Throughput'
+                            title='High-Performance data throughput'
                             descriptions='Accelerated high-speed data processing using hardware-optimized logic and Multi-Core solutions.'
                         />
                         <FeatureItem
                             iconName={Monitor}
-                            title='Advanced System Management'
+                            title='Advanced system management'
                             descriptions='Compatible with network control and monitoring applications for complete operational visibility.'
                         />
                         <FeatureItem
                             iconName={Tool}
-                            title='Proactive Maintenance and Upgrades'
+                            title='Proactive maintenance and upgrades'
                             descriptions='Flexible to feature expansion, standard updates, and hardware upgrades on demand.'
                         />
                     </div>

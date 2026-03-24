@@ -24,7 +24,7 @@ const AntiDDoS = () => {
 
   const solutionsData = [
       {
-      title: 'Mechanism of Operation',
+      title: 'Mechanism of operation',
       description: 'Attackers mobilize a massive number of controlled devices (botnets) from various sources to send overwhelming volumes of fake traffic, many times stronger than traditional DoS attacks.',
       icon: ShieldOff
       },
@@ -42,33 +42,33 @@ const AntiDDoS = () => {
 
   const helpData = [
     {
-      title: "Real-time Attack Prevention",
+      title: "Real-time attack prevention",
       description: "Detect and neutralize threats instantly to maintain service uptime.",
       icon: XCircle
     },
     {
-      title: "Multi-layer Protection",
+      title: "Multi-layer protection",
       description: "Combining traffic analysis, packet filtering, and authentication mechanisms to block attacks at various layers.",
       icon: Shield
     },
     {
-      title: "System Performance Optimization",
+      title: "System performance optimization",
       description: "Filtering malicious traffic before it reaches critical systems, ensuring legitimate services operate smoothly.",
       icon: Zap
     },
     {
     
-      title: "Flexible Configuration and Management",
+      title: "Flexible configuration and management",
       description: "Manage multiple profiles and service ports through an intuitive interface tailored to your needs.",
       icon: Settings
     },
     {
-      title: "Scalable Architecture",
+      title: "Scalable architecture",
       description: "Easily scale to meet growing infrastructure demands and high traffic volumes.",
       icon: Share2
     },
     { 
-      title: "High Availability",
+      title: "High availability",
       description: "Minimizing downtime and ensuring systems stay online even during large-scale attacks.",
       icon: Clock
     }
@@ -126,25 +126,25 @@ const AntiDDoS = () => {
           <h1 className={styles.sectionTitle}>Benefits of Acronics Solutions DDoS protection solution</h1>
           <div className={styles.featureGrid}>
             <div className={styles.featureItem}>
-              <h2 className={styles.featureTitle}>Massive Network Capacity</h2>
+              <h2 className={styles.featureTitle}>Massive network capacity</h2>
               <p className={styles.featureDesc}>
                 Acronics Solutions has 348 Tbps network capacity, 23 times larger than the largest recorded DDoS attack.
               </p>
             </div>
             <div className={styles.featureItem}>
-             <h2 className={styles.featureTitle}>Setup in Minutes</h2>
+             <h2 className={styles.featureTitle}>Setup in minutes</h2>
               <p className={styles.featureDesc}>
                 Deploy DDoS protection immediately without complex configuration. Start protecting your infrastructure in minutes.
               </p>
             </div>
             <div className={styles.featureItem}>
-            <h2 className={styles.featureTitle}>24/7 Email Support</h2>
+            <h2 className={styles.featureTitle}>24/7 Email support</h2>
               <p className={styles.featureDesc}>
                 Our dedicated technical support team is available 24/7 to help you monitor, analyze, and mitigate DDoS threats.
               </p>
             </div>
             <div className={styles.featureItem}>
-              <h2 className={styles.featureTitle}>Eliminates Slow Performance</h2>
+              <h2 className={styles.featureTitle}>Eliminates slow performance</h2>
               <p className={styles.featureDesc}>
                 Intelligent traffic routing and real-time filtering ensure your website and services remain fast and responsive even under attack.
               </p>

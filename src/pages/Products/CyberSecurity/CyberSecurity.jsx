@@ -22,14 +22,14 @@ const CyberSecurity = () => {
             title: 'Anti-DDoS Device - DDoS Defender', // Chuyển từ ALL CAPS sang Title Case để thanh thoát hơn
             image: antiddos_device_img,
             features: [
-                'DDoS Attack Detection:',
+                'DDoS attack detection:',
                 'Detects attacks based on thresholds and packet attributes per IP to identify anomalies and recognize attacks.',
                 'Supports detection of bandwidth attacks (UDP/ICMP Flood), protocol attacks (SYN Flood), and application layer attacks (HTTP/HTTPs Flood, Slowloris).',
                 'Attack detection time is optimized to under 1 second.',
-                'DDoS Attack Mitigation:',
-                'Implements Challenge-Response mechanisms to block malicious packets while ensuring service for legitimate users.',
+                'DDoS attack mitigation:',
+                'Implements challenge-response mechanisms to block malicious packets while ensuring service for legitimate users.',
                 'Integrated bandwidth limiting and traffic shaping.',
-                'DDoS Attack Monitoring:',
+                'DDoS attack monitoring:',
                 'Real-time monitoring of ongoing attacks with detailed insights (IP details, bandwidth metrics, and attack types).'
             ]
         }

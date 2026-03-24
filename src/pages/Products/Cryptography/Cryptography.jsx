@@ -67,10 +67,10 @@ const Cryptography = () => {
           <div className={styles.scadaContent}>
             <h2 className={styles.sectionTitle}>Next generation SCADA Firewall structure</h2>
             <div className={styles.scadaGrid}>
-              <ModuleCard title="Module Control Plane Processor" />
-              <ModuleCard title="Module Network Processor" />
-              <ModuleCard title="Module Multi-Core Security Processor" />
-              <ModuleCard title="Module Signature Match Engine - DPI" />
+              <ModuleCard title="Module Control plane processor" />
+              <ModuleCard title="Module Network processor" />
+              <ModuleCard title="Module Multi-Core security processor" />
+              <ModuleCard title="Module Signature match engine - DPI" />
               <ModuleCard title="Module SCADA & QoS" />
             </div>
           </div>
@@ -87,7 +87,7 @@ const Cryptography = () => {
             
             {/* Cột bên trái: Core Architecture */}
             <div className={styles.archColumn}>
-              <h2 className={styles.archTitle}>Core Architecture: Control & Management Policies</h2>
+              <h2 className={styles.archTitle}>Core architecture: Control & management policies</h2>
               <div className={styles.policyList}>
                 {corePolicies.map((text, index) => (
                   <div key={index} className={styles.policyCard}>
@@ -99,7 +99,7 @@ const Cryptography = () => {
 
             {/* Cột bên phải: Operational Data Flow */}
             <div className={styles.archColumn}>
-              <h2 className={styles.archTitle}>Operational Data Flow</h2>
+              <h2 className={styles.archTitle}>Operational data flow</h2>
               <div className={styles.flowList}>
                 {operationalFlows.map((flow, index) => (
                   <div key={index} className={styles.flowCard}>
@@ -121,7 +121,7 @@ const Cryptography = () => {
         <section className={styles.detailsSection}>
           <h2 className={styles.sectionTitle}>Details of some main modules</h2>
           {/* --- Module 1 --- */}
-          <AccordionModule title="Module 1 - Switch Fabric & Dataplane">
+          <AccordionModule title="Module 1 - Switch Fabric & dataplane">
             <div className={styles.subSection}>
                 <div className={styles.subContent}>
                   <div className={styles.subText}>
@@ -142,9 +142,9 @@ const Cryptography = () => {
           </AccordionModule>
 
           {/* --- Module 2 --- */}
-          <AccordionModule title="Module 2 - Security: SSL/IPSec Architecture">
+          <AccordionModule title="Module 2 - Security: SSL/IPSec architecture">
             {/* SSL/IPSec Architecture for Small and Medium Networks */}
-            <h3 className={styles.subTitle}>SSL/IPSec Architecture for Small and Medium Networks</h3>
+            <h3 className={styles.subTitle}>SSL/IPSec architecture for small and medium networks</h3>
             <div className={styles.subSection}>
                 <div className={styles.subContent}>
                   <div className={styles.subText}>
@@ -167,7 +167,7 @@ const Cryptography = () => {
             </div>
 
             {/* TLS/IPSec Architecture for Large-Scale Networks */}
-            <h3 className={styles.subTitle}>TLS/IPSec Architecture for Large-Scale Networks</h3>
+            <h3 className={styles.subTitle}>TLS/IPSec architecture for large-scale networks</h3>
             <div className={styles.subSection}>
                 <div className={styles.subContent}>
                   <div className={styles.subText}>
@@ -209,7 +209,7 @@ const Cryptography = () => {
             <div className={styles.subSection}>
                 <div className={styles.subContent}>
                   <div className={styles.subText}>
-                    <h4>Overview of the IDS/IPS Block Diagram</h4>
+                    <h4>Overview of the IDS/IPS block diagram</h4>
                     <h4>Detection:</h4>
                     <ul>
                       <li>Packets with specific or specialized formats</li>
@@ -232,7 +232,7 @@ const Cryptography = () => {
             </div>
 
             {/* Extracting and analyzing Payloads to detect malware */}
-             <h3 className={styles.subTitle}>Extracting and analyzing Payloads to detect malware</h3>
+             <h3 className={styles.subTitle}>Extracting and analyzing payloads to detect malware</h3>
             <div className={styles.subSection}>
                 <div className={styles.subContent}>
                   <div className={styles.subText}>

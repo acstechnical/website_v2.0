@@ -71,7 +71,7 @@ const AntiDDoS = () => {
                         <p className={styles.description} style={{ fontStyle: 'italic' }}>
                             High-Performance FPGA/ASIC-Based Anti-DDoS Defender
                         </p>
-                        <h2 className={styles.sectionTitle}>The Need for a DDoS Defense Solution</h2>
+                        <h2 className={styles.sectionTitle}>The need for a DDoS defense solution</h2>
                         <p className={styles.text}>
                             Modern DDoS attacks are growing in both scale and complexity, exploiting the rapid expansion of the Internet of Things (IoT) and the availability of attack tools capable of generating traffic reaching hundreds of gigabits per second (Gbps).
                         </p>
@@ -93,9 +93,9 @@ const AntiDDoS = () => {
 
                 {/* 3. Solution Section */}
                 <section className={styles.solutionSection}>
-                    <h2 className={styles.sectionTitle}>FPGA/ASIC-Based DDoS Defender Solution</h2>
+                    <h2 className={styles.sectionTitle}>FPGA/ASIC-Based DDoS defender solution</h2>
                     <p className={styles.text}>
-                        The ACS DDoS Defender leverages FPGA/ASIC-based hardware acceleration to deliver real-time, parallel packet processing at the network edge, ensuring early detection and mitigation of high-bandwidth DDoS attacks.
+                        The ACS DDoS defender leverages FPGA/ASIC-based hardware acceleration to deliver real-time, parallel packet processing at the network edge, ensuring early detection and mitigation of high-bandwidth DDoS attacks.
                     </p>
                     <p className={styles.text}>
                         This hardware-driven approach provides superior detection speed, low latency, and robust defense capabilities compared to traditional software-based systems.
@@ -108,28 +108,28 @@ const AntiDDoS = () => {
                     <div className={styles.coreFeaturesGrid}>
                         <ServiceCard_3
                             icon={Crosshair}
-                            title="1. DDoS Attack Detection"
+                            title="1. DDoS attack detection"
                             description={[
                                 "Detects attacks based on traffic thresholds and packet attribute sets per IP, identifying anomalies indicative of potential attacks.",
                                 "Supports detection of multiple attack types:",
-                                "- Bandwidth Attacks: UDP Flood, ICMP Flood, etc.",
-                                "- Protocol Attacks: SYN Flood, etc.",
-                                "- Application Layer Attacks: HTTP Flood, HTTPS Flood, Slowloris, etc.",
+                                "- Bandwidth attacks: UDP Flood, ICMP Flood, etc.",
+                                "- Protocol attacks: SYN Flood, etc.",
+                                "- Application layer attacks: HTTP Flood, HTTPs Flood, Slowloris, etc.",
                                 "- Detection latency: Under 1 second from the onset of an attack."
                             ]}
                         />
                         <ServiceCard_3
                             icon={Shield}
-                            title="2. DDoS Attack Mitigation"
+                            title="2. DDoS attack mitigation"
                             description={[
-                                "Implements Challenge-Response mechanisms to block malicious traffic while maintaining uninterrupted service for legitimate users.",
+                                "Implements challenge-response mechanisms to block malicious traffic while maintaining uninterrupted service for legitimate users.",
                                 "Bandwidth limiting to protect critical resources.",
                                 "Configurable Whitelist / Blacklist for filtering traffic from suspicious or verified sources."
                             ]}
                         />
                         <ServiceCard_3
                             icon={Activity}
-                            title="3. DDoS Attack Monitoring"
+                            title="3. DDoS attack monitoring"
                             description={[
                                 "Real-time attack monitoring dashboard providing:",
                                 "- Source IP details and bandwidth usage statistics.",
@@ -180,12 +180,12 @@ const AntiDDoS = () => {
                     <div className={styles.outstandingFeaturesGrid}>
                         <FeatureItem
                             Icon={Link2}
-                            title="Easy System Integration"
+                            title="Easy system integration"
                             descriptions="Seamlessly integrates into existing network infrastructures using FPGA/ASIC hardware acceleration for real-time packet processing without bottlenecking performance."
                         />
                         <FeatureItem
                             Icon={TrendingUp}
-                            title="Comprehensive High-Performance Solution"
+                            title="Comprehensive High-Performance solution"
                             descriptions={[
                                 "Provides complete multi-layer protection (Layer 2/3/6/7) against:",
                                 "- Bandwidth-based and protocol-level attacks.",
@@ -195,7 +195,7 @@ const AntiDDoS = () => {
                         />
                         <FeatureItem
                             Icon={Activity}
-                            title="Optimized Management and Monitoring"
+                            title="Optimized management and monitoring"
                             descriptions={[
                                 "Centralized monitoring interface with full attack visibility and event tracking.",
                                 "Automated real-time alerts and email notifications for prompt response.",

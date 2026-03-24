@@ -1,7 +1,7 @@
 export const hpcTabData = [
   {
     id: 1,
-    title: "HPC Predicts Information Security Risks",
+    title: "HPC predicts information security risks",
     content: [
       "Identify and analyze attacks at Layer 3, Layer 4, Layer 6, and Layer 7.",
       "Identify and analyze complex attacks such as Slowloris.",
@@ -13,7 +13,7 @@ export const hpcTabData = [
   },
   {
     id: 2,
-    title: "HPC - Pentest: Assessing and Testing Network Devices and IT Infrastructure",
+    title: "HPC - Pentest: Assessing and testing network devices and IT infrastructure",
     content: [
       "Develop devices and systems to generate high-volume network traffic for evaluating system defense capabilities.",
       "Deploy devices at edge network nodes to generate large traffic volumes for DDoS testing purposes.",
@@ -38,7 +38,7 @@ export const hpcTabData = [
   },
   {
     id: 4,
-    title: "HPC Malware Analysis and Detection",
+    title: "HPC Malware analysis and detection",
     content: [
       "Identify and analyze malware in real-time via live dynamic traffic or static file analysis.",
       "Support high network throughput of 5G, 10G, and 40G.",
