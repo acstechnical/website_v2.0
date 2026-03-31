@@ -1,14 +1,5 @@
 import { useEffect } from "react";
-import styles from "./Firewall.module.css";
 import PageTitle from "../../../components/Layout/PageTitle/PageTitle";
-<<<<<<< Updated upstream
-import TechProcess from "./components/TechProcess/TechProcess";
-import VideoShowcase from "./components/VideoShowcase/VideoShowcase";
-
-import firewallImg from '../../../assets/image/cryptography/crypto_bg.webp';
-import hpc_ai_1 from "../../../assets/image/hpc_product/hpc_ai_1.png";
-
-=======
 import styles from './Firewall.module.css';
 import VideoShowcase from "../../../components/UI/VideoShowcase/VideoShowcase";
 import firewallBG from '../../../assets/image/firewall/firewall_bg.webp';
@@ -19,29 +10,24 @@ import firewall_ai_4 from '../../../assets/image/firewall/firewall_ai_4.jpg';
 import example from "../../../assets/image/hpc_product/hpc_ai_1.png"; // Thay ảnh 
 import { FileText } from 'react-feather';
 import hpc_plat_vi from "../../../assets/image/hpc_product/hpc_plat_vi.pdf"; // Thay file PDF
->>>>>>> Stashed changes
 const Firewall = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-        document.title = "Firewall | Acronics";
+        document.title = "AI-based malware identification - Acronics";
     }, []);
 
     return (
         <div>
-            {/* 1. Page Title */}
-            <PageTitle title="Firewall" imgSrc={firewallImg} />
-            {/* 4. Our new HPC technologies*/}
+            <PageTitle title="AI-based malware identification" imgSrc={firewallBG} />
+            {/* Content for the Firewall page */}
             <section className={styles.newTechSection}>
                 <div className={styles.container}> {/* Dùng class container chung của bạn */}
                     <div className={styles.techGrid}>
 
                         {/* CỘT TRÁI: NỘI DUNG CHỮ */}
                         <div className={styles.techContent}>
-                            <h2 className={styles.sectionTitle}>AI Malware Defense System</h2>
+                            <h2 className={styles.sectionTitle}>Our New HPC Technologies</h2>
 
-                            {/* <h3 className={styles.sectionSubtitle}>
-                AI-Based Network Security and Hardware Protection Solutions by Acronics Solutions (ACS)
-              </h3> */}
                             <p className={styles.sectionSubtitle}>
                                 AI-Based Network Security and Hardware Protection Solutions by Acronics Solutions (ACS)
                             </p>
@@ -66,9 +52,6 @@ const Firewall = () => {
 
                         {/* CỘT PHẢI: HÌNH ẢNH SƠ ĐỒ */}
                         <div className={styles.imageWrapper}>
-<<<<<<< Updated upstream
-                            <img src={hpc_ai_1} alt="AI-Based HPC Architecture Diagram" />
-=======
                             <img src={example} alt="AI-Based HPC Architecture Diagram" />
                             <div className={styles.gridSpec}>
                                 <a href={hpc_plat_vi} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
@@ -76,19 +59,50 @@ const Firewall = () => {
                                     <span>Xem thông số kỹ thuật Firewall</span>
                                 </a>
                             </div>
->>>>>>> Stashed changes
                         </div>
-
                     </div>
-                    <TechProcess> </TechProcess>
+                </div>
+                <div className={styles.detailsContainer}>
+
+                    {/* Mục 1: 2 ảnh - Căn đều 2 bên */}
+                    <div className={styles.detailItem}>
+                        <h3 className={styles.detailTitle}>
+                            Training models for DDoS and malware detection
+                        </h3>
+                        <div className={styles.imageRow}>
+                            <img src={firewall_ai_1} alt="Training model 1" />
+                            <img src={firewall_ai_2} alt="Training model 2" />
+                        </div>
+                    </div>
+
+                    {/* Mục 2: 1 ảnh - Canh giữa */}
+                    <div className={styles.detailItem}>
+                        <h3 className={styles.detailTitle}>
+                            Steps to handle malware identification, cyber attacks on microchips and systems
+                        </h3>
+                        <div className={styles.imageWrapper}>
+                            <img src={firewall_ai_3} alt="Handling steps" />
+                        </div>
+                    </div>
+
+                    {/* Mục 3: 1 ảnh - Canh giữa */}
+                    <div className={styles.detailItem}>
+                        <h3 className={styles.detailTitle}>
+                            Methods of evaluating the accuracy and precision of equipment after design
+                        </h3>
+                        <div className={styles.imageWrapper}>
+                            <img src={firewall_ai_4} alt="Evaluation methods" />
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
-            {/* 5. Video showcase */}
+            {/* Video Showcase Section */}
             <section className={styles.videoShowcaseSection}>
                 <div className={styles.container}>
                     <VideoShowcase
-                        src="https://www.youtube.com/embed/68IyMgsF3v0"
+                        src="https://www.youtube.com/embed/9n2s8Xo7l5E"
                         title="Overview of ML/DL-based malware detection and prevention on SoC-FPGA"
                     />
 
@@ -100,6 +114,6 @@ const Firewall = () => {
             </section>
         </div>
     );
-};
+}
 
 export default Firewall;

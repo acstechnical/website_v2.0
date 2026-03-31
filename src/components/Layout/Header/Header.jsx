@@ -84,7 +84,7 @@ const Header = () => {
                 </span>
                 <div className={`${styles.subDropdownMenu} ${activeSubDropdown === 'cryptography' ? styles.showSubMobile : ''}`}>
                   <Link to="/products/cryptography" className={styles.dropdownItem} onClick={toggleMenu}>SCADA</Link>
-                  <Link to="/products/firewall" className={styles.dropdownItem} onClick={toggleMenu}>Firewall</Link>
+                  <Link to="/products/firewall" className={styles.dropdownItem} onClick={toggleMenu}>AI-based malware identification</Link>
                 </div>
               </div>
             </div>

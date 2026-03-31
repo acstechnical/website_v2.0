@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import styles from "./HPCPlatforms.module.css";
 import PageTitle from "../../../components/Layout/PageTitle/PageTitle";
 import FeaturesTab from "./components/FeaturesTab/FeaturesTab";
+import TechProcess from "./components/TechProcess/TechProcess";
+import VideoShowcase from "../../../components/UI/VideoShowcase/VideoShowcase";
 
 import imgBg from "../../../assets/image/hpc_product/hpc_product_bg.webp";
 import hpc_example from "../../../assets/image/hpc_product/hpc_example.jpg";
+import hpc_ai_1 from "../../../assets/image/hpc_product/hpc_ai_1.png";
 import hpc_plat_en from "../../../assets/image/hpc_product/hpc_plat_en.pdf";
 import hpc_plat_vi from "../../../assets/image/hpc_product/hpc_plat_vi.pdf";
 import { FileText } from 'react-feather';
@@ -101,6 +104,104 @@ const HPCPlatforms = () => {
 
       {/* 3. HPC Types */}
       <FeaturesTab />
+
+      {/* 4. Our new HPC technologies*/}
+      <section className={styles.newTechSection}>
+        <div className={styles.container}> {/* Dùng class container chung của bạn */}
+          <div className={styles.techGrid}>
+
+            {/* CỘT TRÁI: NỘI DUNG CHỮ */}
+            <div className={styles.techContent}>
+              <h2 className={styles.sectionTitle}>Our New HPC Technologies</h2>
+
+              {/* <h3 className={styles.sectionSubtitle}>
+                AI-Based Network Security and Hardware Protection Solutions by Acronics Solutions (ACS)
+              </h3> */}
+              <p className={styles.sectionSubtitle}>
+                AI-Based Network Security and Hardware Protection Solutions by Acronics Solutions (ACS)
+              </p>
+
+              {/* Danh sách công nghệ */}
+              <ul className={styles.techList}>
+                <li>DDoS Detection: Random Forest (RamFor Core)</li>
+                <li>Malware Detection: Convolutional Neural Network (CNN)</li>
+                <li>Abnormal Behavior Detection: Support Vector Machine (SVM)</li>
+              </ul>
+
+              {/* Đoạn văn 1 */}
+              <p className={styles.description}>
+                ACS provides advanced AI-powered network security solutions implemented directly on hardware and FPGA chips. The system applies deep learning (ML/DL) algorithms optimized for FPGA deployment, featuring a fully self-developed Linux-based operating system, custom control and monitoring programs, and in-house board design and manufacturing for seamless system integration.
+              </p>
+
+              {/* Đoạn văn 2 */}
+              <p className={styles.description}>
+                With complete technological autonomy, the solution is easy to upgrade, maintain, and customize. Developed and produced 100% in Vietnam, ACS’s platform enables ultra-fast malware and DDoS attack detection in real time, capable of processing live network traffic at high speed. The system ensures robust cybersecurity with no malware infection, no backdoors, and no interception risks.
+              </p>
+            </div>
+
+            {/* CỘT PHẢI: HÌNH ẢNH SƠ ĐỒ */}
+            <div className={styles.imageWrapper}>
+              <img src={hpc_ai_1} alt="AI-Based HPC Architecture Diagram" />
+            </div>
+
+          </div>
+          <TechProcess> </TechProcess>
+        </div>
+      </section>
+
+      {/* 5. GUI Showcase*/}
+      <section className={styles.guiSection}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>GUI Showcase</h2>
+          <div className={styles.guiGrid}>
+            {/* KHỐI TRÁI: HIỂN THỊ TABS VÀ ẢNH */}
+            <div className={styles.guiDisplayCard}>
+              <div className={styles.tabBar}>
+                {guiData.map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`${styles.tabButton} ${activeTab === tab.id ? styles.activeTab : ''}`}
+                  >
+                    [{tab.label}]
+                  </button>
+                ))}
+              </div>
+
+              {/* Ảnh thay đổi theo activeTab kèm hiệu ứng fade-in đơn giản */}
+              <div className={styles.tabContent} key={activeTab}>
+                <img
+                  src={guiData[activeTab].image}
+                  alt={guiData[activeTab].label}
+                  className={styles.guiImage}
+                />
+              </div>
+            </div>
+
+            {/* KHỐI PHẢI: NỘI DUNG THAY ĐỔI THEO TAB */}
+            <div className={styles.guiInfo} key={`info-${activeTab}`}>
+                <h3 className={styles.guiInfoTitle}>{guiData[activeTab].title}</h3>
+                <p className={styles.text}>
+                  {guiData[activeTab].description}
+                </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* 5. Video showcase */}
+      <section className={styles.videoShowcaseSection}>
+        <div className={styles.container}>
+          <VideoShowcase
+            src="https://www.youtube.com/embed/68IyMgsF3v0"
+            title="Overview of ML/DL-based malware detection and prevention on SoC-FPGA"
+          />
+
+          <VideoShowcase
+            src="https://www.youtube.com/embed/Ef0ItagAmdA"
+            title="Demo of network traffic malware detection scenarios using ML/DL on SoC-FPGA"
+          />
+        </div>
+      </section>
     </div>
   );
 }
