@@ -48,7 +48,7 @@ const Footer = () => {
         <div className={styles.linksSection}>
           <h3 className={styles.colTitle}>Products</h3>
           <div className={styles.linkList}>
-            <Link to="/products/hpc-platforms" className={styles.footerLink}>HPC Platforms</Link>
+            <Link to="/products/hpc-platforms" className={styles.footerLink}>HPC Products</Link>
             <Link to="/products/networking-devices" className={styles.footerLink}>Networking Devices</Link>
             <Link to="/products/cyber-security" className={styles.footerLink}>Cyber Security</Link>
             <Link to="/products/cryptography" className={styles.footerLink}>Cryptography</Link>

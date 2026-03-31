@@ -1,3 +1,65 @@
+.deviceSection {
+  padding: 20px 0;
+  border-bottom: 1px solid #000000;
+}
+
+.deviceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.deviceImageSide .imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: transparent;
+  margin: 0;
+}
+
+.deviceImageSide .imageWrapper img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.deviceImageSide .description, .videoCaption {
+  font-size: var(--body-size);
+  font-weight: var(--fw-regular);
+  margin-top: 15px;
+  text-align: center;
+  color: #000;
+}
+
+.videoResponsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.videoResponsive iframe {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  .deviceGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+}
 .container {
   margin: 0 auto;    
   padding: 0 20px;   

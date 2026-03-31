@@ -66,7 +66,7 @@ const Header = () => {
               Products
             </span>
             <div className={`${styles.dropdownMenu} ${activeDropdown === 'products' ? styles.showMobile : ''}`}>
-              <Link to="/products/hpc-platforms" className={styles.dropdownItem} onClick={toggleMenu}>HPC Platforms</Link>
+              <Link to="/products/hpc-platforms" className={styles.dropdownItem} onClick={toggleMenu}>HPC Pros</Link>
               <Link to="/products/networking-devices" className={styles.dropdownItem} onClick={toggleMenu}>Networking Devices</Link>
               <Link to="/products/cyber-security" className={styles.dropdownItem} onClick={toggleMenu}>Cyber Security</Link>
               <Link to="/products/cryptography" className={styles.dropdownItem} onClick={toggleMenu}>Cryptography</Link>

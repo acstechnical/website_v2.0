@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react';
+import React, { useEffect } from 'react';
 import styles from './AntiDDoS.module.css';
 import PageTitle from '../../../components/Layout/PageTitle/PageTitle';
 import staticImg from '../../../assets/image/antiddos_solutions/staticstic.png';
@@ -10,34 +10,37 @@ import antiddos_spec_en from '../../../assets/image/antiddos_solutions/antiddos_
 import antiddos_spec_vn from '../../../assets/image/antiddos_solutions/antiddos_spec_vi.pdf';
 import splunk_spec from '../../../assets/image/antiddos_solutions/splunk_spec.pdf';
 import firewall_spec from '../../../assets/image/antiddos_solutions/firewall_spec.pdf';
-import { XCircle, Shield, Zap, Settings, Share2, Clock, AlertTriangle, Server, ShieldOff,FileText } from 'react-feather';
+import { XCircle, Shield, Zap, Settings, Share2, Clock, AlertTriangle, Server, ShieldOff, FileText } from 'react-feather';
+
+// Demo device & video
+import antiddos_device from '../../../assets/image/antiddos_solutions/antiddos_device.png';
 
 const AntiDDoS = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   useEffect(() => {
-          // Đổi tiêu đề tab trình duyệt
-          document.title = "Anti-DDoS Solutions | Acronics Solutions"; 
-      }, []);
+    // Đổi tiêu đề tab trình duyệt
+    document.title = "Anti-DDoS Solutions | Acronics Solutions";
+  }, []);
 
   const solutionsData = [
-      {
+    {
       title: 'Mechanism of operation',
       description: 'Attackers mobilize a massive number of controlled devices (botnets) from various sources to send overwhelming volumes of fake traffic, many times stronger than traditional DoS attacks.',
       icon: ShieldOff
-      },
-      {
+    },
+    {
       title: 'Objective',
       description: 'Focus on flooding hardware resources or transmission bandwidth, paralyzing servers and applications, and preventing legitimate users from accessing services.',
       icon: Server
-      },
-      {
+    },
+    {
       title: 'Consequences',
       description: 'Depending on the scale, attacks can degrade processing performance, cause unstable connections, or lead to complete system downtime.',
       icon: AlertTriangle
-      }
+    }
   ];
 
   const helpData = [
@@ -57,7 +60,7 @@ const AntiDDoS = () => {
       icon: Zap
     },
     {
-    
+
       title: "Flexible configuration and management",
       description: "Manage multiple profiles and service ports through an intuitive interface tailored to your needs.",
       icon: Settings
@@ -67,7 +70,7 @@ const AntiDDoS = () => {
       description: "Easily scale to meet growing infrastructure demands and high traffic volumes.",
       icon: Share2
     },
-    { 
+    {
       title: "High availability",
       description: "Minimizing downtime and ensuring systems stay online even during large-scale attacks.",
       icon: Clock
@@ -110,11 +113,11 @@ const AntiDDoS = () => {
           </div>
           <div className={styles.leftContent}>
             {helpData.map((item, index) => (
-              <HelpCard 
-              key={index} 
-              title={item.title} 
-              description={item.description}
-              icon={item.icon}/>
+              <HelpCard
+                key={index}
+                title={item.title}
+                description={item.description}
+                icon={item.icon} />
             ))}
           </div>
         </div>
@@ -132,13 +135,13 @@ const AntiDDoS = () => {
               </p>
             </div>
             <div className={styles.featureItem}>
-             <h2 className={styles.featureTitle}>Setup in minutes</h2>
+              <h2 className={styles.featureTitle}>Setup in minutes</h2>
               <p className={styles.featureDesc}>
                 Deploy DDoS protection immediately without complex configuration. Start protecting your infrastructure in minutes.
               </p>
             </div>
             <div className={styles.featureItem}>
-            <h2 className={styles.featureTitle}>24/7 Email support</h2>
+              <h2 className={styles.featureTitle}>24/7 Email support</h2>
               <p className={styles.featureDesc}>
                 Our dedicated technical support team is available 24/7 to help you monitor, analyze, and mitigate DDoS threats.
               </p>
@@ -153,7 +156,35 @@ const AntiDDoS = () => {
         </div>
 
       </section>
-
+      <section className={styles.deviceSection}>
+        <div className={styles.container}>
+          <h1 className={styles.sectionTitle}>Anti-DDoS device and Demonstration</h1>
+          <div className={styles.deviceGrid}>
+            {/* Cột 1: Hình ảnh thiết bị */}
+            <div className={styles.deviceImageSide}>
+              <div className={styles.imageWrapper}>
+                <img src={antiddos_device} alt="Anti-DDoS Hardware Device" />
+              </div>
+              <p className={styles.description}>
+                Anti-DDoS hardware appliance with high-throughput network interfaces, real-time traffic analysis, and advanced mitigation capabilities.
+              </p>
+            </div>
+            {/* Cột 2: Video Demo */}
+            <div className={styles.deviceVideoSide}>
+              <div className={styles.videoResponsive}>
+                <iframe
+                  src="https://www.youtube.com/embed/fUk89qzPB8M" // Thay bằng link demo thực tế nếu có
+                  title="Anti-DDoS System Demo"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <p className={styles.videoCaption}>Demo: Real-time Anti-DDoS attack mitigation and monitoring dashboard</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* 5. Specification */}
       <section className={styles.specContainer}>
         <div className={styles.container}>
@@ -162,32 +193,34 @@ const AntiDDoS = () => {
             <div className={styles.AntiDDoS_Spec}>
               <h2 className={styles.specTitle}>Anti-DDoS specifications</h2>
               <a href={antiddos_spec_en} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
-                  <FileText size={20} />
-                  <span>View Anti-DDoS specification PDF</span>
+                <FileText size={20} />
+                <span>View Anti-DDoS specification PDF</span>
               </a>
               <a href={antiddos_spec_vn} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
-                  <FileText size={20} />
-                  <span>Xem thông số kỹ thuật Anti-DDoS</span>
+                <FileText size={20} />
+                <span>Xem thông số kỹ thuật Anti-DDoS</span>
               </a>
             </div>
             <div className={styles.firewall_Spec}>
               <h2 className={styles.specTitle}>Firewall specifications</h2>
               <a href={firewall_spec} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
-                  <FileText size={20} />
-                  <span>Xem thông số kỹ thuật Firewall</span>
+                <FileText size={20} />
+                <span>Xem thông số kỹ thuật Firewall</span>
               </a>
             </div>
             <div className={styles.splunk_Spec}>
               <h2 className={styles.specTitle}>Splunk specifications</h2>
               <a href={splunk_spec} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
-                  <FileText size={20} />
-                  <span>Xem thông số kỹ thuật Splunk</span>
+                <FileText size={20} />
+                <span>Xem thông số kỹ thuật Splunk</span>
               </a>
             </div>
 
           </div>
         </div>
       </section>
+      {/* 6. AntiDDoS Device & Demo Section */}
+      
     </div>
   );
 }
