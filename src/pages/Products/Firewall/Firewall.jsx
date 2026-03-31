@@ -24,7 +24,7 @@ const Firewall = () => {
 
                         {/* CỘT TRÁI: NỘI DUNG CHỮ */}
                         <div className={styles.techContent}>
-                            <h2 className={styles.sectionTitle}>Our New HPC Technologies</h2>
+                            <h2 className={styles.sectionTitle}>AI Malware Defense System</h2>
 
                             {/* <h3 className={styles.sectionSubtitle}>
                 AI-Based Network Security and Hardware Protection Solutions by Acronics Solutions (ACS)
@@ -60,7 +60,7 @@ const Firewall = () => {
                     <TechProcess> </TechProcess>
                 </div>
             </section>
-        
+
             {/* 5. Video showcase */}
             <section className={styles.videoShowcaseSection}>
                 <div className={styles.container}>
