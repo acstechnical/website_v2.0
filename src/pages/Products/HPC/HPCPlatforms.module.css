@@ -7,7 +7,7 @@
   color: var(--primary-color);
   font-size: var(--header1-size);
   font-weight: var(--fw-medium);
-  margin-bottom: 20px;
+
 }
 
 .description {
@@ -15,6 +15,7 @@
   font-weight: var(--fw-light);
   line-height: 1.6;
   margin-bottom: 10px;
+  text-align: justify;
 }
 
 .imageWrapper {
@@ -76,7 +77,6 @@
 .techList {
   list-style: none; /* Bỏ dấu chấm mặc định */
   padding: 0;
-  margin-bottom: 30px;
 }
 
 .techList li {

@@ -1,12 +1,25 @@
 import { useEffect } from "react";
 import styles from "./Firewall.module.css";
 import PageTitle from "../../../components/Layout/PageTitle/PageTitle";
+<<<<<<< Updated upstream
 import TechProcess from "./components/TechProcess/TechProcess";
 import VideoShowcase from "./components/VideoShowcase/VideoShowcase";
 
 import firewallImg from '../../../assets/image/cryptography/crypto_bg.webp';
 import hpc_ai_1 from "../../../assets/image/hpc_product/hpc_ai_1.png";
 
+=======
+import styles from './Firewall.module.css';
+import VideoShowcase from "../../../components/UI/VideoShowcase/VideoShowcase";
+import firewallBG from '../../../assets/image/firewall/firewall_bg.webp';
+import firewall_ai_1 from '../../../assets/image/firewall/firewall_ai_1.jpg';
+import firewall_ai_2 from '../../../assets/image/firewall/firewall_ai_2.jpg';
+import firewall_ai_3 from '../../../assets/image/firewall/firewall_ai_3.jpg';
+import firewall_ai_4 from '../../../assets/image/firewall/firewall_ai_4.jpg';
+import example from "../../../assets/image/hpc_product/hpc_ai_1.png"; // Thay ảnh 
+import { FileText } from 'react-feather';
+import hpc_plat_vi from "../../../assets/image/hpc_product/hpc_plat_vi.pdf"; // Thay file PDF
+>>>>>>> Stashed changes
 const Firewall = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -53,7 +66,17 @@ const Firewall = () => {
 
                         {/* CỘT PHẢI: HÌNH ẢNH SƠ ĐỒ */}
                         <div className={styles.imageWrapper}>
+<<<<<<< Updated upstream
                             <img src={hpc_ai_1} alt="AI-Based HPC Architecture Diagram" />
+=======
+                            <img src={example} alt="AI-Based HPC Architecture Diagram" />
+                            <div className={styles.gridSpec}>
+                                <a href={hpc_plat_vi} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
+                                    <FileText size={20} />
+                                    <span>Xem thông số kỹ thuật Firewall</span>
+                                </a>
+                            </div>
+>>>>>>> Stashed changes
                         </div>
 
                     </div>

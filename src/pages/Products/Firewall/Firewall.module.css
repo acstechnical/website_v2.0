@@ -18,14 +18,13 @@
 .techContent {
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: 10px;
+	gap: 5px;
 }
 
 .sectionTitle {
 	color: var(--primary-color);
 	font-size: var(--header1-size);
 	font-weight: var(--fw-medium);
-	margin-bottom: 20px;
 }
 
 .sectionSubtitle {
@@ -39,7 +38,6 @@
 .techList {
 	list-style: none;
 	padding: 0;
-	margin-bottom: 30px;
 }
 
 .techList li {
@@ -61,6 +59,7 @@
 .description {
 	font-size: var(--body-size);
 	font-weight: var(--fw-light);
+	text-align: justify;
 	line-height: 1.6;
 	margin-bottom: 10px;
 }
@@ -106,3 +105,82 @@
 		justify-content: space-around;
 	}
 }
+<<<<<<< Updated upstream
+=======
+
+/* ... các style cũ của bạn giữ nguyên ... */
+
+.detailsContainer {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.detailItem {
+    margin-bottom: 40px;
+}
+
+.detailTitle {
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: var(--header2-size);
+    font-weight: var(--fw-medium);
+}
+
+/* Container cho 2 ảnh nằm ngang */
+.imageRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Style riêng cho ảnh trong hàng (mục 2 ảnh) */
+.imageRow img {
+    width: calc(50% - 10px); /* Chia đôi trừ đi gap */
+    max-width: 70vw; 
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+/* Cấu hình cho mobile: 2 ảnh sẽ tự nhảy thành hàng dọc */
+@media (max-width: 768px) {
+    .imageRow img {
+        width: 100%;
+    }
+    
+    .imageRow {
+        justify-content: center;
+    }
+}
+
+.gridSpec {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.specButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background-color: #fff;
+  color: var(--primary-color);
+  font-size: var(--body-size);
+  font-weight: var(--fw-medium);
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.specButton:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+>>>>>>> Stashed changes
