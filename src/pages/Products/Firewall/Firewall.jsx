@@ -9,7 +9,9 @@ import firewall_ai_3 from '../../../assets/image/firewall/firewall_ai_3.jpg';
 import firewall_ai_4 from '../../../assets/image/firewall/firewall_ai_4.jpg';
 import example from "../../../assets/image/hpc_product/hpc_ai_1.png"; // Thay ảnh 
 import { FileText } from 'react-feather';
-import hpc_plat_vi from "../../../assets/image/hpc_product/hpc_plat_vi.pdf"; // Thay file PDF
+// import hpc_plat_vi from "../../../assets/image/hpc_product/hpc_plat_vi.pdf"; // Thay file PDF
+import solution_ai from "../../../assets/image/firewall/Giải pháp HPC_Mã độc_AI_H04.pdf"; // Thay file PDF
+// const solution_ai = "/assets/image/firewall/Giải pháp HPC_Mã độc_AI_H04.pdf"; đưa file pdf ra folder public để có thể truy cập trực tiếp
 const Firewall = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -26,17 +28,17 @@ const Firewall = () => {
 
                         {/* CỘT TRÁI: NỘI DUNG CHỮ */}
                         <div className={styles.techContent}>
-                            <h2 className={styles.sectionTitle}>Our New HPC Technologies</h2>
+                            <h2 className={styles.sectionTitle}>AI-based malware identification</h2>
 
                             <p className={styles.sectionSubtitle}>
-                                AI-Based Network Security and Hardware Protection Solutions by Acronics Solutions (ACS)
+                                AI-based network security and hardware protection solutions by Acronics Solutions (ACS)
                             </p>
 
                             {/* Danh sách công nghệ */}
                             <ul className={styles.techList}>
                                 <li>DDoS Detection: Random Forest (RamFor Core)</li>
-                                <li>Malware Detection: Convolutional Neural Network (CNN)</li>
-                                <li>Abnormal Behavior Detection: Support Vector Machine (SVM)</li>
+                                <li>Malware Detection: Convolutional Neural Network (CNN Core)</li>
+                                <li>Abnormal Behavior Detection: Support Vector Machine (SVM Core)</li>
                             </ul>
 
                             {/* Đoạn văn 1 */}
@@ -54,9 +56,9 @@ const Firewall = () => {
                         <div className={styles.imageWrapper}>
                             <img src={example} alt="AI-Based HPC Architecture Diagram" />
                             <div className={styles.gridSpec}>
-                                <a href={hpc_plat_vi} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
+                                <a href={solution_ai} target="_blank" rel="noopener noreferrer" className={styles.specButton}>
                                     <FileText size={20} />
-                                    <span>Xem thông số kỹ thuật Firewall</span>
+                                    <span>Giải pháp HPC_Mã độc_AI</span>
                                 </a>
                             </div>
                         </div>
@@ -102,7 +104,7 @@ const Firewall = () => {
             <section className={styles.videoShowcaseSection}>
                 <div className={styles.container}>
                     <VideoShowcase
-                        src="https://www.youtube.com/embed/9n2s8Xo7l5E"
+                        src="https://www.youtube.com/embed/68IyMgsF3v0"
                         title="Overview of ML/DL-based malware detection and prevention on SoC-FPGA"
                     />
 

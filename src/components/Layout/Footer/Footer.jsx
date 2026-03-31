@@ -29,7 +29,7 @@ const Footer = () => {
             <img src={logoWhite} alt="Acronics Solutions Logo" />
           </Link>
           <p className={styles.tagline}>
-            Innovating cybersecurity, networking, and performance solutions.
+            Innovating cybersecurity, networking, and high performance computing.
           </p>
         </div>
 
