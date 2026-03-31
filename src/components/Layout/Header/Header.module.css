@@ -107,6 +107,30 @@
   color: #ffffff;
 }
 
+.subDropdownContainer {
+  position: relative;
+  width: 100%;
+}
+
+.subDropdownMenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #ffffff;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border-left: 2px solid var(--primary-color);
+  padding: 8px 0;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.subDropdownContainer:hover .subDropdownMenu {
+  display: flex;
+}
+
 /* Container hiển thị lá cờ chính */
 .langDisplay {
   display: flex;
@@ -243,6 +267,23 @@
 
   .dropdownItem {
     border-bottom: 1px solid var(--border-color);
+  }
+
+  .subDropdownMenu {
+    position: static;
+    left: auto;
+    top: auto;
+    min-width: 100%;
+    box-shadow: none;
+    border-left: none;
+    border-top: none;
+    background-color: #f4f4f4;
+    border-radius: 0;
+    padding-left: 12px;
+  }
+
+  .showSubMobile {
+    display: flex !important;
   }
   
   /* Language wrapper trên mobile */

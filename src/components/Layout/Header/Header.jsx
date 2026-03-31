@@ -9,16 +9,25 @@ const Header = () => {
   const [language, setLanguage] = useState('en');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeSubDropdown, setActiveSubDropdown] = useState(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setActiveDropdown(null); // Reset dropdown khi đóng menu
+    setActiveSubDropdown(null);
   };
 
   const toggleDropdown = (name) => {
     // Chỉ xử lý toggle click trên màn hình mobile
     if (window.innerWidth <= 768) {
       setActiveDropdown(activeDropdown === name ? null : name);
+      setActiveSubDropdown(null);
+    }
+  };
+
+  const toggleSubDropdown = (name) => {
+    if (window.innerWidth <= 768) {
+      setActiveSubDropdown(activeSubDropdown === name ? null : name);
     }
   };
 
@@ -66,10 +75,18 @@ const Header = () => {
               Products
             </span>
             <div className={`${styles.dropdownMenu} ${activeDropdown === 'products' ? styles.showMobile : ''}`}>
-              <Link to="/products/hpc-platforms" className={styles.dropdownItem} onClick={toggleMenu}>HPC Pros</Link>
+              <Link to="/products/hpc-platforms" className={styles.dropdownItem} onClick={toggleMenu}>HPC Product</Link>
               <Link to="/products/networking-devices" className={styles.dropdownItem} onClick={toggleMenu}>Networking Devices</Link>
               <Link to="/products/cyber-security" className={styles.dropdownItem} onClick={toggleMenu}>Cyber Security</Link>
-              <Link to="/products/cryptography" className={styles.dropdownItem} onClick={toggleMenu}>Cryptography</Link>
+              <div className={styles.subDropdownContainer}>
+                <span className={styles.dropdownItem} onClick={() => toggleSubDropdown('cryptography')}>
+                  Cryptography
+                </span>
+                <div className={`${styles.subDropdownMenu} ${activeSubDropdown === 'cryptography' ? styles.showSubMobile : ''}`}>
+                  <Link to="/products/cryptography" className={styles.dropdownItem} onClick={toggleMenu}>SCADA</Link>
+                  <Link to="/products/firewall" className={styles.dropdownItem} onClick={toggleMenu}>Firewall</Link>
+                </div>
+              </div>
             </div>
           </div>
 
