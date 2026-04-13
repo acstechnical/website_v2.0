@@ -199,9 +199,51 @@
 }
 
 .activeTab {
-    color: var(--primary-color) !important;
-    background-color: #eef6ff; /* Màu nền xanh nhạt khi được chọn */
-    border-radius: 6px;
+  color: var(--primary-color) !important;
+  background-color: #eef6ff;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  letter-spacing: 0.5px;
+  border: 1.5px solid var(--primary-color);
+}
+.zoomOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.zoomedImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  background: #fff;
+}
+
+.versionNote {
+  margin-top: 18px;
+  background: #f5f5f5;
+  border-left: 4px solid var(--primary-color);
+  padding: 12px 18px;
+  font-size: 0.97rem;
+  color: #333;
+  border-radius: 8px;
+}
+.versionNote ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.versionNote li {
+  margin-bottom: 6px;
 }
 
 .tabContent {
@@ -232,6 +274,37 @@
     font-weight: var(--fw-light);
     line-height: 1.6;
 }
+
+/*------------------*/
+/* Trong file HPCPlatforms.module.css */
+
+.descriptionText {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.highlightList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.bullet {
+  color: #007bff; /* Hoặc màu chủ đạo của Acronics */
+  font-weight: bold;
+  margin-right: 10px;
+}
+/*----------------*/
 
 /* --- Responsive Update --- */
 @media (max-width: 992px) {

@@ -27,43 +27,49 @@ const HPCPlatforms = () => {
     document.title = "HPC Platforms - Acronics";
   }, []);
   const [activeTab, setActiveTab] = useState(0);
+  const [zoomed, setZoomed] = useState(false);
   // Cấu trúc dữ liệu mới: Mỗi tab đi kèm với nội dung riêng biệt
   const guiData = [
     {
       id: 0,
       label: "Processing",
       image: hpc_processing,
-      title: "High-Performance Computing Processing", // Thêm gạch nối
+      title: "High-Performance Computing processing", // Thêm gạch nối
       description: "Leverage our advanced HPC platforms for unparalleled computational power and efficiency. Designed for complex simulations, data analysis, and AI workloads."
     },
     {
       id: 1,
       label: "Information",
       image: hpc_info,
-      title: "Comprehensive Information Hub",
+      title: "Comprehensive information hub",
       description: "Access detailed information about our HPC platforms, including technical specifications, performance metrics, and use cases. Stay informed about the latest advancements in high-performance computing." // 'high-performance' viết thường trong câu.
     },
     {
       id: 2,
       label: "History",
       image: hpc_history,
-      title: "Historical Data Analysis",
+      title: "Historical data analysis",
       description: "Explore the evolution of our HPC platforms through detailed historical data and performance metrics. Understand how our solutions have advanced over time and their impact on various industries."
     },
     {
       id: 3,
       label: "Performance",
       image: hpc_performer,
-      title: "Performance Monitoring",
+      title: "Performance monitoring",
       description: "Monitor the performance of your HPC platforms in real-time with detailed metrics and analytics. Identify bottlenecks and optimize your computational workflows for maximum efficiency."
     },
     {
-      id: 4,
-      label: "Other Versions",
-      image: hpc_version,
-      title: "Version Management",
-      description: "Access and manage different versions of our HPC platforms. Stay updated with the latest features and improvements across all available releases."
-    }
+    id: 4,
+    label: "Other versions",
+    image: hpc_version,
+    title: "Version management",
+    description: "Access and manage different versions of our HPC platforms. Stay updated with the latest features and improvements across all available releases.",
+    highlights: [
+      "(*) Password generation tools are typically limited to a maximum of 12 characters; however, PWR supports longer password lengths, thereby enhancing its capability to recover passwords beyond this limitation.",
+      "(**) FPGA cluster architectures allow leveraging the potential of FPGA parallelism. Processing performance can increase by approximately 3–5 times depending on the FPGA hardware architecture (board capability), and can be further enhanced by using larger FPGA cluster configurations. The prototype architectures have versions from 1 to 6, with a significant increase in the number of usable FPGA clusters, from 16 to 512 clusters.",
+      "System performance can be dynamically adjusted based on the operating temperature and environmental conditions of the clusters. This adaptive mechanism helps prevent hardware failure and ensures stable operation during the password recovery process."
+    ]
+  }
   ];
 
   return (
@@ -112,20 +118,20 @@ const HPCPlatforms = () => {
 
             {/* CỘT TRÁI: NỘI DUNG CHỮ */}
             <div className={styles.techContent}>
-              <h2 className={styles.sectionTitle}>Our New HPC Technologies</h2>
+              <h2 className={styles.sectionTitle}>Our new HPC technologies</h2>
 
               {/* <h3 className={styles.sectionSubtitle}>
                 AI-Based Network Security and Hardware Protection Solutions by Acronics Solutions (ACS)
               </h3> */}
               <p className={styles.sectionSubtitle}>
-                AI-Based Network Security and Hardware Protection Solutions by Acronics Solutions (ACS)
+                AI-based network security and hardware protection solutions by Acronics Solutions (ACS)
               </p>
 
               {/* Danh sách công nghệ */}
               <ul className={styles.techList}>
                 <li>DDoS Detection: Random Forest (RamFor Core)</li>
-                <li>Malware Detection: Convolutional Neural Network (CNN)</li>
-                <li>Abnormal Behavior Detection: Support Vector Machine (SVM)</li>
+                <li>Malware Detection: Convolutional Neural Network (CNN Core)</li>
+                <li>Abnormal Behavior Detection: Support Vector Machine (SVM Core)</li>
               </ul>
 
               {/* Đoạn văn 1 */}
@@ -162,33 +168,58 @@ const HPCPlatforms = () => {
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
                     className={`${styles.tabButton} ${activeTab === tab.id ? styles.activeTab : ''}`}
+                    style={activeTab === tab.id ? { fontWeight: 700, fontSize: '1.1rem', letterSpacing: '0.5px' } : {}}
                   >
-                    [{tab.label}]
+                    {tab.label}
                   </button>
                 ))}
               </div>
 
-              {/* Ảnh thay đổi theo activeTab kèm hiệu ứng fade-in đơn giản */}
+              {/* Ảnh thay đổi theo activeTab, click để zoom */}
               <div className={styles.tabContent} key={activeTab}>
                 <img
                   src={guiData[activeTab].image}
                   alt={guiData[activeTab].label}
                   className={styles.guiImage}
+                  style={{ cursor: 'zoom-in' }}
+                  onClick={() => setZoomed(true)}
                 />
+                {/* Overlay zoom */}
+                {zoomed && (
+                  <div className={styles.zoomOverlay} onClick={() => setZoomed(false)}>
+                    <img
+                      src={guiData[activeTab].image}
+                      alt={guiData[activeTab].label}
+                      className={styles.zoomedImage}
+                      onClick={e => e.stopPropagation()}
+                    />
+                  </div>
+                )}
               </div>
             </div>
 
-            {/* KHỐI PHẢI: NỘI DUNG THAY ĐỔI THEO TAB */}
             <div className={styles.guiInfo} key={`info-${activeTab}`}>
-                <h3 className={styles.guiInfoTitle}>{guiData[activeTab].title}</h3>
-                <p className={styles.text}>
-                  {guiData[activeTab].description}
-                </p>
-            </div>
+  <h3 className={styles.guiInfoTitle}>{guiData[activeTab].title}</h3>
+  
+  <p className={styles.descriptionText}>
+    {guiData[activeTab].description}
+  </p>
+
+  {/* Hiển thị các ý chính dưới dạng danh sách chuyên nghiệp */}
+  {guiData[activeTab].highlights && (
+    <ul className={styles.highlightList}>
+      {guiData[activeTab].highlights.map((item, index) => (
+        <li key={index} className={styles.highlightItem}>
+          <span className={styles.bullet}>•</span> {item}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
           </div>
         </div>
       </section>
-      {/* 5. Video showcase */}
+      {/* 5. Video showcase
       <section className={styles.videoShowcaseSection}>
         <div className={styles.container}>
           <VideoShowcase
@@ -201,7 +232,7 @@ const HPCPlatforms = () => {
             title="Demo of network traffic malware detection scenarios using ML/DL on SoC-FPGA"
           />
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
