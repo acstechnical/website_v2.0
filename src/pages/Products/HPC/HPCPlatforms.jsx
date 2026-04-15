@@ -17,6 +17,7 @@ import hpc_info from "../../../assets/image/hpc_product/hpc_info.png";
 import hpc_history from "../../../assets/image/hpc_product/hpc_history.png";
 import hpc_performer from "../../../assets/image/hpc_product/hpc_performer.png";
 import hpc_version from "../../../assets/image/hpc_product/hpc_version.png";
+import hpc_device from "../../../assets/image/hpc_product/hpc_device.jpg";
 
 const HPCPlatforms = () => {
   useEffect(() => {
@@ -59,17 +60,17 @@ const HPCPlatforms = () => {
       description: "Monitor the performance of your HPC platforms in real-time with detailed metrics and analytics. Identify bottlenecks and optimize your computational workflows for maximum efficiency."
     },
     {
-    id: 4,
-    label: "Other versions",
-    image: hpc_version,
-    title: "Version management",
-    description: "Access and manage different versions of our HPC platforms. Stay updated with the latest features and improvements across all available releases.",
-    highlights: [
-      "(*) Password generation tools are typically limited to a maximum of 12 characters; however, PWR supports longer password lengths, thereby enhancing its capability to recover passwords beyond this limitation.",
-      "(**) FPGA cluster architectures allow leveraging the potential of FPGA parallelism. Processing performance can increase by approximately 3–5 times depending on the FPGA hardware architecture (board capability), and can be further enhanced by using larger FPGA cluster configurations. The prototype architectures have versions from 1 to 6, with a significant increase in the number of usable FPGA clusters, from 16 to 512 clusters.",
-      "System performance can be dynamically adjusted based on the operating temperature and environmental conditions of the clusters. This adaptive mechanism helps prevent hardware failure and ensures stable operation during the password recovery process."
-    ]
-  }
+      id: 4,
+      label: "Other versions",
+      image: hpc_version,
+      title: "Version management",
+      description: "Access and manage different versions of our HPC platforms. Stay updated with the latest features and improvements across all available releases.",
+      highlights: [
+        "(*) Password generation tools are typically limited to a maximum of 12 characters; however, PWR supports longer password lengths, thereby enhancing its capability to recover passwords beyond this limitation.",
+        "(**) FPGA cluster architectures allow leveraging the potential of FPGA parallelism. Processing performance can increase by approximately 3–5 times depending on the FPGA hardware architecture (board capability), and can be further enhanced by using larger FPGA cluster configurations. The prototype architectures have versions from 1 to 6, with a significant increase in the number of usable FPGA clusters, from 16 to 512 clusters.",
+        "System performance can be dynamically adjusted based on the operating temperature and environmental conditions of the clusters. This adaptive mechanism helps prevent hardware failure and ensures stable operation during the password recovery process."
+      ]
+    }
   ];
 
   return (
@@ -109,7 +110,7 @@ const HPCPlatforms = () => {
       </section>
 
       {/* 3. HPC Types */}
-      <FeaturesTab />
+      {/* <FeaturesTab /> */}
 
       {/* 4. Our new HPC technologies*/}
       <section className={styles.newTechSection}>
@@ -199,40 +200,119 @@ const HPCPlatforms = () => {
             </div>
 
             <div className={styles.guiInfo} key={`info-${activeTab}`}>
-  <h3 className={styles.guiInfoTitle}>{guiData[activeTab].title}</h3>
-  
-  <p className={styles.descriptionText}>
-    {guiData[activeTab].description}
-  </p>
+              <h3 className={styles.guiInfoTitle}>{guiData[activeTab].title}</h3>
 
-  {/* Hiển thị các ý chính dưới dạng danh sách chuyên nghiệp */}
-  {guiData[activeTab].highlights && (
-    <ul className={styles.highlightList}>
-      {guiData[activeTab].highlights.map((item, index) => (
-        <li key={index} className={styles.highlightItem}>
-          <span className={styles.bullet}>•</span> {item}
-        </li>
-      ))}
-    </ul>
-  )}
-</div>
+              <p className={styles.descriptionText}>
+                {guiData[activeTab].description}
+              </p>
+
+              {/* Hiển thị các ý chính dưới dạng danh sách chuyên nghiệp */}
+              {guiData[activeTab].highlights && (
+                <ul className={styles.highlightList}>
+                  {guiData[activeTab].highlights.map((item, index) => (
+                    <li key={index} className={styles.highlightItem}>
+                      <span className={styles.bullet}>•</span> {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </div>
         </div>
       </section>
-      {/* 5. Video showcase
+      {/* 5. Video showcase */}
       <section className={styles.videoShowcaseSection}>
-        <div className={styles.container}>
-          <VideoShowcase
-            src="https://www.youtube.com/embed/68IyMgsF3v0"
-            title="Overview of ML/DL-based malware detection and prevention on SoC-FPGA"
-          />
+        {(() => {
+          // Danh sách video/card
+          const videos = [
+            {
+              type: 'image',
+              title: 'High-Performance Password Recovery Device',
+              content: (
+                <img
+                  src={hpc_device}
+                  alt="HPC Device"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              )
+            },
+            {
+              type: 'video',
+              title: 'Overview of High-Performace Password Recovery',
+              content: (
+                <iframe
+                  src="https://www.youtube.com/embed/W4mOqW1WS2Y"
+                  title="Demo of network traffic malware detection scenarios using ML/DL on SoC-FPGA"
+                  style={{ width: '100%', height: '100%', border: 'none' }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              )
+            },
+            {
+              type: 'video',
+              title: 'Demo High-Performance Password Recovery',
+              content: (
+                <iframe
+                  src="https://www.youtube.com/embed/nSnrBXvd0xU"
+                  title="Overview of ML/DL-based malware detection and prevention on SoC-FPGA"
+                  style={{ width: '100%', height: '100%', border: 'none' }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              )
+            },
+            
+            
+          ];
 
-          <VideoShowcase
-            src="https://www.youtube.com/embed/Ef0ItagAmdA"
-            title="Demo of network traffic malware detection scenarios using ML/DL on SoC-FPGA"
-          />
-        </div>
-      </section> */}
+          // Tính toán chia hàng
+          const n = videos.length;
+          let firstRowCount = n;
+          let secondRowCount = 0;
+          if (n <= 3) {
+            firstRowCount = n;
+            secondRowCount = 0;
+          } else if (n % 2 === 0) {
+            // Chẵn > 3, chia đều
+            firstRowCount = n / 2;
+            secondRowCount = n / 2;
+          } else {
+            // Lẻ > 3, hàng đầu nhiều hơn 1
+            firstRowCount = Math.ceil(n / 2);
+            secondRowCount = n - firstRowCount;
+          }
+          const firstRow = videos.slice(0, firstRowCount);
+          const secondRow = videos.slice(firstRowCount);
+
+          return (
+            <>
+              <div className={styles.videoShowcaseGrid} style={{ marginBottom: secondRow.length > 0 ? 24 : 0 }}>
+                {firstRow.map((video, idx) => (
+                  <div className={styles.videoCard} key={video.title + idx}>
+                    <div className={styles.videoTitle}>{video.title}</div>
+                    <div style={{ width: '100%', aspectRatio: '16/9', background: '#000', borderRadius: '10px', overflow: 'hidden', border: '1px solid #e0e0e0', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+                      {video.content}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {secondRow.length > 0 && (
+                <div className={styles.videoShowcaseGrid}>
+                  {secondRow.map((video, idx) => (
+                    <div className={styles.videoCard} key={video.title + '2-' + idx}>
+                      <div className={styles.videoTitle}>{video.title}</div>
+                      <div style={{ width: '100%', aspectRatio: '16/9', background: '#000', borderRadius: '10px', overflow: 'hidden', border: '1px solid #e0e0e0', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+                        {video.content}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </>
+          );
+        })()}
+      </section>
     </div>
   );
 }

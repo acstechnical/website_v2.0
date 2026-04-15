@@ -1,5 +1,6 @@
 import React, { useEffect} from 'react';
 import styles from './HPC.module.css';
+import FeaturesTab from "./components/FeaturesTab/FeaturesTab";
 import PageTitle from '../../../components/Layout/PageTitle/PageTitle';
 import hpcSampleImage from '../../../assets/image/hpc_solutions/hpc_sample_01.png';
 import switchImage from '../../../assets/image/hpc_solutions/hpc_arch_1.png';
@@ -116,6 +117,8 @@ const HPC = () => {
         </div>
     </section>
 
+
+
     {/* HPC system platform section */}
     <section className={styles.platformSection}>
         <div className={styles.container}>
@@ -125,13 +128,14 @@ const HPC = () => {
               <img src={platformImage} alt="HPC System Platform Diagram" />
             </div>
             <div className={styles.platformDesc}>
-              <h2 className={styles.featureTitle}>HPC solutions developed on SoC-FPGA allow for the implementation of various specific requirements, serving specialized professional tasks such as:</h2>
+                   <FeaturesTab />
+              {/* <h2 className={styles.featureTitle}>HPC solutions developed on SoC-FPGA allow for the implementation of various specific requirements, serving specialized professional tasks such as:</h2>
               <ul className={styles.platformList}>
                 <li>Pentest systems</li>
                 <li>Malware analysis and identification systems</li>
                 <li>Cryptanalysis systems</li>
                 <li>Information security risk analysis/forecasting and big data processing systems</li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
