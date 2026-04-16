@@ -37,9 +37,9 @@ const Footer = () => {
         <div className={styles.linksSection}>
           <h3 className={styles.colTitle}>Solutions</h3>
           <div className={styles.linkList}>
-            <Link to="/solutions/hpc" className={styles.footerLink}>HPC</Link>
-            <Link to="/solutions/anti-ddos" className={styles.footerLink}>AntiDDoS</Link>
-            <Link to="/solutions/ipsec" className={styles.footerLink}>IPSec</Link>
+            <Link to="/solutions/hpc" className={styles.footerLink}>HPC Solutions</Link>
+            <Link to="/solutions/anti-ddos" className={styles.footerLink}>Anti - DDoS</Link>
+            <Link to="/solutions/ipsec" className={styles.footerLink}>IPSec - VPN</Link>
             <Link to="/solutions/ids-ips" className={styles.footerLink}>IDS / IPS</Link>
           </div>
         </div>

@@ -12,10 +12,14 @@ import hpc_plat_en from "../../../assets/image/hpc_product/hpc_plat_en.pdf";
 import hpc_plat_vi from "../../../assets/image/hpc_product/hpc_plat_vi.pdf";
 import { FileText } from 'react-feather';
 //bổ sung
-import hpc_processing from "../../../assets/image/hpc_product/hpc_processing.png";
-import hpc_info from "../../../assets/image/hpc_product/hpc_info.png";
-import hpc_history from "../../../assets/image/hpc_product/hpc_history.png";
-import hpc_performer from "../../../assets/image/hpc_product/hpc_performer.png";
+// import hpc_processing from "../../../assets/image/hpc_product/hpc_processing.png";
+import processing from "../../../assets/image/hpc_product/processing.png";
+// import hpc_info from "../../../assets/image/hpc_product/hpc_info.png";
+import info from "../../../assets/image/hpc_product/info.png";
+// import hpc_history from "../../../assets/image/hpc_product/hpc_history.png";
+import history from "../../../assets/image/hpc_product/history.png";
+// import hpc_performer from "../../../assets/image/hpc_product/hpc_performer.png";
+import performace from "../../../assets/image/hpc_product/performance.png";
 import hpc_version from "../../../assets/image/hpc_product/hpc_version.png";
 import hpc_device from "../../../assets/image/hpc_product/hpc_device.jpg";
 
@@ -34,28 +38,32 @@ const HPCPlatforms = () => {
     {
       id: 0,
       label: "Processing",
-      image: hpc_processing,
+      // image: hpc_processing,
+      image: processing,
       title: "High-Performance Computing processing", // Thêm gạch nối
       description: "Leverage our advanced HPC platforms for unparalleled computational power and efficiency. Designed for complex simulations, data analysis, and AI workloads."
     },
     {
       id: 1,
       label: "Information",
-      image: hpc_info,
+      // image: hpc_info,
+      image: info,
       title: "Comprehensive information hub",
       description: "Access detailed information about our HPC platforms, including technical specifications, performance metrics, and use cases. Stay informed about the latest advancements in high-performance computing." // 'high-performance' viết thường trong câu.
     },
     {
       id: 2,
       label: "History",
-      image: hpc_history,
+      // image: hpc_history,
+      image: history,
       title: "Historical data analysis",
       description: "Explore the evolution of our HPC platforms through detailed historical data and performance metrics. Understand how our solutions have advanced over time and their impact on various industries."
     },
     {
       id: 3,
       label: "Performance",
-      image: hpc_performer,
+      // image: hpc_performer,
+      image: performace,
       title: "Performance monitoring",
       description: "Monitor the performance of your HPC platforms in real-time with detailed metrics and analytics. Identify bottlenecks and optimize your computational workflows for maximum efficiency."
     },
