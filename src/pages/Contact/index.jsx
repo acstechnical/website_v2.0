@@ -114,8 +114,13 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <button type="submit" className={styles.submitBtn}>
-              SEND INFORMATION <span className={styles.arrow}>&gt;</span>
+            <button
+              type="submit"
+              className={styles.submitBtn}
+              disabled={status === "Sending..."} // Vô hiệu hóa khi đang gửi
+            >
+              {status === "Sending..." ? "SENDING..." : "SEND INFORMATION"}
+              <span className={styles.arrow}>&gt;</span>
             </button>
 
             {status && <p className={styles.statusMessage}>{status}</p>}
