@@ -12,6 +12,7 @@ import hpc_plat_en from "../../../assets/image/hpc_product/hpc_plat_en.pdf";
 import hpc_plat_vi from "../../../assets/image/hpc_product/hpc_plat_vi.pdf";
 import { FileText } from 'react-feather';
 //bổ sung
+import home from "../../../assets/image/hpc_product/home.png";
 // import hpc_processing from "../../../assets/image/hpc_product/hpc_processing.png";
 import processing from "../../../assets/image/hpc_product/processing.png";
 // import hpc_info from "../../../assets/image/hpc_product/hpc_info.png";
@@ -37,6 +38,14 @@ const HPCPlatforms = () => {
   const guiData = [
     {
       id: 0,
+      label: "Overview",
+      // image: hpc_home,
+      image: home,
+      title: "HPC Password Recovery Dashboard", // Thêm gạch nối
+      description: "The HPC Password Recovery Dashboard provides a centralized interface for recovering encrypted files with simple drag-and-drop functionality, supporting formats such as Office, PDF, and RAR. The system integrates multiple features including Wi-Fi recovery, disk recovery, hash cracking, and AI-based wordlist generation using ML/DL. Real-time status tracking allows users to monitor processing progress and results efficiently."
+    },
+    {
+      id: 1,
       label: "Processing",
       // image: hpc_processing,
       image: processing,
@@ -44,7 +53,7 @@ const HPCPlatforms = () => {
       description: "Leverage our advanced HPC platforms for unparalleled computational power and efficiency. Designed for complex simulations, data analysis, and AI workloads."
     },
     {
-      id: 1,
+      id: 2,
       label: "Information",
       // image: hpc_info,
       image: info,
@@ -52,7 +61,7 @@ const HPCPlatforms = () => {
       description: "Access detailed information about our HPC platforms, including technical specifications, performance metrics, and use cases. Stay informed about the latest advancements in high-performance computing." // 'high-performance' viết thường trong câu.
     },
     {
-      id: 2,
+      id: 3,
       label: "History",
       // image: hpc_history,
       image: history,
@@ -60,7 +69,7 @@ const HPCPlatforms = () => {
       description: "Explore the evolution of our HPC platforms through detailed historical data and performance metrics. Understand how our solutions have advanced over time and their impact on various industries."
     },
     {
-      id: 3,
+      id: 4,
       label: "Performance",
       // image: hpc_performer,
       image: performace,
@@ -68,7 +77,7 @@ const HPCPlatforms = () => {
       description: "Monitor the performance of your HPC platforms in real-time with detailed metrics and analytics. Identify bottlenecks and optimize your computational workflows for maximum efficiency."
     },
     {
-      id: 4,
+      id: 5,
       label: "Other versions",
       image: hpc_version,
       title: "Version management",
@@ -270,7 +279,19 @@ const HPCPlatforms = () => {
                 ></iframe>
               )
             },
-            
+            {
+              type: 'video',
+              title: 'Demo High-Performance Password Recovery',
+              content: (
+                <iframe
+                  src="https://www.youtube.com/embed/JeKwromL3oU"
+                  title="Overview of ML/DL-based malware detection and prevention on SoC-FPGA"
+                  style={{ width: '100%', height: '100%', border: 'none' }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              )
+            },
             
           ];
 
