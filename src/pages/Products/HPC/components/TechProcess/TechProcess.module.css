@@ -9,9 +9,9 @@
 .accordionWrapper {
   background-color: var(--secondary-color);
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05); /* Đổ bóng nhẹ cho cả khối */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
   overflow: hidden;
-  border: 1px solid var(--border-color); /* Viền mỏng xám nhạt */
+  border: 1px solid var(--border-color); 
 }
 
 /* Từng dòng accordion */
@@ -80,16 +80,18 @@
 
 .imageGrid {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   gap: 20px;
   width: 100%;
   max-width: 450px;
 }
 
 .contentImage {
-  width: 100%;
+  min-width: 45vw;
+  min-height: 100%;
   height: auto;
-  object-fit: contain;
+  /* object-fit: contain; */
   border-radius: 8px;
   border: 1px solid #eee;
   display: block;
@@ -128,6 +130,54 @@
     padding: 12px 15px 20px 15px;
   }
   
+  .titleText {
+    font-size: 14px;
+  }
+}
+
+.zoomOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+.zoomedImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  background: #fff;
+  object-fit: contain;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .accordionHeader {
+    padding: 15px 20px;
+  }
+  .contentInner {
+    padding: 15px 20px 30px 20px;
+  }
+  .titleText {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentImage {
+    min-width: 100%;
+  }
+  .accordionHeader {
+    padding: 12px 15px;
+  }
   .titleText {
     font-size: 14px;
   }

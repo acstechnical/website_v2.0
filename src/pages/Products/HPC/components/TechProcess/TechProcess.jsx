@@ -3,12 +3,12 @@ import styles from './TechProcess.module.css';
 import { CaretRight, CaretDown } from 'phosphor-react';
 import { hpcProcessData } from './data';
 
-import hpc_ai_2 from '../../../../../assets/image/hpc_product/hpc_ai_2.jpg';
-import hpc_ai_3 from '../../../../../assets/image/hpc_product/hpc_ai_3.jpg';
+import hpc_ai_2 from '../../../../../assets/image/firewall/firewall_ai_1.jpg';
+import hpc_ai_3 from '../../../../../assets/image/firewall/firewall_ai_2.jpg';
 import hpc_ai_4 from '../../../../../assets/image/hpc_product/hpc_ai_4.jpg';
 import hpc_ai_5 from '../../../../../assets/image/hpc_product/hpc_ai_5.jpg';
 
-// Tạo map để lấy ảnh dựa trên key trong data
+// Map ảnh từ data
 const IMG_MAP = {
   "hpc_ai_2": hpc_ai_2,
   "hpc_ai_3": hpc_ai_3,
@@ -16,9 +16,10 @@ const IMG_MAP = {
   "hpc_ai_5": hpc_ai_5
 };
 
-
 const TechProcess = () => {
-  const [openId, setOpenId] = useState([null]); // Mảng chứa id của các accordion đang mở
+  const [openId, setOpenId] = useState(null); 
+  // State lưu URL của ảnh đang được zoom
+  const [zoomedImg, setZoomedImg] = useState(null);
 
   const toggleAccordion = (id) => {
     setOpenId(openId === id ? null : id); 
@@ -31,9 +32,6 @@ const TechProcess = () => {
           
           {hpcProcessData.map((item) => {
             const isOpen = openId === item.id;
-            
-            // Lấy danh sách ảnh dựa trên mảng keys (imgKey hoặc imgKeys). 
-            // Nếu không tồn tại thì mặc định là mảng rỗng.
             const images = item.imgKey || item.imgKeys || [];
             const imagesToRender = images.map(key => IMG_MAP[key]).filter(Boolean);
 
@@ -52,10 +50,9 @@ const TechProcess = () => {
 
                 <div 
                   className={styles.accordionContent}
-                  style={{ maxHeight: isOpen ? '2000px' : '0px' }} // Tăng maxHeight để chứa nhiều ảnh
+                  style={{ maxHeight: isOpen ? '2000px' : '0px' }}
                 >
                   <div className={styles.contentInner}>
-                    {/* Render danh sách ảnh bằng map */}
                     <div className={styles.imageGrid}>
                       {imagesToRender.map((src, index) => (
                         <img 
@@ -63,18 +60,30 @@ const TechProcess = () => {
                           src={src} 
                           alt={`${item.title} - ${index}`} 
                           className={styles.contentImage}
+                          style={{ cursor: 'zoom-in' }}
+                          onClick={() => setZoomedImg(src)}
                         />
                       ))}
                     </div>
                   </div>
                 </div>
-                
               </div>
             );
           })}
-
         </div>
       </div>
+
+      {/* Overlay hiển thị khi zoom ảnh */}
+      {zoomedImg && (
+        <div className={styles.zoomOverlay} onClick={() => setZoomedImg(null)}>
+          <img 
+            src={zoomedImg} 
+            alt="Zoomed View" 
+            className={styles.zoomedImage} 
+            onClick={(e) => e.stopPropagation()} 
+          />
+        </div>
+      )}
     </section>
   );
 };

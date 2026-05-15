@@ -10,23 +10,25 @@ import PrevPageBtn from '../../../../components/UI/PrevPageBtn/PrevPageBtn';
 import imgBg from "../../../../assets/image/cyber_security/cyber-security_bg.webp";
 import antiDDoS_sample from "../../../../assets/image/ProductDetail/AntiDDoSDevice/ddos_sample_01.png";
 import antiDDoS_spec from "../../../../assets/image/ProductDetail/AntiDDoSDevice/Acronics_Sysnef-Def_Tech_Spec.pdf";
-import { FileText, Crosshair, Shield, Activity, Link2, TrendingUp, Sliders, Clock, Cpu, Layers, Bell, Link } from 'react-feather';
-//bổ sung
+import { FileText, Crosshair, Shield, Activity, Link2, TrendingUp, Clock, Cpu, Layers, Bell, Link } from 'react-feather';
+
 import guiDashboard from "../../../../assets/image/cyber_security/Dashboard_DDoS.png";
 import guiMonitor from "../../../../assets/image/cyber_security/monitor.png";
 import guiAnalyze from "../../../../assets/image/cyber_security/analyze.png";
 import guiDevice from "../../../../assets/image/cyber_security/Device_Manager.png";
+
 const AntiDDoS = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     useEffect(() => {
-        // Đổi tiêu đề tab trình duyệt
         document.title = "ACS Network Security Device | Acronics Solutions";
     }, []);
 
     const [activeTab, setActiveTab] = useState(0);
+    // State cho cơ chế zoom ảnh
+    const [zoomed, setZoomed] = useState(false);
 
     const guiData = [
         {
@@ -140,7 +142,7 @@ const AntiDDoS = () => {
                     </div>
                 </section>
 
-                {/* 5. GUI Showcase */}
+                {/* 5. GUI Showcase với cơ chế Zoom */}
                 <section className={styles.guiSection}>
                     <h2 className={styles.sectionTitle}>GUI Showcase</h2>
                     <div className={styles.guiGrid}>
@@ -161,7 +163,20 @@ const AntiDDoS = () => {
                                     src={guiData[activeTab].image}
                                     alt={guiData[activeTab].label}
                                     className={styles.guiImage}
+                                    style={{ cursor: 'zoom-in' }}
+                                    onClick={() => setZoomed(true)}
                                 />
+                                
+                                {zoomed && (
+                                    <div className={styles.zoomOverlay} onClick={() => setZoomed(false)}>
+                                        <img
+                                            src={guiData[activeTab].image}
+                                            alt={guiData[activeTab].label}
+                                            className={styles.zoomedImage}
+                                            onClick={e => e.stopPropagation()}
+                                        />
+                                    </div>
+                                )}
                             </div>
                         </div>
 
