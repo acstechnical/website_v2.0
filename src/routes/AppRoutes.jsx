@@ -12,6 +12,7 @@ import HPC from '../pages/Solutions/HPC/HPC';
 import AntiDDoS from '../pages/Solutions/AntiDDoS/AntiDDoS';
 import IPSec from '../pages/Solutions/IPSec/IPSec';
 import IdsIps from '../pages/Solutions/IdsIps/IdsIps';
+import HSM from '../pages/Solutions/HSM/HSM';
 
 // Import các trang sản phẩm chính của Products
 import HPCPlatforms from '../pages/Products/HPC/HPCPlatforms';
@@ -41,6 +42,7 @@ const AppRoutes = () => {
           <Route path="solutions/anti-ddos" element={<AntiDDoS />} />
           <Route path="solutions/ipsec" element={<IPSec />} />
           <Route path="solutions/ids-ips" element={<IdsIps />} />
+          <Route path="solutions/hsm" element={<HSM />} />
           
           {/* Đường dẫn cho Products */}
           <Route path="products/hpc-platforms" element={<HPCPlatforms />} />
