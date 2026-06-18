@@ -315,7 +315,7 @@ const HPCPlatforms = () => {
           const secondRow = videos.slice(firstRowCount);
 
           return (
-            <>
+            <div className={styles.container}>
               <div className={styles.videoShowcaseGrid} style={{ marginBottom: secondRow.length > 0 ? 24 : 0 }}>
                 {firstRow.map((video, idx) => (
                   <div className={styles.videoCard} key={video.title + idx}>
@@ -338,7 +338,7 @@ const HPCPlatforms = () => {
                   ))}
                 </div>
               )}
-            </>
+            </div>
           );
         })()}
       </section>

@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 import PageTitle from '../../../components/Layout/PageTitle/PageTitle';
 import styles from './IdsIps.module.css';
 import ServiceCard_2 from '../../../components/UI/ServiceCard_2/ServiceCard_2';
@@ -6,7 +6,7 @@ import FeatureItem from '../../../components/UI/FeatureItem/FeatureItem';
 import ids_img from "../../../assets/image/idsips/ids.webp";
 import ips_img from "../../../assets/image/idsips/ips.webp";
 import ipds_bg from "../../../assets/image/idsips/ipds_bg.jpg";
-import {Database, Activity, Eye, Search, Zap, MinusCircle, Clipboard, Layers} from "react-feather";
+import { Database, Activity, Eye, Search, Zap, MinusCircle, Clipboard, Layers } from "react-feather";
 const IdsIps = () => {
     useEffect(() => {
         document.title = 'IDS/IPS Solutions - Your Company Name';
@@ -15,7 +15,7 @@ const IdsIps = () => {
     return (
         <div>
             {/* 1. PageTitle */}
-            <PageTitle title="Intrusion Detection and Prevention System" imgSrc={ipds_bg}/>
+            <PageTitle title="Intrusion Detection and Prevention System" imgSrc={ipds_bg} />
             <div className={styles.container}>
                 {/* 2. What is IDS/IPS */}
                 <section className={styles.introSection}>
@@ -52,7 +52,7 @@ const IdsIps = () => {
                             </ul>
                         </div>
                     </div>
-                        
+
                 </section>
                 {/* 4. How does IDS/IPS work? */}
                 <section className={styles.howDoesWorkSection}>
@@ -129,6 +129,85 @@ const IdsIps = () => {
                         />
                     </div>
                     <p className={styles.text}>IDS/IPS is an essential component of modern cybersecurity frameworks, helping organizations detect, prevent, and respond to cyber threats using advanced detection techniques and automated responses. Whether deployed inline or out-of-band, IDS/IPS plays a critical role in maintaining network integrity, compliance, and overall security resilience.</p>
+                </section>
+                <section className={styles.videoShowcaseSection}>
+                    {(() => {
+                        // Danh sách video/card
+                        const videos = [
+                            {
+                                type: 'video',
+                                title: 'Part 1: Acronics IDS/IPS Solutions on SoC-FPGA technology',
+                                content: (
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/JA88bTVCGc8?si=7Aoa7vknz3NYO5gB" 
+                                        title="Acronics IDS/IPS Solutions on SoC-FPGA technology" 
+                                        style={{ width: '100%', height: '100%', border: 'none' }}
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowFullScreen
+                                    ></iframe>
+                                )
+                            },
+                            {
+                                type: 'video',
+                                title: 'Part 2: Demo of IDS/IPS solutions for anomaly intrusion detection & malware analysis',
+                                content: (
+                                    <iframe
+                                        src="https://www.youtube.com/embed/doEI76JBWL0?si=Nw9t3nTkQnZOmbxc"
+                                        title="Demo of IDS/IPS solutions for anomaly intrusion detection & malware analysis"
+                                        style={{ width: '100%', height: '100%', border: 'none' }}
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowFullScreen
+                                    ></iframe>
+                                )
+                            },
+                        ];
+
+                        // Tính toán chia hàng
+                        const n = videos.length;
+                        let firstRowCount = n;
+                        let secondRowCount = 0;
+                        if (n <= 3) {
+                            firstRowCount = n;
+                            secondRowCount = 0;
+                        } else if (n % 2 === 0) {
+                            // Chẵn > 3, chia đều
+                            firstRowCount = n / 2;
+                            secondRowCount = n / 2;
+                        } else {
+                            // Lẻ > 3, hàng đầu nhiều hơn 1
+                            firstRowCount = Math.ceil(n / 2);
+                            secondRowCount = n - firstRowCount;
+                        }
+                        const firstRow = videos.slice(0, firstRowCount);
+                        const secondRow = videos.slice(firstRowCount);
+
+                        return (
+                            <>
+                                <div className={styles.videoShowcaseGrid} style={{ marginBottom: secondRow.length > 0 ? 24 : 0 }}>
+                                    {firstRow.map((video, idx) => (
+                                        <div className={styles.videoCard} key={video.title + idx}>
+                                            <div className={styles.videoTitle}>{video.title}</div>
+                                            <div style={{ width: '100%', aspectRatio: '16/9', background: '#000', borderRadius: '10px', overflow: 'hidden', border: '1px solid #e0e0e0', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+                                                {video.content}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                                {secondRow.length > 0 && (
+                                    <div className={styles.videoShowcaseGrid}>
+                                        {secondRow.map((video, idx) => (
+                                            <div className={styles.videoCard} key={video.title + '2-' + idx}>
+                                                <div className={styles.videoTitle}>{video.title}</div>
+                                                <div style={{ width: '100%', aspectRatio: '16/9', background: '#000', borderRadius: '10px', overflow: 'hidden', border: '1px solid #e0e0e0', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+                                                    {video.content}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </>
+                        );
+                    })()}
                 </section>
             </div>
         </div>
