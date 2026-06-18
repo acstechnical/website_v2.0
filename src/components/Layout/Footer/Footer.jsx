@@ -59,7 +59,7 @@ const Footer = () => {
         <div className={styles.linksSection}>
           <h3 className={styles.colTitle}>Company</h3>
           <div className={styles.linkList}>
-            <Link to="/about" className={styles.footerLink}>About us</Link>
+            <Link to="/about" className={styles.footerLink}>About Us</Link>
             <Link to="/contact" className={styles.footerLink}>Contact</Link>
           </div>
         </div>

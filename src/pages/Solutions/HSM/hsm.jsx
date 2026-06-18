@@ -6,6 +6,8 @@ import imgBg from '../../../assets/image/hsm/hsm-bg.jpg';
 // Import các components
 import ServiceCard_3 from '../../../components/UI/ServiceCard_3/ServiceCard_3';
 import AdvantageCard from '../../../components/UI/AdvantageCard/AdvantageCard';
+import device from '../../../assets/image/hsm/hsm-device.jpg';
+import hsm_pdf from '../../../assets/image/hsm/ACS_HSM_VN_5_5_2025_H04.pdf';
 
 // Import TẤT CẢ các icon từ react-feather
 import { 
@@ -28,18 +30,52 @@ const HSM = () => {
             {/* 1. Page title */}
             <PageTitle title="HSM – Hardware Security Module" imgSrc={imgBg} />
 
-            {/* 2. Overview */}
-            <section className={styles.overviewDesc}>
-                <div className={styles.container}>
-                    <h1 className={styles.sectionTitle}>HSM – Hardware Security Module</h1>
-                    <p className={styles.introText}>
-                        A <span style={{ color: 'var(--primary-color)' }}>Hardware Security Module (HSM) </span> is a dedicated security device designed to generate, store, and manage cryptographic keys within a highly secure environment. HSMs protect sensitive data against unauthorized access, key theft, and cyber threats.
-                    </p>
-                    <p className={styles.introText}>
-                        The device performs encryption, decryption, digital signing, and authentication operations with high performance, meeting strict security requirements for enterprises, banking systems, data centers, and critical infrastructure.
-                    </p>
-                </div>
-            </section>
+                        {/* 2. Overview - giống HPC */}
+                        <section className={styles.overviewDesc}>
+                                <div className={styles.container}>
+                                    <div className={styles.hsmGrid}>
+                                        {/* Cột trái: mô tả */}
+                                        <div className={styles.hsmIntroLeft}>
+                                            <h1 className={styles.sectionTitle}>HSM – Hardware Security Module</h1>
+                                            <p className={styles.introText}>
+                                                <span style={{color: 'var(--primary-color)'}}>Hardware Security Module (HSM)</span> is a dedicated security device designed to generate, store, and manage cryptographic keys within a highly secure environment. HSMs protect sensitive data against unauthorized access, key theft, and cyber threats.
+                                            </p>
+                                            <p className={styles.introText}>
+                                                The device performs encryption, decryption, digital signing, and authentication operations with high performance, meeting strict security requirements for enterprises, banking systems, data centers, and critical infrastructure.
+                                            </p>
+                                            <p className={styles.introText}>
+                                                <span style={{color: 'var(--primary-color)'}}>Acronics HSM</span> provides a secure, scalable, and high-performance solution for protecting digital assets, supporting compliance, and enabling trusted transactions in modern IT environments.
+                                            </p>
+                                        </div>
+                                        {/* Cột phải: ảnh thiết bị và nút PDF */}
+                                        <div className={styles.hsmIntroRight}>
+                                            <img
+                                                src={device}
+                                                alt="Acronics HSM Device"
+                                                className={styles.hsmImage}
+                                            />
+                                            <div className={styles.hsmBtnGroup}>
+                                                <a
+                                                    href={hsm_pdf}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className={styles.hsmBtn}
+                                                >
+                                                    View HSM Specification PDF
+                                                </a>
+                                                {/* <a
+                                                    href={hsm_pdf}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className={styles.hsmBtn}
+                                                >
+                                                    Xem thông số kỹ thuật HSM
+                                                </a> */}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </section>
 
             {/* 3. Key Features */}
             <section className={styles.featuresSection}>

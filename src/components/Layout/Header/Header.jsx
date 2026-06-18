@@ -92,7 +92,7 @@ const Header = () => {
           </div>
 
           {/* Link: About & Contact */}
-          <Link to="/about" className={styles.navLink} onClick={toggleMenu}>About us</Link>
+          <Link to="/about" className={styles.navLink} onClick={toggleMenu}>About Us</Link>
           <Link to="/contact" className={styles.navLink} onClick={toggleMenu}>Contact</Link>
         </nav>
 
