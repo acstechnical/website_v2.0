@@ -4,6 +4,7 @@ import styles from './Header.module.css';
 import logo from '../../../assets/image/global/acs_logo.png';
 import engFlag from '../../../assets/image/global/flag-for-flag-united-kingdom-svgrepo-com.svg';
 import vieFlag from '../../../assets/image/global/flag-for-flag-vietnam-svgrepo-com.svg';
+import {ChevronDown} from 'react-feather';
 
 const Header = () => {
   const [language, setLanguage] = useState('en');
@@ -80,8 +81,9 @@ const Header = () => {
               <Link to="/products/networking-devices" className={styles.dropdownItem} onClick={toggleMenu}>Networking Devices</Link>
               <Link to="/products/cyber-security" className={styles.dropdownItem} onClick={toggleMenu}>Cyber Security</Link>
               <div className={styles.subDropdownContainer}>
-                <span className={styles.dropdownItem} onClick={() => toggleSubDropdown('cryptography')}>
+                <span className={styles.dropdownItem + ' ' + styles.hasSubDropdown} onClick={() => toggleSubDropdown('cryptography')}>
                   Cryptography
+                  <ChevronDown size={16}/>
                 </span>
                 <div className={`${styles.subDropdownMenu} ${activeSubDropdown === 'cryptography' ? styles.showSubMobile : ''}`}>
                   <Link to="/products/cryptography" className={styles.dropdownItem} onClick={toggleMenu}>SCADA Firewall</Link>

@@ -322,3 +322,10 @@
     padding: 10px 16px;
   }
 }
+
+.hasSubDropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

@@ -182,7 +182,7 @@ const AntiDDoS = () => {
 
                         <div className={styles.guiInfo} key={`info-${activeTab}`}>
                             <h3 className={styles.guiInfoTitle}>{guiData[activeTab].title}</h3>
-                            <p className={styles.text}>
+                            <p className={styles.descriptionText}>
                                 {guiData[activeTab].description}
                             </p>
                         </div>

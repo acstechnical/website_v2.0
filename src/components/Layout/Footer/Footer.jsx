@@ -41,6 +41,7 @@ const Footer = () => {
             <Link to="/solutions/anti-ddos" className={styles.footerLink}>Anti - DDoS</Link>
             <Link to="/solutions/ipsec" className={styles.footerLink}>IPSec - VPN</Link>
             <Link to="/solutions/ids-ips" className={styles.footerLink}>IDS / IPS</Link>
+            <Link to="/solutions/hsm" className={styles.footerLink}>HSM</Link>
           </div>
         </div>
 
