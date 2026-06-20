@@ -2,6 +2,7 @@
   margin: 0 auto;    
   padding: 0 20px;   
 }
+
 .title {
   color: var(--primary-color);
   font-size: var(--header1-size);
@@ -29,8 +30,9 @@
   padding-left: 15px;
   display: inline-block;
 }
+
 .overviewSection {
-  padding:10px 0;
+  padding: 10px 0;
 }
 
 .layerSection {
@@ -38,18 +40,88 @@
 }
 
 .layerSection ul {
-    padding-left: 20px;
-    margin-bottom: 10px;
+  padding-left: 20px;
+  margin-bottom: 10px;
 }
 
 .layerSection li {
   margin-bottom: 10px;
-  /* padding-left: 10px; */
   position: relative;
 }
 
 li ul {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding-left: 20px; 
+  margin-top: 5px;
 }
 
+/* ==========================================================================
+   BỔ SUNG BỐ CỤC MỚI ĐỂ CHỐNG TRỐNG TRANG
+   ========================================================================== */
+
+/* Layout 2 cột cho divideGrid (Technical Specs + Layer 2 ở bên trái, Ảnh ở bên phải) */
+.divideGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* Tỉ lệ cột nội dung rộng hơn cột ảnh */
+  gap: 40px;
+  align-items: center; /* Căn giữa ảnh theo chiều dọc của khối bên trái */
+  max-width: 100%;
+}
+
+.leftColumn {
+  width: 100%;
+}
+
+.rightColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.imageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.image {
+  max-width: 400px;
+  border-radius: 8px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Chia đôi danh sách li cho cả phần Layer 3 và QoS thành 2 cột chữ đều nhau */
+.splitListColumns {
+  column-count: 2;
+  column-gap: 40px;
+  padding-left: 20px !important;
+}
+
+.splitListColumns > li {
+  break-inside: avoid; /* Ngăn thẻ li bị bẻ làm đôi khi chuyển cột */
+}
+
+/* Đảm bảo responsive mượt mà trên Mobile và Tablet nhỏ */
+@media (max-width: 992px) {
+  .divideGrid {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .divideGrid {
+    grid-template-columns: 1fr; /* Trở về 1 cột dọc trên thiết bị di động */
+    gap: 20px;
+  }
+  
+  .rightColumn {
+    order: -1; /* Đẩy ảnh lên trên đầu cho dễ nhìn trên mobile */
+  }
+
+  .splitListColumns {
+    column-count: 1; /* Hủy chia cột chữ trên mobile để tránh tràn/gãy chữ */
+  }
+}

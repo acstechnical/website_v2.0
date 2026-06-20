@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './LayerSwitch.module.css';
 import FeatureItem from '../../../../components/UI/FeatureItem/FeatureItem';
@@ -6,7 +6,8 @@ import PageTitle from '../../../../components/Layout/PageTitle/PageTitle';
 import PrevPageBtn from '../../../../components/UI/PrevPageBtn/PrevPageBtn';
 
 import imgBg from "../../../../assets/image/networking_device/networking-device_bg.webp";
-import {GitMerge, Filter, Shield} from 'react-feather'
+import imgLayerSwitch from "../../../../assets/image/networking_device/switch_device_02.png";
+import { GitMerge, Filter, Shield } from 'react-feather';
 
 const LayerSwitch = () => {
     useEffect(() => {
@@ -14,7 +15,6 @@ const LayerSwitch = () => {
     }, []);
 
     useEffect(() => {
-        // Đổi tiêu đề tab trình duyệt
         document.title = "ACS Layer 2/3/4 Switch - Switch on FPGA | Acronics Solutions"; 
     }, []);
 
@@ -24,37 +24,46 @@ const LayerSwitch = () => {
             <PageTitle title="ACS Layer 2/3/4 Switch - Switch on FPGA" imgSrc={imgBg} />
 
             {/* 2. Technical Specifications */}
-            <section className={styles.overviewSection}>
-                <div className={styles.container}>
-                    <div className={styles.overviewContent}>
-                        <h1 className={styles.title}>ACS Layer 2/3/4 Switch</h1>
-                        <p className={styles.description} style={{fontStyle: 'italic'}}>
-                            Advanced Multi-Layer Network Switch
-                        </p>
-                        <h2 className={styles.sectionTitle}>Technical Specifications: Layer 2/3/4 Switching Capabilities</h2>
+            <div className={styles.divideGrid}>
+                <div className={styles.leftColumn}>
+                    <section className={styles.overviewSection}>
+                        <div className={styles.container}>
+                            <div className={styles.overviewContent}>
+                                <h1 className={styles.title}>ACS Layer 2/3/4 Switch</h1>
+                                <p className={styles.description} style={{ fontStyle: 'italic' }}>
+                                    Advanced Multi-Layer Network Switch
+                                </p>
+                                <h2 className={styles.sectionTitle}>Technical Specifications: Layer 2/3/4 Switching Capabilities</h2>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* 3. Layer 2 Switching */}
+                    <section className={styles.layerSection}>
+                        <div className={styles.container}>
+                            <h2 className={styles.sectionTitle}>Layer 2 Switching</h2>
+                            <ul>
+                                <li className={styles.text}>64-entry L2 multicast table.</li>
+                                <li className={styles.text}>Automatic aging and wire-speed learning of L2 addresses — no CPU or software intervention required.</li>
+                                <li className={styles.text}>Spanning Tree Protocol (STP) support with ingress and egress checks.</li>
+                                <li className={styles.text}>Support for 16 multiple spanning trees, each with ingress and egress verification.</li>
+                                <li className={styles.text}>VLAN priority tagging can bypass VLAN processing and be removed on egress.</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <div className={styles.rightColumn}>
+                    <div className={styles.imageContainer}>
+                        <img src={imgLayerSwitch} alt="ACS Layer 2/3/4 Switch" className={styles.image} />
                     </div>
                 </div>
-            </section>
+            </div>
 
-            {/* 3. Layer 2 Switching */}
-            <section className={styles.layerSection}>
-                <div className={styles.container}>
-                    <h2 className={styles.sectionTitle}>Layer 2 Switching</h2>
-                    <ul>
-                        <li className={styles.text}>64-entry L2 multicast table.</li>
-                        <li className={styles.text}>Automatic aging and wire-speed learning of L2 addresses — no CPU or software intervention required.</li>
-                        <li className={styles.text}>Spanning Tree Protocol (STP) support with ingress and egress checks.</li>
-                        <li className={styles.text}>Support for 16 multiple spanning trees, each with ingress and egress verification.</li>
-                        <li className={styles.text}>VLAN priority tagging can bypass VLAN processing and be removed on egress.</li>
-                    </ul>
-                </div>
-            </section>
-
-            {/* Layer 3 Routing */}
+            {/* Layer 3 Routing (Chia thẻ li làm 2 cột chữ) */}
             <section className={styles.layerSection}>
                 <div className={styles.container}>
                     <h2 className={styles.sectionTitle}>Layer 3 Routing</h2>
-                    <ul>
+                    <ul className={styles.splitListColumns}>
                         <li className={styles.text}>MPLS forwarding with support for swap, push, pop, and penultimate pop operations.</li>
                         <li className={styles.text}>4-entry VRF table.</li>
                         <li className={styles.text}>1,024 x 4 hash-based L3 routing table.</li>
@@ -69,12 +78,11 @@ const LayerSwitch = () => {
                             </ul>
                         </li>
                         <li className={styles.text}>ECMP supports up to 256 parallel paths.</li>
-
                     </ul>
                 </div>
             </section>
 
-            {/* 4. Layer 2/3/4 Classification and ACL*/}
+            {/* 4. Layer 2/3/4 Classification and ACL */}
             <section className={styles.layer234Section}>
                 <div className={styles.container}>
                     <h2 className={styles.sectionTitle}>Layer 2/3/4 Classification and ACL</h2>
@@ -97,11 +105,11 @@ const LayerSwitch = () => {
                 </div>
             </section>
 
-            {/* 5. QoS and Traffic Management  */}
+            {/* 5. QoS and Traffic Management (Chia danh sách thành 2 cột chữ) */}
             <section className={styles.layerSection}>
                 <div className={styles.container}>
                     <h2 className={styles.sectionTitle}>QoS and Traffic management</h2>
-                    <ul>
+                    <ul className={styles.splitListColumns}>
                         <li className={styles.text}>5,242,880-bit shared packet buffer memory (4,096 cells x 160 bytes each) shared among all ports.</li>
                         <li className={styles.text}>8 priority queues per egress port.</li>
                         <li className={styles.text}>Configurable egress queue mapping from IP ToS, MPLS EXP/TC, or VLAN PCP bits.</li>
@@ -114,8 +122,8 @@ const LayerSwitch = () => {
                 </div>
             </section>
 
-            {/* 6.System Control and Management */}
-             <section className={styles.layerSection}>
+            {/* 6. System Control and Management */}
+            <section className={styles.layerSection}>
                 <div className={styles.container}>
                     <h2 className={styles.sectionTitle}>System control and Management</h2>
                     <ul>
@@ -124,6 +132,7 @@ const LayerSwitch = () => {
                     </ul>
                 </div>
             </section>
+
             {/* Back to Cyber Security Page */}
             <PrevPageBtn linkTo="/products/networking-devices" text="See more our networking devices"/>
         </div>
