@@ -87,7 +87,7 @@ li ul {
 }
 
 .image {
-  max-width: 400px;
+  width: 35vw;
   border-radius: 8px;
   height: auto;
   object-fit: contain;
@@ -107,7 +107,10 @@ li ul {
 /* Đảm bảo responsive mượt mà trên Mobile và Tablet nhỏ */
 @media (max-width: 992px) {
   .divideGrid {
-    gap: 30px;
+    gap: 10px;
+  }
+  .image {
+    width: 100%;
   }
 }
 
@@ -116,10 +119,7 @@ li ul {
     grid-template-columns: 1fr; /* Trở về 1 cột dọc trên thiết bị di động */
     gap: 20px;
   }
-  
-  .rightColumn {
-    order: -1; /* Đẩy ảnh lên trên đầu cho dễ nhìn trên mobile */
-  }
+
 
   .splitListColumns {
     column-count: 1; /* Hủy chia cột chữ trên mobile để tránh tràn/gãy chữ */
