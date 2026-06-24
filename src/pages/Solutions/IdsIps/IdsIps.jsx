@@ -136,7 +136,7 @@ const IdsIps = () => {
                         const videos = [
                             {
                                 type: 'video',
-                                title: 'Part 1: Acronics IDS/IPS Solutions on SoC-FPGA technology',
+                                title: 'Part 1: Acronics IDS/IPS solutions on SoC-FPGA technology',
                                 content: (
                                     <iframe 
                                         src="https://www.youtube.com/embed/JA88bTVCGc8?si=7Aoa7vknz3NYO5gB" 

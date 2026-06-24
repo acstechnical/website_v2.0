@@ -7,7 +7,7 @@ import VideoShowcase from "../../../components/UI/VideoShowcase/VideoShowcase";
 
 import imgBg from "../../../assets/image/hpc_product/hpc_product_bg.webp";
 import hpc_example from "../../../assets/image/hpc_product/hpc_example.jpg";
-import hpc_ai_1 from "../../../assets/image/hpc_product/hpc_ai_1.png";
+import hpc_ai_1 from "../../../assets/image/hpc_product/hpc_ai_1_bg_rm.png";
 import hpc_plat_en from "../../../assets/image/hpc_product/hpc_plat_en.pdf";
 import hpc_plat_vi from "../../../assets/image/hpc_product/hpc_plat_vi.pdf";
 import { FileText } from 'react-feather';
@@ -244,7 +244,7 @@ const HPCPlatforms = () => {
           const videos = [
             {
               type: 'image',
-              title: 'High-Performance Password Recovery Device',
+              title: 'High-Performance Password Recovery device',
               content: (
                 <img
                   src={hpc_device}
@@ -255,7 +255,7 @@ const HPCPlatforms = () => {
             },
             {
               type: 'video',
-              title: 'Overview of High-Performace Password Recovery',
+              title: 'Overview of High-Performance Password Recovery',
               content: (
                 <iframe
                   src="https://www.youtube.com/embed/W4mOqW1WS2Y"
@@ -268,7 +268,7 @@ const HPCPlatforms = () => {
             },
             {
               type: 'video',
-              title: 'Demo High-Performance Password Recovery',
+              title: 'Demonstration of High-Performance Password Recovery',
               content: (
                 <iframe
                   src="https://www.youtube.com/embed/nSnrBXvd0xU"
@@ -281,7 +281,7 @@ const HPCPlatforms = () => {
             },
             {
               type: 'video',
-              title: 'Demo High-Performance Password Recovery',
+              title: 'Demonstration of password recovery using ML/DL',
               content: (
                 <iframe
                   src="https://www.youtube.com/embed/JeKwromL3oU"

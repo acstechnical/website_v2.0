@@ -96,7 +96,7 @@
   margin: 10px 0;
 }
 .introImageWrapper img {
-  max-width: 90%;
+  width: 70vw;
   height: auto;
 }
 

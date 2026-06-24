@@ -170,7 +170,7 @@ const IPSec = () => {
                             <div className={styles.videoResponsive}>
                                 <iframe
                                     src="https://www.youtube.com/embed/oYX6m0V9mWc"
-                                    
+
                                     title="IPSec System Demo"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen
@@ -187,6 +187,9 @@ const IPSec = () => {
             <section className={styles.demoSection}>
                 <div className={styles.container}>
                     <div className={styles.demoContent}>
+                        <div className={styles.imageWrapper}>
+                            <img src={ipsecDescImg_5} alt="High Speed IPSec Development on Solution 2nd" />
+                        </div>
                         <div className={styles.leftContent}>
                             <h1 className={styles.sectionTitle}>IPSec system development demonstration</h1>
                             <div className={styles.featureList}>
@@ -212,9 +215,6 @@ const IPSec = () => {
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                        <div className={styles.imageWrapper}>
-                            <img src={ipsecDescImg_5} alt="High Speed IPSec Development on Solution 2nd" />
                         </div>
                     </div>
                 </div>

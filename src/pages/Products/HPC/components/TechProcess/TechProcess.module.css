@@ -1,7 +1,8 @@
 .section {
-  padding-bottom: 20px 0;
+  padding: 20px 0; /* Sửa lỗi cú pháp padding-bottom cũ */
   background-color: var(--secondary-color); 
 }
+
 .container {
   margin: 0 auto;    
 }
@@ -48,7 +49,7 @@
 }
 
 .titleText {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 500; /* Medium */
   color: #000;
 }
@@ -78,61 +79,30 @@
   width: 100%;
 }
 
+/* --- Cấu hình Grid chứa ảnh --- */
 .imageGrid {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 20px;
   width: 100%;
-  max-width: 450px;
+  max-width: 100%; 
 }
 
 .contentImage {
-  min-width: 45vw;
-  min-height: 100%;
+  width: 70vw;       
+  max-width: 100%; 
   height: auto;
-  /* object-fit: contain; */
   border-radius: 8px;
-  border: 1px solid #eee;
   display: block;
 }
 
-@media (max-width: 1024px) {
-  .imageGrid {
-    max-width: 350px;
-    gap: 15px;
-  }
-  
-  .accordionHeader {
-    padding: 15px 20px;
-  }
-  
-  .contentInner {
-    padding: 15px 20px 30px 20px;
-  }
-  
-  .titleText {
-    font-size: 16px;
-  }
+.imageGrid:has(.contentImage:nth-child(2)) {
+  max-width: 100%;   
 }
 
-@media (max-width: 768px) {
-  .imageGrid {
-    max-width: 100%;
-    gap: 12px;
-  }
-  
-  .accordionHeader {
-    padding: 12px 15px;
-  }
-  
-  .contentInner {
-    padding: 12px 15px 20px 15px;
-  }
-  
-  .titleText {
-    font-size: 14px;
-  }
+.imageGrid:has(.contentImage:nth-child(2)) .contentImage {
+  width: calc(48vw - 10px); 
 }
 
 .zoomOverlay {
@@ -158,26 +128,48 @@
   object-fit: contain;
 }
 
-/* --- Responsive --- */
 @media (max-width: 1024px) {
+  .imageGrid {
+    gap: 15px;
+  }
+  
+  .imageGrid:has(.contentImage:nth-child(2)) .contentImage {
+    width: calc(48vw - 10px);
+  }
+  
   .accordionHeader {
     padding: 15px 20px;
   }
+  
   .contentInner {
     padding: 15px 20px 30px 20px;
   }
+  
   .titleText {
-    font-size: 16px;
+    font-size: var(--body-size);
   }
 }
 
 @media (max-width: 768px) {
-  .contentImage {
-    min-width: 100%;
+  .imageGrid {
+    flex-direction: column; 
+    align-items: center;
+    gap: 12px;
   }
+  
+  .contentImage,
+  .imageGrid:has(.contentImage:nth-child(2)) .contentImage {
+    width: 100%;
+  }
+  
   .accordionHeader {
     padding: 12px 15px;
   }
+  
+  .contentInner {
+    padding: 12px 15px 20px 15px;
+  }
+  
   .titleText {
     font-size: 14px;
   }

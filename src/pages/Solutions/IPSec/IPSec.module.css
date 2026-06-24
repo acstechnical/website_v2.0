@@ -72,7 +72,8 @@
 }
 
 .howItWorkContent .imageWrapper img {
-  max-width: 700px;
+  /* max-width: 700px; */
+  min-width: 1000px;
 }
 
 
@@ -94,7 +95,8 @@
 }
 
 .goalSection .imageWrapper img {
-  max-width: 700px;
+  /* max-width: 700px; */
+  min-width: 1000px;
 }
 
 
